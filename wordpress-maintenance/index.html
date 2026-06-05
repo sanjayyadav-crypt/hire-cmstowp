@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K3BGSP');</script>
+<!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>WordPress Maintenance Service | Expert Care for Your Site</title>
@@ -126,7 +135,7 @@
     /* ══ HERO — cream background ══ */
     .hero {
       background: var(--cream);
-      padding: 72px 32px 90px;
+      padding: 60px 32px 90px;
       position: relative;
       overflow: visible;
     }
@@ -367,7 +376,7 @@
     }
 
     .hero-card-sub {
-      font-size: 14px;
+      font-size: 12px;
       color: var(--ink-3);
       margin-bottom: 20px
     }
@@ -787,7 +796,7 @@
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
-      background: #fff;
+      background: #fb923c;
       color: var(--blue);
       font-size: 11px;
       font-weight: 700;
@@ -1733,7 +1742,7 @@
       background: var(--white);
       border: none;
       border-radius: var(--r-xl);
-      padding: 40px 38px;
+      padding: 30px 30px;
       box-shadow: 0 16px 48px rgba(0, 0, 0, .2);
     }
 
@@ -1759,6 +1768,27 @@
       font-size: 14px;
       color: var(--ink-3);
       margin-bottom: 0
+    }
+   .hidden-feats {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+
+.hidden-feats.active {
+  max-height: 1000px; /* adjust as needed */
+}
+    .view-all-features {
+      background: transparent;
+      border: none;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+    .popular .view-all-features {
+      color: white !important;
     }
 
     @media(max-width:1100px) {
@@ -1886,11 +1916,16 @@
 
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3BGSP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
       <a href="/" class="nav-logo">
-        <img src="./cms-logo.png" alt="">
+        <img src="../assets/cms-logo.png" alt="">
       </a>
       <div class="nav-links">
         <a href="#included">What's Included</a>
@@ -1924,7 +1959,6 @@
       </div>
 
       <form class="bottom-form-card" action="https://www.getdrip.com/forms/262017254/submissions" method="post" data-drip-embedded-form="262017254" id="drip-ef-262017254">
-        <div class="hero-card-tag">Free Consultation</div>
         <h3>Let's talk about your site</h3>
         <p class="hero-card-sub">Tell us about your WordPress site and we'll recommend the right plan.</p>
         <div class="card-divider"></div>
@@ -2125,10 +2159,12 @@
 
         <!-- ── BASIC ── -->
         <div class="plan">
-          <div class="plan-name">Basic Plan</div>
+          <div class="plan-header">
+            <div class="plan-name">Basic Plan</div>
           <div class="plan-price"><sup>$</sup>197</div>
           <div class="plan-period">Monthly</div>
           <div class="plan-tagline">Dedicated developer, designer, client manager and QA Specialist</div>
+          </div>
           <ul class="plan-features">
             <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
@@ -2166,7 +2202,8 @@
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span>Uptime Monitoring</li>
-            <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
+           <div class="hidden-feats">
+             <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span>30-day money back guarantee</li>
@@ -2194,17 +2231,21 @@
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span>Phone Calls — By Request (Limited **)</li>
+           </div>
           </ul>
+          <button class="view-all-features" onclick="viewAllFeatures(this)">View All Features</button>
           <a href="#frm-bg" class="plan-btn secondary">Get Started</a>
         </div>
 
         <!-- ── PRO (popular) ── -->
         <div class="plan popular">
-          <div class="plan-badge">Most Popular</div>
+         <div class="plan-header">
+             <div class="plan-badge">Most Popular</div>
           <div class="plan-name">Pro Plan</div>
           <div class="plan-price"><sup>$</sup>297</div>
           <div class="plan-period">Monthly</div>
           <div class="plan-tagline">Dedicated developer, designer, client manager and QA Specialist</div>
+          </div>
           <ul class="plan-features">
             <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
@@ -2242,7 +2283,8 @@
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span>Uptime Monitoring</li>
-            <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
+           <div class="hidden-feats">
+             <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span>30-day money back guarantee</li>
@@ -2278,16 +2320,21 @@
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span><strong>Website builds and redesigns</strong></li>
+
+           </div>
           </ul>
+           <button class="view-all-features" onclick="viewAllFeatures(this)">View All Features</button>
           <a href="#frm-bg" class="plan-btn primary">Get Started</a>
         </div>
 
         <!-- ── VIP ── -->
         <div class="plan">
-          <div class="plan-name">VIP Plan</div>
+          <div class="plan-header">
+            <div class="plan-name">VIP Plan</div>
           <div class="plan-price"><sup>$</sup>997</div>
           <div class="plan-period">Monthly</div>
           <div class="plan-tagline">Dedicated developer, designer, client manager and QA Specialist</div>
+          </div>
           <ul class="plan-features">
             <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
@@ -2325,7 +2372,8 @@
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span>Uptime Monitoring</li>
-            <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
+            <div class="hidden-feats">
+              <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span>30-day money back guarantee</li>
@@ -2360,8 +2408,10 @@
             <li><span class="feat-check"><svg viewBox="0 0 10 10" fill="none">
                   <polyline points="1.5,5 4,7.5 8.5,2" stroke="#0052A2" stroke-width="1.8" stroke-linecap="round"
                     stroke-linejoin="round" />
-                </svg></span><strong>Website builds and redesigns</strong></li>
+                </svg></span><strong>Website builds and redesigns</strong></li> 
+            </div>
           </ul>
+           <button class="view-all-features" onclick="viewAllFeatures(this)">View All Features</button>
           <a href="#frm-bg" class="plan-btn secondary">Get Started</a>
         </div>
 
@@ -2783,6 +2833,19 @@
       el.style.transition = 'opacity 0.5s ease,transform 0.5s ease';
       io.observe(el)
     })
+
+
+   function viewAllFeatures(btn) {
+  const hiddenFeats = btn.parentElement.querySelector('.hidden-feats');
+
+  hiddenFeats.classList.toggle('active');
+
+  if (hiddenFeats.classList.contains('active')) {
+    btn.textContent = 'Hide Features';
+  } else {
+    btn.textContent = 'View All Features';
+  }
+}
   </script>
 </body>
 
