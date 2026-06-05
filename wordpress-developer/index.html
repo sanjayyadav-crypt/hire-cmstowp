@@ -66,7 +66,6 @@
 
     /* ── NAV ── */
     nav {
-      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -140,10 +139,10 @@
     .hero {
       background: #FAFBED;
       border-bottom: 1px solid #e8e7c8;
-      min-height: 100vh;
+      min-height: 70vh;
       display: flex;
+      padding: 60px 5% 40px;
       align-items: center;
-      padding: 120px 5% 80px;
       position: relative;
       overflow: hidden;
     }
@@ -178,6 +177,27 @@
       grid-template-columns: 1fr 500px;
       gap: 52px;
       align-items: center;
+    }
+
+    /* Responsive hero tweaks */
+    @media (max-width: 1200px) {
+      .hero-inner { grid-template-columns: 1fr 420px; gap: 40px; }
+      .hero { padding: 80px 10% 40px; min-height: 80vh; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 60px 4% 30px; min-height: auto; align-items: start; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; align-items: start; }
+      .hero h1 { font-size: clamp(1.8rem, 6.5vw, 2.6rem); }
+      .hero-desc { font-size: 0.98rem; }
+      .form-card { padding: 18px; }
+      .form-row { grid-template-columns: 1fr; gap: 10px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 40px 4% 24px; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-badge { font-size: 0.72rem; padding: 5px 12px; }
     }
 
     .hero-badge {
@@ -327,7 +347,7 @@
 
     .form-field input::placeholder,
     .form-field textarea::placeholder {
-      color: #a0a88a;
+      color: #c8d9ee;
     }
 
     .form-field input:focus,
@@ -493,7 +513,7 @@
     }
 
     .inline-cta-btn.dark {
-      background: #5ba8e5;
+      background: white;
       color: var(--navy);
     }
 
@@ -586,15 +606,29 @@
       border: 1px solid #d4d89a;
       border-radius: var(--radius);
       padding: 28px 24px;
-      transition: box-shadow .2s, transform .2s, border-color .2s;
-      cursor: default;
-    }
+        nav .nav-links {
+          display: flex;
+        }
+        .services-grid {
+          grid-template-columns: repeat(3, 1fr);
+        } 
+      }
 
-    .service-card:hover {
-      box-shadow: 0 12px 40px rgba(0, 82, 162, 0.1);
-      transform: translateY(-4px);
-      border-color: #80b9e0;
-    }
+      /* Lateral padding for laptops and MacBooks */
+      @media (min-width: 1024px) and (max-width: 1439px) {
+        nav { padding: 0 8%; }
+        .hero { padding-left: 8%; padding-right: 8%; }
+        section { padding-left: 8%; padding-right: 8%; }
+        .hero-inner { max-width: 1100px; grid-template-columns: 1fr 420px; }
+      }
+
+      @media (min-width: 1440px) {
+        nav { padding: 0 14%; }
+        .hero { padding-left: 14%; padding-right: 14%; }
+        section { padding-left: 14%; padding-right: 14%; }
+        .hero-inner { max-width: 1300px; grid-template-columns: 1fr 500px; }
+      }
+    
 
     .service-icon {
       width: 48px;
@@ -1157,6 +1191,11 @@
         grid-template-columns: 1fr;
       } 
     }
+    @media (min-width: 1200px){
+      .hero{
+        padding
+      }
+    }
   </style>
 </head>
 
@@ -1420,7 +1459,7 @@
               </div>
               <div style="text-align:center;">
                 <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:800;color:#5ba8e5;">
-                  15+</div>
+                  15+yr</div>
                 <div style="color:#494c54;font-size:0.78rem;margin-top:4px;">Experience</div>
               </div>
             </div>
