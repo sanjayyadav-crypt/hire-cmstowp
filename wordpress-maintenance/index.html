@@ -1992,6 +1992,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               onfocus="this.style.borderColor='#0052A2';this.style.boxShadow='0 0 0 3px rgba(0,82,162,.10)'"
               onblur="this.style.borderColor=''this.style.boxShadow=''"  id="drip-message" name="fields[message]" value=""></textarea>
           </div>
+
+                <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
+        <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
+        <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
           <input type="submit" value="Book My Free Consultation →" data-drip-attribute="sign-up-button" class="btn-full"/>
           <p class="form-note">🔒 No spam, no obligation. We respond within 1 business day.</p>
         </div>
@@ -2706,6 +2710,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               onfocus="this.style.borderColor='#0052A2';this.style.boxShadow='0 0 0 3px rgba(0,82,162,.10)'"
               onblur="this.style.borderColor=''this.style.boxShadow=''"  id="drip-message" name="fields[message]" value=""></textarea>
           </div>
+
+          <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
+          <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
+          <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
+
           <input type="submit" value="Book My Free Consultation →" data-drip-attribute="sign-up-button" class="btn-full"/>
           <p class="form-note">🔒 No spam, no obligation. We respond within 1 business day.</p>
         </div>
@@ -2842,6 +2851,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     btn.textContent = 'View All Features';
   }
 }
+
+      <!-- hidden fields -->
+
+    document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+
+  // UTM Fields
+  const utmSource = params.get("utm_source") || "";
+  const utmCampaign = params.get("utm_campaign") || "";
+
+  // Landing Page
+  const landingPage = window.location.href;
+
+  // Set UTM + landing page fields right away for top form
+  document.getElementById("hidden-source").value = utmSource;
+  document.getElementById("hidden-campaign").value = utmCampaign;
+  document.getElementById("hidden-landing-page").value = landingPage;
+
+      // Set UTM + landing page fields right away for bottom form
+   document.getElementById("hidden-source-2").value = utmSource;
+  document.getElementById("hidden-campaign-2").value = utmCampaign;
+  document.getElementById("hidden-landing-page-2").value = landingPage;
+
+});
+
   </script>
 </body>
 
