@@ -921,159 +921,227 @@
     }
 
     /* ── PRICING ── */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 52px;
-    }
+   .pricing-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 52px;
+  }
+  .pricing-card {
+    border-radius: 18px;
+    padding: 32px 28px;
+    position: relative;
+    transition: transform .2s;
+  }
+  .pricing-card:hover { transform: translateY(-6px); }
+  .pricing-card.basic { background: #FAFBED; border: 1.5px solid #c5c99a; }
+  .pricing-card.pro {
+    background: linear-gradient(145deg, #0052A2, #003a80);
+    color: var(--white);
+    box-shadow: 0 20px 60px rgba(0,82,162,0.3);
+  }
+  .pricing-card.enterprise { background: #FAFBED; border: 1.5px solid #c5c99a; }
+  .pricing-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: #e07b20;
+    color: var(--white);
+    font-size: 0.72rem; font-weight: 700;
+    padding: 4px 14px; border-radius: 100px;
+    white-space: nowrap;
+  }
+  .price-label { font-size: 0.8rem; font-weight: 500; opacity: 0.6; margin-bottom: 8px; }
+  .price-num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.6rem; font-weight: 800;
+    line-height: 1; margin-bottom: 4px;
+  }
+  .price-period { font-size: 0.8rem; opacity: 0.5; margin-bottom: 20px; }
+  .pricing-card h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .pricing-card .desc { font-size: 0.85rem; opacity: 0.6; margin-bottom: 24px; }
+  .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .feature-list li { font-size: 0.87rem; display: flex; align-items: center; gap: 8px; }
+  .feature-list li::before { content: '✓'; font-weight: 700; color: #5ba8e5; }
+  .pricing-card.pro .feature-list li::before { color: rgba(255,255,255,0.8); }
+  .btn-outline {
+    display: block; width: 100%; text-align: center;
+    border: 2px solid currentColor;
+    border-radius: 10px; padding: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem; font-weight: 700;
+    cursor: pointer; text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+  .pricing-card.basic .btn-outline { color: #0052A2; }
+  .pricing-card.basic .btn-outline:hover { background: #0052A2; color: var(--white); }
+  .pricing-card.pro .btn-outline { color: var(--white); }
+  .pricing-card.pro .btn-outline:hover { background: rgba(255,255,255,0.2); }
+  .pricing-card.enterprise .btn-outline { color: var(--navy); }
+  .pricing-card.enterprise .btn-outline:hover { background: #001a3a; color: var(--white); }
 
-    .pricing-card {
-      display: flex;
-      flex-direction: column;
-      border-radius: 18px;
-      padding: 32px 28px;
-      position: relative;
-      transition: transform .2s;
-    }
+  /* ── PRICING LAYOUT ── */
+.pricing-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 28px;
+  align-items: start;
+}
+/* 3 pricing cards */
+.pricing-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pcard {
+  border-radius: 16px;
+  padding: 28px 28px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.pcard:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,82,162,0.12); }
+.pcard-basic {
+  background: #ffffff;
+  border: 1.5px solid #d4d89a;
+}
+.pcard-pro {
+  background: #0052A2;
+  border: 1.5px solid #003d7a;
+  box-shadow: 0 8px 32px rgba(0,82,162,0.3);
+}
+.pcard-badge {
+  position: absolute; top: -13px; left: 28px;
+  background: #FAFBED; color: #0052A2;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 4px 14px; border-radius: 100px;
+  border: 1.5px solid #0052A2;
+}
+.pcard-top { }
+.pcard-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem; font-weight: 800;
+  color: #1F1F1F; margin-bottom: 4px;
+}
+.pcard-pro .pcard-name { color: #ffffff; }
+.pcard-best { font-size: 0.8rem; color: #64748b; line-height: 1.4; }
+.pcard-time { text-align: center; }
+.pcard-time-main {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: #1F1F1F;
+}
+.pcard-pro .pcard-time-main { color: #ffffff; }
+.pcard-time-sub { font-size: 0.78rem; color: #64748b; }
+.pcard-price {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.9rem; font-weight: 800;
+  color: #1F1F1F; line-height: 1; text-align: center;
+}
+.pcard-price span { font-size: 0.85rem; font-weight: 400; color: #64748b; }
 
-    .pricing-card:hover {
-      transform: translateY(-6px);
-    }
+/* Card buttons */
+.pcard-btn {
+  display: inline-block; text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700; font-size: 0.85rem;
+  padding: 11px 20px; border-radius: 9px;
+  text-decoration: none; white-space: nowrap;
+  transition: transform .15s, background .2s, box-shadow .15s;
+}
+.pcard-btn-outline {
+  border: 2px solid #0052A2; color: #0052A2; background: transparent;
+}
+.pcard-btn-outline:hover { background: #0052A2; color: #ffffff; }
+.pcard-btn-white {
+  background: #ffffff; color: #0052A2;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.pcard-btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+.pcard-btn-solid {
+  background: #0052A2; color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0,82,162,0.3);
+}
+.pcard-btn-solid:hover { background: #003d7a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,82,162,0.4); }
 
-    .pricing-card.basic {
-      background: #FAFBED;
-      border: 1.5px solid #c5c99a;
-    }
+/* ── ALL PLANS INCLUDE ── */
+.plans-include {
+  background: #FAFBED;
+  border: 1.5px solid #d4d89a;
+  border-radius: 14px;
+  padding: 22px 28px;
+}
+.pi-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem; font-weight: 700;
+  color: #1F1F1F; margin-bottom: 14px;
+}
+.pi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; }
+.pi-item { font-size: 0.84rem; color: #494c54; line-height: 1.5; }
 
-    .pricing-card.pro {
-      background: linear-gradient(145deg, #0052A2, #003a80);
-      color: var(--white);
-      box-shadow: 0 20px 60px rgba(0, 82, 162, 0.3);
-    }
+/* ── HOUR BUCKET (right side) ── */
+.bucket-col { position: sticky; top: 88px; }
+.hour-bucket {
+  background: #ffffff;
+  border: 2px solid #0052A2;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hb-eyebrow {
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: #0052A2;
+}
+.hb-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem; font-weight: 800;
+  color: #1F1F1F; line-height: 1.2;
+}
+.hb-price { display: flex; align-items: baseline; gap: 6px; }
+.hb-price-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.4rem; font-weight: 800; color: #0052A2; line-height: 1;
+}
+.hb-price-label { font-size: 0.85rem; color: #64748b; }
+.hb-divider { height: 1px; background: #e8e7c8; }
+.hb-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.hb-list li { font-size: 0.88rem; color: #1F1F1F; display: flex; align-items: center; gap: 8px; }
+.hb-check { color: #0052A2; font-weight: 700; font-size: 0.9rem; }
+.hb-cross { color: #94a3b8; font-weight: 700; font-size: 0.9rem; }
+.hb-desc { font-size: 0.84rem; color: #494c54; line-height: 1.6; font-style: normal; }
+.hb-desc em { font-style: italic; }
+.hb-cta { width: 100%; text-align: center; }
+.hb-link {
+  text-align: center; font-size: 0.8rem; color: #0052A2;
+  text-decoration: none; font-weight: 600;
+  border-bottom: 1px solid rgba(0,82,162,0.25);
+  padding-bottom: 1px;
+  transition: border-color .2s;
+  display: block;
+}
+.hb-link:hover { border-color: #0052A2; }
 
-    .pricing-card.enterprise {
-      background: #FAFBED;
-      border: 1.5px solid #c5c99a;
-    }
-
-    .pricing-badge {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #e07b20;
-      color: var(--white);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 100px;
-      white-space: nowrap;
-    }
-
-    .price-label {
-      font-size: 0.8rem;
-      font-weight: 500;
-      opacity: 0.6;
-      margin-bottom: 8px;
-    }
-
-    .price-num {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 2.6rem;
-      font-weight: 800;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .price-period {
-      font-size: 0.8rem;
-      opacity: 0.5;
-      margin-bottom: 20px;
-    }
-
-    .pricing-card h4 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .pricing-card .desc {
-      font-size: 0.85rem;
-      opacity: 0.6;
-      margin-bottom: 24px;
-    }
-
-    .feature-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
-      flex: 1;
-    }
-
-    .feature-list li {
-      font-size: 0.87rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .feature-list li::before {
-      content: '✓';
-      font-weight: 700;
-      color: #5ba8e5;
-    }
-
-    .pricing-card.pro .feature-list li::before {
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .btn-outline {
-      display: block;
-      width: 100%;
-      text-align: center;
-      border: 2px solid currentColor;
-      border-radius: 10px;
-      padding: 12px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background .2s, color .2s;
-      margin-top: auto;
-    }
-
-    .pricing-card.basic .btn-outline {
-      color: white;
-      background: #0052A2;
-    }
-
-    .pricing-card.basic .btn-outline:hover {
-      background: transparent;
-      color: #0052A2;
-    }
-
-    .pricing-card.pro .btn-outline {
-      color: var(--white);
-    }
-
-    .pricing-card.pro .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    .pricing-card.enterprise .btn-outline {
-      color: white;
-      background: #0052A2;
-    }
-
-    .pricing-card.enterprise .btn-outline:hover {
-      background: transparent;
-      color: #0052A2;
-    }
+/* Responsive */
+@media (max-width: 960px) {
+  .pricing-layout { grid-template-columns: 1fr; }
+  .bucket-col { position: static; }
+  .pcard { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
+  .pcard-btn { grid-column: 1 / -1; }
+  .pi-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .pcard { grid-template-columns: 1fr; text-align: center; }
+  .pcard-time, .pcard-price { text-align: center; }
+}
 
     /* ── BOTTOM CTA / FORM ── */
     .bottom-cta {
@@ -1615,85 +1683,104 @@
 
   <!-- ── PRICING (light) ── -->
   <section class="section-light" id="pricing">
-    <div class="section-inner">
-      <span class="section-tag">WordPress Developer Hire Pricing</span>
-      <h2 class="section-title">Transparent Pricing to Hire a WordPress Developer</h2>
-      <p class="section-sub">No hidden fees. No surprise invoices. Pick the engagement model that fits your project and
-        budget — and scale your WordPress development team whenever you need to.</p>
-      <div class="pricing-grid">
-        <div class="pricing-card basic">
-          <p class="price-label">Starter</p>
-          <div class="price-num">$699</div>
-          <p class="price-period">one time cost</p>
-          <ul class="feature-list">
-            <li>Up to 5 custom pages/templates</li>
-            <li>WordPress installation and configuration</li>
-            <li>Mobile-responsive design</li>
-            <li>Theme customization</li>
-            <li>Contact forms and newsletter integration</li>
-            <li>Social media integration</li>
-            <li>Blog setup</li>
-            <li>Google Analytics integration</li>
-            <li>Basic on-page SEO setup</li>
-            <li>Performance optimization</li>
-            <li>Cross-browser compatibility testing</li>
-            <li>30 days of post-launch support</li>
-            <li>WordPress training session</li>
-          </ul>
-          <a href="#hire" class="btn-outline">Get Started</a>
-        </div>
-        <div class="pricing-card pro">
-          <div class="pricing-badge">Most Popular</div>
-          <p class="price-label" style="opacity:.7">Professional</p>
-          <div class="price-num">$2,499</div>
-          <p class="price-period" style="opacity:.6">one time cost</p>
-          <ul class="feature-list">
-            <li>Up to 15 custom pages/templates</li>
-            <li>Custom UI/UX design tailored to your brand</li>
-            <li>Advanced theme customization</li>
-            <li>Custom forms and lead capture functionality</li>
-            <li>Membership or user registration functionality</li>
-            <li>WooCommerce setup (up to 50 products)</li>
-            <li>Third-party API integrations</li>
-            <li>Advanced performance optimization</li>
-            <li>Security hardening and malware protection</li>
-            <li>Dedicated Project Manager</li>
-            <li>Priority support for 60 days</li>
-          </ul>
-          <a href="#hire" class="btn-outline">Get Started</a>
-        </div>
-        <div class="pricing-card enterprise">
-          <p class="price-label">Enterprise</p>
-          <div class="price-num">
-            Contact Us
-          </div>
-          <p class="price-period">one time cost</p>
+  <div class="section-inner">
 
-          <ul class="feature-list">
-            <li>Unlimited pages and templates
-            </li>
-            <li>Fully custom WordPress development
-            </li>
-            <li>Custom plugin development
-            </li>
-            <li>Advanced WooCommerce implementation
-            </li>
-            <li>CRM integration (HubSpot, Salesforce, Zoho, etc.)
-            </li>
-            <li>ERP or Accounting System Integration*</li>
-            <li>Multi-language website (up to 3 languages)</li>
-            <li>Membership, subscription, or marketplace functionality</li>
-            <li>Custom API development and integrations</li>
-            <li>Enterprise-grade security and performance optimization</li>
-            <li>Staging and deployment setup</li>
-            <li>Dedicated Account Manager</li>
-            <li>90 days of priority post-launch support</li>
+    <!-- Header -->
+    <div style="text-align:center; margin-bottom: 52px;">
+      <span class="section-tag">Choose Your Plan</span>
+      <h2 class="section-title">Dedicated WordPress Developer Time</h2>
+      <p class="section-sub" style="max-width:560px; margin: 0 auto; text-align:center;">No hiring, no freelancers, no scope fights. Just a senior WordPress developer working on your site every day.</p>
+    </div>
+
+    <!-- 3-col cards + right side bucket -->
+    <div class="pricing-layout">
+
+      <!-- LEFT: 3 pricing cards -->
+      <div class="pricing-cards-col">
+
+        <!-- Starter -->
+        <div class="pcard pcard-basic">
+          <div class="pcard-top">
+            <div class="pcard-name">Starter</div>
+            <div class="pcard-best">Solo founders, blogs</div>
+          </div>
+          <div class="pcard-time">
+            <span class="pcard-time-main">1 hr/day</span>
+            <span class="pcard-time-sub">~20 hrs/mo</span>
+          </div>
+          <div class="pcard-price">$997<span>/mo</span></div>
+          <a href="#hire" class="pcard-btn pcard-btn-outline">Start 14-Day Trial →</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="pcard pcard-pro">
+          <div class="pcard-badge">Most Popular</div>
+          <div class="pcard-top">
+            <div class="pcard-name">Pro</div>
+            <div class="pcard-best" style="color:rgba(255,255,255,0.75);">Growing stores, lead-gen sites</div>
+          </div>
+          <div class="pcard-time">
+            <span class="pcard-time-main">2–3 hrs/day</span>
+            <span class="pcard-time-sub" style="color:rgba(255,255,255,0.65);">~50–60 hrs/mo</span>
+          </div>
+          <div class="pcard-price" style="color:#FAFBED;">$1,497<span style="color:rgba(255,255,255,0.65);">/mo</span></div>
+          <a href="#hire" class="pcard-btn pcard-btn-white">Start 14-Day Trial →</a>
+        </div>
+
+        <!-- Business -->
+        <div class="pcard pcard-basic">
+          <div class="pcard-top">
+            <div class="pcard-name">Business</div>
+            <div class="pcard-best">Agencies, WooCommerce, high-traffic</div>
+          </div>
+          <div class="pcard-time">
+            <span class="pcard-time-main">5–6 hrs/day</span>
+            <span class="pcard-time-sub">~100–120 hrs/mo</span>
+          </div>
+          <div class="pcard-price">$2,497<span>/mo</span></div>
+          <a href="#hire" class="pcard-btn pcard-btn-outline">Talk to Sales →</a>
+        </div>
+
+        <!-- All plans include -->
+        <div class="plans-include">
+          <div class="pi-title">✅ All plans include:</div>
+          <div class="pi-grid">
+            <div class="pi-item">📋 Unlimited task queue — one active task at a time</div>
+            <div class="pi-item">👨‍💻 Vetted senior WordPress developer + dedicated PM</div>
+            <div class="pi-item">💬 Slack + ClickUp access with daily updates</div>
+            <div class="pi-item">🛠️ New builds, maintenance, speed, security, WooCommerce</div>
+            <div class="pi-item">⚡ 24–48hr turnaround per task</div>
+            <div class="pi-item">🔒 14-day money-back guarantee. Cancel anytime.</div>
+          </div>
+        </div>
+
+      </div><!-- end pricing-cards-col -->
+
+      <!-- RIGHT: Hour bucket -->
+      <div class="bucket-col">
+        <div class="hour-bucket">
+          <div class="hb-eyebrow">Need a one-time project instead?</div>
+          <div class="hb-title">Buy a Bucket<br>of Hours</div>
+          <div class="hb-price">
+            <span class="hb-price-num">$1,400</span>
+            <span class="hb-price-label">one-time</span>
+          </div>
+          <div class="hb-divider"></div>
+          <ul class="hb-list">
+            <li><span class="hb-check">✓</span> 40 hours of dev time</li>
+            <li><span class="hb-check">✓</span> Valid for 6 months</li>
+            <li><span class="hb-cross">✗</span> No PM included</li>
           </ul>
-          <a href="#hire" class="btn-outline">Contact Sales</a>
+          <p class="hb-desc">Perfect for migrations, audits, or <em>"just fix this one thing"</em>.</p>
+          <a href="#hire" class="pcard-btn pcard-btn-solid hb-cta">Buy Hours →</a>
+          <a href="#hire" class="hb-link">Book a call to estimate your project →</a>
         </div>
       </div>
-    </div>
-  </section>
+
+    </div><!-- end pricing-layout -->
+
+  </div>
+</section>
 
   <!-- ── BOTTOM CTA + FORM (dark) ── -->
   <section class="bottom-cta" id="hire">
