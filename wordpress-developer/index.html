@@ -1015,14 +1015,13 @@
 }
 .pcard-badge {
   position: absolute; top: -13px; left: 28px;
-  background: #FAFBED; color: #0052A2;
+  background: rgb(253, 178, 39); color: white;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.68rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.08em;
   padding: 4px 14px; border-radius: 100px;
-  border: 1.5px solid #0052A2;
+  border: 1.5px solid rgb(253, 178, 39);
 }
-.pcard-top { }
 .pcard-name {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.15rem; font-weight: 800;
@@ -1083,7 +1082,21 @@
   color: #1F1F1F; margin-bottom: 14px;
 }
 .pi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; }
-.pi-item { font-size: 0.84rem; color: #494c54; line-height: 1.5; }
+.pi-item {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.84rem;
+  color: #494c54;
+  line-height: 1.5;
+}
+.pi-item::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #22c55e;
+  font-size: 0.95rem;
+}
 
 /* ── HOUR BUCKET (right side) ── */
 .bucket-col { position: sticky; top: 88px; }
@@ -1244,6 +1257,8 @@
       .why-grid,
       .bottom-cta-inner {
         grid-template-columns: 1fr;
+        display: block;
+        margin: 0px auto;
       }
 
       .process-steps {
@@ -1265,11 +1280,12 @@
       }
       .services-grid {
         grid-template-columns: 1fr;
+      }
+      .inline-cta-inner{
+        flex-direction: column;
       } 
-    }
-    @media (min-width: 1200px){
-      .hero{
-        padding
+      .inline-cta-text{
+        width: 100%;
       }
     }
   </style>
@@ -1745,12 +1761,12 @@
         <div class="plans-include">
           <div class="pi-title">✅ All plans include:</div>
           <div class="pi-grid">
-            <div class="pi-item">📋 Unlimited task queue — one active task at a time</div>
-            <div class="pi-item">👨‍💻 Vetted senior WordPress developer + dedicated PM</div>
-            <div class="pi-item">💬 Slack + ClickUp access with daily updates</div>
-            <div class="pi-item">🛠️ New builds, maintenance, speed, security, WooCommerce</div>
-            <div class="pi-item">⚡ 24–48hr turnaround per task</div>
-            <div class="pi-item">🔒 14-day money-back guarantee. Cancel anytime.</div>
+            <div class="pi-item">Unlimited task queue — one active task at a time</div>
+            <div class="pi-item">Vetted senior WordPress developer + dedicated PM</div>
+            <div class="pi-item">Slack + ClickUp access with daily updates</div>
+            <div class="pi-item">New builds, maintenance, speed, security, WooCommerce</div>
+            <div class="pi-item">24–48hr turnaround per task</div>
+            <div class="pi-item">14-day money-back guarantee. Cancel anytime.</div>
           </div>
         </div>
 
