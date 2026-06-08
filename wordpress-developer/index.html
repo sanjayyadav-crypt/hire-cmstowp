@@ -1268,7 +1268,7 @@
           <div class="form-row">
             <div class="form-field">
               <label>First Name</label>
-              <input type="text" placeholder="John" id="drip-first-name" name="fields[first_name]" value="">
+              <input type="text" placeholder="John" id="drip-first-name" name="fields[first_name]" value="" required>
             </div>
             <div class="form-field">
               <label>Last Name</label>
@@ -1277,16 +1277,16 @@
           </div>
           <div class="form-field">
             <label>Business Email</label>
-            <input type="email" placeholder="john@company.com" id="drip-email" name="fields[email]" value="">
+            <input type="email" placeholder="john@company.com" id="drip-email" name="fields[email]" value="" required>
           </div>
           <div class="form-field">
             <label>Phone Number</label>
             <input type="tel" placeholder="+1 (555) 000-0000" id="drip-phone-number" name="fields[phone_number]"
-              value="">
+              value="" required>
           </div>
           <div class="form-field">
             <label>Service Needed</label>
-            <select name="fields[service_needed]">
+            <select name="fields[service_needed]" required>
               <option disabled="" selected="" value="Select a service…">Select a service…</option>
               <option value="Custom WordPress Theme">Custom WordPress Theme</option>
               <option value="Plugin Development">Plugin Development</option>
@@ -1299,7 +1299,7 @@
           <div class="form-field">
             <label>Project Details</label>
             <textarea placeholder="Briefly describe your project…" id="drip-project-details"
-              name="fields[project_details]"></textarea>
+              name="fields[project_details]" required></textarea>
           </div>
 
           <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
@@ -1710,7 +1710,7 @@
           <div class="form-row">
             <div class="form-field">
               <label>First Name</label>
-              <input type="text" placeholder="Jane" id="drip-first-name" name="fields[first_name]" value="">
+              <input type="text" placeholder="Jane" id="drip-first-name" name="fields[first_name]" value="" required>
             </div>
             <div class="form-field">
               <label>Last Name</label>
@@ -1719,16 +1719,16 @@
           </div>
           <div class="form-field">
             <label>Work Email</label>
-            <input type="email" placeholder="jane@company.com" id="drip-email" name="fields[email]" value="">
+            <input type="email" placeholder="jane@company.com" id="drip-email" name="fields[email]" value="" required>
           </div>
           <div class="form-field">
             <label>Company / Website URL</label>
             <input type="text" placeholder="https://yoursite.com" id="drip-website-url" name="fields[website_url]"
-              value="">
+              value="" required>
           </div>
           <div class="form-field">
             <label>Budget Range</label>
-            <select>
+            <select required>
               <option value="Select your budget…" name="fields[budget_range]" disabled selected>Select your budget…
               </option>
               <option value="Under $1,000">Under $1,000</option>
@@ -1741,7 +1741,7 @@
           <div class="form-field">
             <label>Tell Us About Your Project</label>
             <textarea placeholder="What are you trying to build or fix?" type="text"
-              id="drip-tell-us-about-your-project" name="fields[tell_us_about_your_project]"></textarea>
+              id="drip-tell-us-about-your-project" name="fields[tell_us_about_your_project]" required></textarea>
           </div>
 
           <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
