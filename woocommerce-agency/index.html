@@ -125,7 +125,7 @@
       margin: 0 auto;
       padding: 0px 14% 80px;
       display: grid;
-      grid-template-columns: 1fr 50%;
+      grid-template-columns: 1fr 40%;
       gap: 64px;
       align-items: center;
     }
@@ -252,6 +252,11 @@
       font-size: 13px;
       color: var(--muted);
       margin-bottom: 22px
+    }
+    .first-row{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
 
     .hf-group {
@@ -1262,7 +1267,7 @@
     .contact-inner {
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 50%;
+      grid-template-columns: 1fr 40%;
       gap: 64px;
       align-items: start
     }
@@ -1775,13 +1780,15 @@
         data-drip-embedded-form="982483474" id="drip-ef-982483474">
         <h3>Tell us what you need</h3>
         <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
-        <div class="hf-group">
+        <div class="first-row">
+          <div class="hf-group">
           <label>Full Name <span>*</span></label>
           <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
         </div>
         <div class="hf-group">
           <label>Email Address <span>*</span></label>
           <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
+        </div>
         </div>
         <div class="hf-group">
           <label>Store / Company Name</label>
@@ -2508,13 +2515,15 @@
           data-drip-embedded-form="982483474" id="drip-ef-982483474">
           <h3>Tell us what you need</h3>
           <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
-          <div class="hf-group">
+          <div class="first-row">
+            <div class="hf-group">
             <label>Full Name <span>*</span></label>
             <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
           </div>
           <div class="hf-group">
             <label>Email Address <span>*</span></label>
             <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
+          </div>
           </div>
           <div class="hf-group">
             <label>Store / Company Name</label>

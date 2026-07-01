@@ -60,7 +60,7 @@
     }
 
     /* NAV */
-     nav {
+    nav {
       top: 0;
       left: 0;
       right: 0;
@@ -163,7 +163,7 @@
       margin: 0 auto;
       padding: 40px 14%;
       display: grid;
-      grid-template-columns: 1fr 50%;
+      grid-template-columns: 1fr 40%;
       gap: 64px;
       align-items: center
     }
@@ -280,6 +280,11 @@
       box-shadow: 0 8px 48px rgba(0, 82, 162, 0.12);
       border: 1px solid rgba(0, 82, 162, 0.08)
     }
+     .first-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
 
     .hero-form h3 {
       font-size: 17px;
@@ -1150,9 +1155,10 @@
     }
 
     /* ── TESTIMONIALS ── */
-    .testimonials{
+    .testimonials {
       background: var(--cream-card);
     }
+
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1204,11 +1210,12 @@
       font-size: 0.9rem;
       color: var(--white);
     }
-    .author-avatar img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
 
     .author-name {
@@ -1345,7 +1352,7 @@
     .contact-inner {
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 50%;
+      grid-template-columns: 1fr 40%;
       gap: 64px;
       align-items: start
     }
@@ -1429,7 +1436,8 @@
       gap: 48px;
       margin-bottom: 48px
     }
-    .footer-brand .footer-logo img{
+
+    .footer-brand .footer-logo img {
       filter: brightness(0) invert(1);
     }
 
@@ -1522,26 +1530,32 @@
     }
 
     @media(max-width:1024px) {
-       nav{
+      nav {
         padding: 0 32px;
       }
+
       #hero {
         grid-template-columns: 1fr;
         padding: 40px 10px 60px
       }
+
       .hero-wrap {
         padding: 0 24px;
       }
-      .section{
+
+      .section {
         padding: 64px 32px;
       }
+
       #stats {
         padding: 40px 32px;
       }
+
       .hero-form {
         max-width: 480px
       }
 
+     
       #services .svc-grid,
       #whatyouget .get-grid,
       #why .why-grid,
@@ -1640,17 +1654,21 @@
         border-bottom: none
       }
     }
+
     @media(min-width:1025px) and (max-width: 1600px) {
-      nav{
+      nav {
         padding: 0 5%;
       }
+
       #hero {
         padding: 20px 5%;
       }
-      #stats{
+
+      #stats {
         padding: 40px 5%;
       }
-      .section{
+
+      .section {
         padding: 64px 5%;
       }
     }
@@ -1705,16 +1723,19 @@
           </div>
         </div>
       </div>
-      <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post" data-drip-embedded-form="982483474" id="drip-ef-982483474">
+      <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post"
+        data-drip-embedded-form="982483474" id="drip-ef-982483474">
         <h3>Tell us what you need</h3>
         <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
-        <div class="hf-group">
-          <label>Full Name <span>*</span></label>
-          <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
-        </div>
-        <div class="hf-group">
-          <label>Email Address <span>*</span></label>
-          <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
+        <div class="first-row">
+          <div class="hf-group">
+            <label>Full Name <span>*</span></label>
+            <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
+          </div>
+          <div class="hf-group">
+            <label>Email Address <span>*</span></label>
+            <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
+          </div>
         </div>
         <div class="hf-group">
           <label>Store / Company Name</label>
@@ -1722,12 +1743,13 @@
         </div>
         <div class="hf-group">
           <label>Message</label>
-          <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message" name="fields[message]"></textarea>
+          <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message"
+            name="fields[message]"></textarea>
         </div>
 
         <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
-          <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
-          <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
+        <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
+        <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
 
         <input class="hf-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
         <p class="hf-privacy">🔒 Your information is 100% confidential.</p>
@@ -2155,7 +2177,8 @@
               </div>
             </div>
             <div class="result-body">
-              <p>Rebuilt the WooCommerce store for a global tool bag brand, improving site speed, mobile experience, and inventory management while preserving all data and search rankings.</p>
+              <p>Rebuilt the WooCommerce store for a global tool bag brand, improving site speed, mobile experience, and
+                inventory management while preserving all data and search rankings.</p>
             </div>
           </div>
           <div class="result-card">
@@ -2180,7 +2203,8 @@
               </div>
             </div>
             <div class="result-body">
-              <p>Migrated the online store to WooCommerce with a mobile-first redesign, optimized checkout, and seamless data transfer, resulting in better performance and uninterrupted sales.</p>
+              <p>Migrated the online store to WooCommerce with a mobile-first redesign, optimized checkout, and seamless
+                data transfer, resulting in better performance and uninterrupted sales.</p>
 
             </div>
           </div>
@@ -2206,7 +2230,8 @@
               </div>
             </div>
             <div class="result-body">
-              <p>Migrated 12+ publishing websites from Drupal to WordPress with WooCommerce, preserving SEO and improving performance. Delivered custom book management features with zero downtime.</p>
+              <p>Migrated 12+ publishing websites from Drupal to WordPress with WooCommerce, preserving SEO and
+                improving performance. Delivered custom book management features with zero downtime.</p>
             </div>
           </div>
         </div>
@@ -2224,7 +2249,9 @@
       <div class="testimonials-grid">
         <div class="testi-card">
           <div class="stars">★★★★★</div>
-          <blockquote>"Their services are remarkable, extraordinary team of professionals who leave no stone unturned to make customers happy! They have redesigned CFA Society India website and helped us connect investment professionals globally."</blockquote>
+          <blockquote>"Their services are remarkable, extraordinary team of professionals who leave no stone unturned to
+            make customers happy! They have redesigned CFA Society India website and helped us connect investment
+            professionals globally."</blockquote>
           <div class="testi-author">
             <div class="author-avatar" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6)">
               <img src="../assets/parijit-garg.png" alt="PG">
@@ -2237,7 +2264,8 @@
         </div>
         <div class="testi-card">
           <div class="stars">★★★★★</div>
-          <blockquote>"I am 56, working on a E-Learning Plattform. You helped me to transfer the data from Joomla to woocommerce. The best thing is the quick response, when there is a problem."</blockquote>
+          <blockquote>"I am 56, working on a E-Learning Plattform. You helped me to transfer the data from Joomla to
+            woocommerce. The best thing is the quick response, when there is a problem."</blockquote>
           <div class="testi-author">
             <div class="author-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">
               <img src="../assets/avatar-1.jpg" alt="OJ">
@@ -2250,7 +2278,8 @@
         </div>
         <div class="testi-card">
           <div class="stars">★★★★★</div>
-          <blockquote>"The team has been fantastic to work with from design, development to migration. Thank you for making the migration process easy."'ll use them for every project going forward."</blockquote>
+          <blockquote>"The team has been fantastic to work with from design, development to migration. Thank you for
+            making the migration process easy."'ll use them for every project going forward."</blockquote>
           <div class="testi-author">
             <div class="author-avatar" style="background:linear-gradient(135deg,#10b981,#0077cc)">
               <img src="../assets/Eileen Lawrence's profile picture.png" alt="EL">
@@ -2373,33 +2402,37 @@
             </div>
           </div>
         </div>
-        <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post" data-drip-embedded-form="982483474" id="drip-ef-982483474">
-        <h3>Tell us what you need</h3>
-        <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
-        <div class="hf-group">
-          <label>Full Name <span>*</span></label>
-          <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
-        </div>
-        <div class="hf-group">
-          <label>Email Address <span>*</span></label>
-          <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
-        </div>
-        <div class="hf-group">
-          <label>Store / Company Name</label>
-          <input type="text" placeholder="Your Store" id="drip-company" name="fields[company]" value="">
-        </div>
-        <div class="hf-group">
-          <label>Message</label>
-          <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message" name="fields[message]"></textarea>
-        </div>
+        <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post"
+          data-drip-embedded-form="982483474" id="drip-ef-982483474">
+          <h3>Tell us what you need</h3>
+          <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
+          <div class="first-row">
+            <div class="hf-group">
+              <label>Full Name <span>*</span></label>
+              <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
+            </div>
+            <div class="hf-group">
+              <label>Email Address <span>*</span></label>
+              <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
+            </div>
+          </div>
+          <div class="hf-group">
+            <label>Store / Company Name</label>
+            <input type="text" placeholder="Your Store" id="drip-company" name="fields[company]" value="">
+          </div>
+          <div class="hf-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message"
+              name="fields[message]"></textarea>
+          </div>
 
-        <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
+          <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
           <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
           <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
 
-        <input class="hf-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
-        <p class="hf-privacy">🔒 Your information is 100% confidential.</p>
-      </form>
+          <input class="hf-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
+          <p class="hf-privacy">🔒 Your information is 100% confidential.</p>
+        </form>
       </div>
     </section>
   </div>
@@ -2410,7 +2443,7 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div class="footer-brand">
-             <div class="nav-logo footer-logo">
+            <div class="nav-logo footer-logo">
               <a href="#" class="logo">
                 <img src="../assets/cms-logo.png" alt="CmsToWP Logo" style="height:36px;width:auto;display:block;">
               </a>
@@ -2475,7 +2508,7 @@
       obs.observe(el);
     });
 
-     <!-- hidden fields -->
+    <!-- hidden fields -->
 
     document.addEventListener("DOMContentLoaded", function () {
       const params = new URLSearchParams(window.location.search);
