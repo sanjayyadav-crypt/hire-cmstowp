@@ -16,7 +16,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hire WooCommerce Developer — CartCraft</title>
+  <title>Hire WooCommerce Developer — CMSTOWP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="icon" type="image/x-icon" href="../assets/cms-favicon.png">
   <link
@@ -1107,63 +1107,78 @@
       flex-wrap: wrap
     }
 
-    /* TESTIMONIALS */
-    #testimonials .testi-grid {
+    /* ── TESTIMONIALS ── */
+    .testimonials{
+      background: var(--cream-card);
+    }
+    .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 52px;
     }
 
     .testi-card {
-      background: var(--cream-card);
-      border-radius: var(--radius);
-      padding: 32px;
-      border: 1px solid rgba(0, 82, 162, 0.06)
+      background: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: background .2s;
     }
 
-    .testi-stars {
-      color: var(--gold);
-      font-size: 14px;
+    .testi-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .stars {
+      color: #fbbf24;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
       letter-spacing: 2px;
-      margin-bottom: 14px
     }
 
-    .testi-text {
-      font-size: 15px;
+    .testi-card blockquote {
+      color: black;
+      font-size: 0.9rem;
       line-height: 1.7;
-      color: var(--text);
-      margin-bottom: 24px;
-      font-style: italic
+      font-style: italic;
+      margin-bottom: 20px;
     }
 
     .testi-author {
       display: flex;
       align-items: center;
-      gap: 12px
+      gap: 12px;
     }
 
-    .testi-avatar {
-      width: 44px;
-      height: 44px;
+    .author-avatar {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: var(--blue);
-      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
       font-weight: 700;
-      flex-shrink: 0
+      font-size: 0.9rem;
+      color: var(--white);
+    }
+    .author-avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
     }
 
-    .testi-name {
+    .author-name {
+      font-size: 0.88rem;
       font-weight: 700;
-      font-size: 14px
+      color: black;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
-    .testi-role {
-      font-size: 12px;
-      color: var(--muted)
+    .author-role {
+      font-size: 0.78rem;
+      color: rgba(0, 0, 0, 0.7);
     }
 
     /* FAQ */
@@ -1808,7 +1823,7 @@
     <section id="why" class="section">
       <div class="section-inner">
         <div class="section-header">
-          <span class="eyebrow">Why CartCraft</span>
+          <span class="eyebrow">Why CMSTOWP</span>
           <h2>Why Hire a WooCommerce Developer<br><em>Through Us?</em></h2>
           <p class="section-lead">We're not Upwork. Every developer is in-house, senior-level, and has shipped real
             WooCommerce stores — not side projects.</p>
@@ -2145,70 +2160,56 @@
     </section>
   </div>
 
-  <!-- TESTIMONIALS (Cream) -->
-  <div class="bg-cream">
-    <section id="testimonials" class="section">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="eyebrow">Client Stories</span>
-          <h2>What Clients Say About <em>Our Developers</em></h2>
-          <p class="section-lead">Real reviews from store owners who hired WooCommerce developers through CartCraft.</p>
+  <!-- ── TESTIMONIALS (dark) ── -->
+  <section class="section-blue-brand section testimonials">
+    <div class="section-inner">
+      <span class="section-tag">Client Stories</span>
+      <h2 class="section-title">What Clients Say After Hiring Our Woocommerce Developers</h2>
+      <p class="section-sub">Businesses that hired Woocommerce developers through CMSTOWP consistently report faster
+        delivery, higher quality, and better communication than any alternative they'd tried before.</p>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Their services are remarkable, extraordinary team of professionals who leave no stone unturned to make customers happy! They have redesigned CFA Society India website and helped us connect investment professionals globally."</blockquote>
+          <div class="testi-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6)">
+              <img src="../assets/parijit-garg.png" alt="PG">
+            </div>
+            <div>
+              <div class="author-name">Parijat Garg</div>
+              <div class="author-role">Program Director, CFA Institute</div>
+            </div>
+          </div>
         </div>
-        <div class="testi-grid">
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"The developer CartCraft matched us with understood our subscription logic
-              immediately, asked the right questions, and delivered cleaner code than we expected. Best technical hire
-              we've made in years."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">RK</div>
-              <div>
-                <div class="testi-name">Rachel Kim</div>
-                <div class="testi-role">Founder, PeakGear Outdoors</div>
-              </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I am 56, working on a E-Learning Plattform. You helped me to transfer the data from Joomla to woocommerce. The best thing is the quick response, when there is a problem."</blockquote>
+          <div class="testi-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">
+              <img src="../assets/avatar-1.jpg" alt="OJ">
+            </div>
+            <div>
+              <div class="author-name">Mag. Oswald Jäger</div>
+              <div class="author-role">mein-lernen.at</div>
             </div>
           </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"Our entire Magento store was migrated without a single hiccup — 12,000 products, all
-              customer data, no Google rankings affected. I was braced for problems. There were none."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">SL</div>
-              <div>
-                <div class="testi-name">Sophie Laurent</div>
-                <div class="testi-role">Head of eCommerce, LuxeThread</div>
-              </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"The team has been fantastic to work with from design, development to migration. Thank you for making the migration process easy."'ll use them for every project going forward."</blockquote>
+          <div class="testi-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#10b981,#0077cc)">
+              <img src="../assets/Eileen Lawrence's profile picture.png" alt="EL">
             </div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"The matching process was fast and accurate. Within 24 hours I had a developer on a
-              call who already understood our use case. That never happens with freelance platforms. This is a
-              completely different experience."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">DM</div>
-              <div>
-                <div class="testi-name">Daniel Mills</div>
-                <div class="testi-role">CTO, BrightBasket Foods</div>
-              </div>
-            </div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"Load times went from 7 seconds to under 2. The uplift in conversions was immediate.
-              CartCraft doesn't just build — they think about your business outcomes. That's rare."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">JB</div>
-              <div>
-                <div class="testi-name">James Brennan</div>
-                <div class="testi-role">Director, NovaHealth</div>
-              </div>
+            <div>
+              <div class="author-name">Eileen Lawrence</div>
+              <div class="author-role">Macmillan Publishers</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <!-- FAQ (White) -->
   <div class="bg-white">
@@ -2221,7 +2222,7 @@
             <div class="faq-item open">
               <button class="faq-btn" onclick="toggleFaq(this)">Is this a job board or recruitment service?<span
                   class="faq-icon">+</span></button>
-              <div class="faq-answer">Neither. CartCraft is a WooCommerce development agency. All developers are our own
+              <div class="faq-answer">Neither. CMSTOWP is a WooCommerce development agency. All developers are our own
                 full-time in-house employees. You engage us as an agency, and we assign the right developer to your
                 project — so you get agency accountability and quality, not freelance uncertainty.</div>
             </div>
@@ -2383,7 +2384,7 @@
           </div>
           <div class="footer-col">
             <h4>Company</h4>
-            <a href="#">About CartCraft</a>
+            <a href="#">About CMSTOWP</a>
             <a href="#">Portfolio</a>
             <a href="#">Blog</a>
             <a href="#">Privacy Policy</a>
@@ -2391,7 +2392,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2026 CartCraft. All rights reserved. A WooCommerce Partner Agency.</p>
+          <p>© 2026 CMSTOWP. All rights reserved. A WooCommerce Partner Agency.</p>
           <div class="footer-badges">
             <span class="f-badge">WooCommerce Partner</span>
             <span class="f-badge">WordPress Expert</span>
