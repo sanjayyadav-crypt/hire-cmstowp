@@ -1021,63 +1021,80 @@
       flex-shrink: 0
     }
 
-    /* TESTIMONIALS */
-    #testimonials .testi-grid {
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      background: var(--cream-card);
+    }
+
+    .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 52px;
     }
 
     .testi-card {
-      background: var(--cream-card);
-      border-radius: var(--radius);
-      padding: 32px;
-      border: 1px solid rgba(0, 82, 162, 0.06)
+      background: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: background .2s;
     }
 
-    .testi-stars {
-      color: var(--gold);
-      font-size: 14px;
+    .testi-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .stars {
+      color: #fbbf24;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
       letter-spacing: 2px;
-      margin-bottom: 14px
     }
 
-    .testi-text {
-      font-size: 15px;
+    .testi-card blockquote {
+      color: black;
+      font-size: 0.9rem;
       line-height: 1.7;
-      color: var(--text);
-      margin-bottom: 24px;
-      font-style: italic
+      font-style: italic;
+      margin-bottom: 20px;
     }
 
     .testi-author {
       display: flex;
       align-items: center;
-      gap: 12px
+      gap: 12px;
     }
 
-    .testi-avatar {
-      width: 44px;
-      height: 44px;
+    .author-avatar {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: var(--purple);
-      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
       font-weight: 700;
-      flex-shrink: 0
+      font-size: 0.9rem;
+      color: var(--white);
     }
 
-    .testi-name {
-      font-weight: 700;
-      font-size: 14px
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
 
-    .testi-role {
-      font-size: 12px;
-      color: var(--muted)
+    .author-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: black;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .author-role {
+      font-size: 0.78rem;
+      color: rgba(0, 0, 0, 0.7);
     }
 
     /* FAQ */
@@ -1290,9 +1307,11 @@
       gap: 48px;
       margin-bottom: 48px
     }
-    .footer-brand .footer-logo img{
-      filter: brightness(0) invert(1);  
+
+    .footer-brand .footer-logo img {
+      filter: brightness(0) invert(1);
     }
+
     .footer-brand p {
       font-size: 14px;
       line-height: 1.7;
@@ -1504,25 +1523,31 @@
     }
 
     @media(max-width:1024px) {
-      nav{
+      nav {
         padding: 0 32px;
       }
+
       #hero {
         grid-template-columns: 1fr;
         padding: 40px 10px 60px
       }
+
       .hero-wrap {
         padding: 0 24px;
       }
+
       .hero-form {
         max-width: 480px
       }
-      .stats-inner{
+
+      .stats-inner {
         padding: 0 24px;
       }
+
       .section {
         padding: 80px 32px !important;
       }
+
       #services .services-grid,
       #results .results-grid {
         grid-template-columns: 1fr 1fr
@@ -1562,6 +1587,7 @@
       nav {
         padding: 0 20px;
       }
+
       .hero-wrap {
         padding: 0 20px;
       }
@@ -1682,7 +1708,8 @@
           </div>
         </div>
       </div>
-      <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post" data-drip-embedded-form="982483474" id="drip-ef-982483474">
+      <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post"
+        data-drip-embedded-form="982483474" id="drip-ef-982483474">
         <h3>Tell us what you need</h3>
         <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
         <div class="hf-group">
@@ -1695,16 +1722,17 @@
         </div>
         <div class="hf-group">
           <label>Store / Company Name</label>
-          <input type="text" placeholder="Your Store" id="drip-company-name" name="fields[company_name]" value="">
+          <input type="text" placeholder="Your Store" id="drip-company" name="fields[company]" value="">
         </div>
         <div class="hf-group">
           <label>Message</label>
-          <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message" name="fields[message]"></textarea>
+          <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message"
+            name="fields[message]"></textarea>
         </div>
 
         <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
-          <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
-          <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
+        <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
+        <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
 
         <input class="hf-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
         <p class="hf-privacy">🔒 Your information is 100% confidential.</p>
@@ -2250,69 +2278,60 @@
     </section>
   </div>
 
-  <!-- TESTIMONIALS (White) -->
-  <div class="bg-white">
-    <section id="testimonials" class="section">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="eyebrow">Client Stories</span>
-          <h2>What Our Clients Say About Us</h2>
-          <p class="section-lead">Real reviews from merchants who hired WooCommerce developers through CMSTOWP.</p>
+  <!-- ── TESTIMONIALS (dark) ── -->
+  <section class="section-blue-brand section testimonials">
+    <div class="section-inner">
+      <span class="section-tag">Client Stories</span>
+      <h2 class="section-title">What Clients Say After Hiring Our Woocommerce Developers</h2>
+      <p class="section-sub">Businesses that hired Woocommerce developers through CMSTOWP consistently report faster
+        delivery, higher quality, and better communication than any alternative they'd tried before.</p>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Their services are remarkable, extraordinary team of professionals who leave no stone unturned to
+            make customers happy! They have redesigned CFA Society India website and helped us connect investment
+            professionals globally."</blockquote>
+          <div class="testi-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6)">
+              <img src="../assets/parijit-garg.png" alt="PG">
+            </div>
+            <div>
+              <div class="author-name">Parijat Garg</div>
+              <div class="author-role">Program Director, CFA Institute</div>
+            </div>
+          </div>
         </div>
-        <div class="testi-grid">
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"CMSTOWP migrated our entire Shopify store to WooCommerce without losing a single
-              product, customer record, or Google ranking. The team was communicative, fast, and genuinely cared about
-              the outcome."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">RK</div>
-              <div>
-                <div class="testi-name">Rachel Kim</div>
-                <div class="testi-role">Founder, PeakGear Outdoors</div>
-              </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I am 56, working on a E-Learning Plattform. You helped me to transfer the data from Joomla to
+            woocommerce. The best thing is the quick response, when there is a problem."</blockquote>
+          <div class="testi-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">
+              <img src="../assets/avatar-1.jpg" alt="OJ">
+            </div>
+            <div>
+              <div class="author-name">Mag. Oswald Jäger</div>
+              <div class="author-role">mein-lernen.at</div>
             </div>
           </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"The custom subscription plugin they built for us is exactly what we needed — and they
-              delivered on time and on budget. Our subscription revenue is up 92% since launch. Incredible team."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">DM</div>
-              <div>
-                <div class="testi-name">David Mills</div>
-                <div class="testi-role">CEO, NovaHealth Supplements</div>
-              </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"The team has been fantastic to work with from design, development to migration. Thank you for
+            making the migration process easy."'ll use them for every project going forward."</blockquote>
+          <div class="testi-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#10b981,#0077cc)">
+              <img src="../assets/Eileen Lawrence's profile picture.png" alt="EL">
             </div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"After two failed Magento migrations with other agencies, CMSTOWP got it right first
-              time. 12,000 SKUs, zero data loss, zero SEO impact. I wish I'd found them sooner."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">SL</div>
-              <div>
-                <div class="testi-name">Sophie Laurent</div>
-                <div class="testi-role">Head of eCommerce, LuxeThread</div>
-              </div>
-            </div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"The checkout redesign alone paid for the entire project within 6 weeks. CMSTOWP
-              doesn't just build — they think about your business. That's rare in a development agency."</p>
-            <div class="testi-author">
-              <div class="testi-avatar">JB</div>
-              <div>
-                <div class="testi-name">James Brennan</div>
-                <div class="testi-role">Director, BrightBasket Foods</div>
-              </div>
+            <div>
+              <div class="author-name">Eileen Lawrence</div>
+              <div class="author-role">Macmillan Publishers</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <!-- FAQ (Cream) -->
   <div class="bg-cream">
@@ -2424,33 +2443,35 @@
             </div>
           </div>
         </div>
-        <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post" data-drip-embedded-form="982483474" id="drip-ef-982483474">
-        <h3>Tell us what you need</h3>
-        <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
-        <div class="hf-group">
-          <label>Full Name <span>*</span></label>
-          <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
-        </div>
-        <div class="hf-group">
-          <label>Email Address <span>*</span></label>
-          <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
-        </div>
-        <div class="hf-group">
-          <label>Store / Company Name</label>
-          <input type="text" placeholder="Your Store" id="drip-company-name" name="fields[company_name]" value="">
-        </div>
-        <div class="hf-group">
-          <label>Message</label>
-          <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message" name="fields[message]"></textarea>
-        </div>
+        <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post"
+          data-drip-embedded-form="982483474" id="drip-ef-982483474">
+          <h3>Tell us what you need</h3>
+          <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
+          <div class="hf-group">
+            <label>Full Name <span>*</span></label>
+            <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
+          </div>
+          <div class="hf-group">
+            <label>Email Address <span>*</span></label>
+            <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
+          </div>
+          <div class="hf-group">
+            <label>Store / Company Name</label>
+            <input type="text" placeholder="Your Store" id="drip-company" name="fields[company]" value="">
+          </div>
+          <div class="hf-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message"
+              name="fields[message]"></textarea>
+          </div>
 
-        <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
+          <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
           <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
           <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
 
-        <input class="hf-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
-        <p class="hf-privacy">🔒 Your information is 100% confidential.</p>
-      </form>
+          <input class="hf-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
+          <p class="hf-privacy">🔒 Your information is 100% confidential.</p>
+        </form>
       </div>
     </section>
   </div>
@@ -2525,7 +2546,7 @@
       obs.observe(el);
     });
 
-     <!-- hidden fields -->
+    <!-- hidden fields -->
 
     document.addEventListener("DOMContentLoaded", function () {
       const params = new URLSearchParams(window.location.search);

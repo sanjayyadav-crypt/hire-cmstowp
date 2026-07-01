@@ -1662,7 +1662,7 @@
         </div>
         <div class="hf-group">
           <label>Store / Company Name</label>
-          <input type="text" placeholder="Your Store" id="drip-company-name" name="fields[company_name]" value="">
+          <input type="text" placeholder="Your Store" id="drip-company" name="fields[company]" value="">
         </div>
         <div class="hf-group">
           <label>Message</label>
@@ -2332,7 +2332,7 @@
         </div>
         <div class="hf-group">
           <label>Store / Company Name</label>
-          <input type="text" placeholder="Your Store" id="drip-company-name" name="fields[company_name]" value="">
+          <input type="text" placeholder="Your Store" id="drip-company" name="fields[company]" value="">
         </div>
         <div class="hf-group">
           <label>Message</label>
@@ -2419,6 +2419,30 @@
       el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.45s ease,transform 0.45s ease';
       obs.observe(el);
+    });
+
+     <!-- hidden fields -->
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+
+      // UTM Fields
+      const utmSource = params.get("utm_source") || "";
+      const utmCampaign = params.get("utm_campaign") || "";
+
+      // Landing Page
+      const landingPage = window.location.href;
+
+      // Set UTM + landing page fields right away for top form
+      document.getElementById("hidden-source").value = utmSource;
+      document.getElementById("hidden-campaign").value = utmCampaign;
+      document.getElementById("hidden-landing-page").value = landingPage;
+
+      // Set UTM + landing page fields right away for bottom form
+      document.getElementById("hidden-source-2").value = utmSource;
+      document.getElementById("hidden-campaign-2").value = utmCampaign;
+      document.getElementById("hidden-landing-page-2").value = landingPage;
+
     });
   </script>
 </body>
