@@ -1,0 +1,2554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K3BGSP');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CartCraft — WooCommerce Development Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/x-icon" href="../assets/cms-favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --cream: #FAFBED;
+      --cream-card: #F0F1DC;
+      --white: #ffffff;
+      --purple: #0052A2;
+      --purple-dark: #003D7A;
+      --purple-light: #E8F0FA;
+      --orange: #0052A2;
+      --navy: #0A1628;
+      --text: #1A1A2E;
+      --muted: #6B7280;
+      --gold: #F59E0B;
+      --green: #16A34A;
+      --ff-display: 'Fraunces', serif;
+      --ff-body: 'Plus Jakarta Sans', sans-serif;
+      --radius: 10px;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: var(--ff-body);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden
+    }
+
+    /* NAV */
+    nav {
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: #FAFBED;
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0, 82, 162, 0.12);
+      padding: 0 14%;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .2s
+    }
+
+    .nav-links a:hover {
+      color: var(--purple)
+    }
+
+    .nav-cta {
+      background: var(--purple);
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 700 !important;
+      transition: opacity .2s !important;
+      box-shadow: 0 4px 14px rgba(0, 82, 162, 0.3);
+    }
+
+    .nav-cta:hover {
+      opacity: .9 !important
+    }
+
+    /* HERO */
+    .hero-wrap {
+      background: var(--cream);
+      padding-top: 68px
+    }
+
+    #hero {
+      margin: 0 auto;
+      padding: 0px 14% 80px;
+      display: grid;
+      grid-template-columns: 1fr 50%;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--purple-light);
+      color: var(--purple);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid rgba(0, 82, 162, 0.2);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(36px, 4.5vw, 62px);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--purple)
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 520px
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 36px
+    }
+
+    .btn-primary {
+      background: var(--purple);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all .2s;
+      box-shadow: 0 4px 20px rgba(0, 82, 162, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0, 82, 162, 0.4)
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid rgba(26, 18, 40, 0.18);
+      transition: all .2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--purple);
+      color: var(--purple)
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .trust-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted)
+    }
+
+    .trust-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0
+    }
+
+    /* HERO FORM */
+    .hero-form {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 8px 48px rgba(0, 82, 162, 0.14);
+      border: 1px solid rgba(0, 82, 162, 0.1);
+    }
+
+    .hero-form h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px
+    }
+
+    .hero-form p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 22px
+    }
+
+    .hf-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 14px
+    }
+
+    .hf-group label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: .3px
+    }
+
+    .hf-group label span {
+      color: #e53e3e
+    }
+
+    .hf-group input,
+    .hf-group select,
+    .hf-group textarea {
+      padding: 11px 14px;
+      border-radius: 8px;
+      border: 1.5px solid rgba(0, 82, 162, 0.15);
+      background: var(--cream);
+      font-size: 14px;
+      font-family: var(--ff-body);
+      color: var(--text);
+      transition: border-color .2s;
+      outline: none;
+    }
+
+    .hf-group input:focus,
+    .hf-group select:focus,
+    .hf-group textarea:focus {
+      border-color: var(--purple);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(0, 82, 162, 0.08);
+    }
+
+    .hf-group textarea {
+      resize: vertical;
+      min-height: 80px
+    }
+
+    .hf-submit {
+      width: 100%;
+      padding: 13px;
+      background: var(--purple);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: var(--ff-body);
+      transition: all .2s;
+      margin-top: 4px;
+      box-shadow: 0 4px 16px rgba(0, 82, 162, 0.3);
+    }
+
+    .hf-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(0, 82, 162, 0.4)
+    }
+
+    .hf-privacy {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 10px
+    }
+
+    /* BG WRAPPERS */
+    .bg-white {
+      background: var(--white)
+    }
+
+    .bg-cream {
+      background: var(--cream)
+    }
+
+    .bg-purple {
+      background: var(--purple)
+    }
+
+    .bg-navy {
+      background: var(--navy)
+    }
+
+    /* STATS */
+    #stats {
+      padding: 52px 0;
+    }
+
+    .stats-inner {
+      padding: 32px 14%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .stat-item {
+      flex: 1;
+      min-width: 140px;
+      text-align: center;
+      padding: 12px 20px;
+      border-right: 1px solid rgba(255, 255, 255, 0.15)
+    }
+
+    .stat-item:last-child {
+      border-right: none
+    }
+
+    .stat-num {
+      font-family: var(--ff-display);
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 6px
+    }
+
+    .stat-num em {
+      font-style: italic
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.72);
+      font-weight: 500
+    }
+
+    /* LOGOS */
+    #logos {
+      padding: 48px 48px
+    }
+
+    .logos-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center
+    }
+
+    .logos-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      display: block
+    }
+
+    .logos-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap
+    }
+
+    .logo-pill {
+      font-family: var(--ff-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: #C4C8D4;
+      letter-spacing: -.3px;
+      transition: color .2s
+    }
+
+    .logo-pill:hover {
+      color: var(--muted)
+    }
+
+    .logo-pill em {
+      font-style: italic
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 96px 14% !important;
+    }
+
+    .section-inner {
+      margin: 0 auto
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--purple);
+      margin-bottom: 14px;
+      display: block
+    }
+
+    .bg-purple .eyebrow {
+      color: rgba(255, 255, 255, 0.6)
+    }
+
+    h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(30px, 3.5vw, 48px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -.5px;
+      margin-bottom: 16px
+    }
+
+    h2 em {
+      font-style: italic;
+      color: var(--purple)
+    }
+
+    .bg-purple h2 {
+      color: #fff
+    }
+
+    .bg-purple h2 em {
+      color: var(--gold)
+    }
+
+    .section-lead {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 580px;
+      line-height: 1.7
+    }
+
+    .bg-purple .section-lead {
+      color: rgba(255, 255, 255, 0.75)
+    }
+
+    .section-header {
+      margin-bottom: 56px
+    }
+
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 56px
+    }
+
+    /* SERVICES */
+    #services .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .svc-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      border: 1px solid rgba(0, 82, 162, 0.07);
+      transition: all .25s;
+    }
+
+    .svc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 82, 162, 0.12);
+      border-color: rgba(0, 82, 162, 0.2)
+    }
+
+    .svc-icon {
+      font-size: 28px;
+      margin-bottom: 18px;
+      display: block
+    }
+
+    .svc-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px
+    }
+
+    .svc-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 16px
+    }
+
+    .svc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple);
+      background: var(--purple-light);
+      padding: 3px 10px;
+      border-radius: 20px
+    }
+
+    .svc-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(0, 82, 162, 0.08)
+    }
+
+    .svc-footer a {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--purple);
+      text-decoration: none
+    }
+
+    .svc-footer a:hover {
+      text-decoration: underline
+    }
+
+    /* PROCESS */
+    #process .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px
+    }
+
+    .step-card {
+      background: rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.14)
+    }
+
+    .step-num {
+      font-family: var(--ff-display);
+      font-size: 36px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.25);
+      font-style: italic;
+      line-height: 1;
+      margin-bottom: 16px
+    }
+
+    .step-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px
+    }
+
+    .step-card p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.68);
+      line-height: 1.6
+    }
+
+    /* WHY US */
+    #why .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .why-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 1px solid rgba(0, 82, 162, 0.07)
+    }
+
+    .why-icon {
+      font-size: 26px;
+      margin-bottom: 14px;
+      display: block
+    }
+
+    .why-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px
+    }
+
+    .why-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65
+    }
+
+    .why-cta {
+      margin-top: 48px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    /* EXPERTISE */
+    #expertise .exp-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start
+    }
+
+    .exp-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .exp-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid rgba(0, 82, 162, 0.07)
+    }
+
+    .exp-card .exp-icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+      display: block
+    }
+
+    .exp-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px
+    }
+
+    .exp-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6
+    }
+
+    .exp-skills {
+      margin-top: 0
+    }
+
+    .skill-row {
+      margin-bottom: 18px
+    }
+
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px
+    }
+
+    .skill-pct {
+      color: var(--purple);
+      font-weight: 700
+    }
+
+    .skill-bar {
+      height: 6px;
+      background: rgba(0, 82, 162, 0.12);
+      border-radius: 3px;
+      overflow: hidden
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: var(--purple);
+      border-radius: 3px
+    }
+
+    .exp-bottom {
+      margin-top: 24px;
+      padding: 20px;
+      background: var(--purple);
+      border-radius: var(--radius);
+      color: #fff;
+      text-align: center
+    }
+
+    .exp-bottom .big {
+      font-family: var(--ff-display);
+      font-size: 36px;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 4px
+    }
+
+    .exp-bottom small {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.75)
+    }
+
+    /* CTA BAND */
+    #cta-band {
+      padding: 80px 14%;
+    }
+
+    .cta-inner {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center
+    }
+
+    .cta-left .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .cta-checks {
+      margin: 24px 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .cta-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.85)
+    }
+
+    .cta-check::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .btn-white {
+      background: #fff;
+      color: var(--purple);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .2s
+    }
+
+    .btn-white:hover {
+      background: var(--cream);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18)
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      transition: all .2s
+    }
+
+    .btn-outline-white:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.08)
+    }
+
+    .cta-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .cta-stat {
+      background: rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      text-align: center
+    }
+
+    .cta-stat .num {
+      font-family: var(--ff-display);
+      font-size: 34px;
+      font-weight: 600;
+      color: #fff;
+      font-style: italic;
+      line-height: 1;
+      margin-bottom: 4px
+    }
+
+    .cta-stat .lbl {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.65)
+    }
+
+    .cta-badges {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .cta-badge-item {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.75);
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    /* RESULTS */
+    #results .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px
+    }
+
+    .result-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 82, 162, 0.08);
+      transition: all .25s
+    }
+
+    .result-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 82, 162, 0.12)
+    }
+
+    .result-header {
+      background: #0052A2;
+      padding: 20px 24px
+    }
+
+    .result-client {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 500
+    }
+
+    .result-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 4px
+    }
+
+    .result-metrics {
+      display: flex;
+      border-bottom: 1px solid rgba(0, 82, 162, 0.07)
+    }
+
+    .metric {
+      flex: 1;
+      padding: 20px 14px;
+      text-align: center;
+      border-right: 1px solid rgba(0, 82, 162, 0.07)
+    }
+
+    .metric:last-child {
+      border-right: none
+    }
+
+    .metric-val {
+      font-family: var(--ff-display);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--purple);
+      font-style: italic;
+      line-height: 1;
+      margin-bottom: 4px
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500
+    }
+
+    .result-body {
+      padding: 20px 24px
+    }
+
+    .result-body p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 14px
+    }
+
+    .result-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap
+    }
+
+    /* TECH */
+    #tech .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px
+    }
+
+    .tech-group {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid rgba(0, 82, 162, 0.07)
+    }
+
+    .tech-group h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px
+    }
+
+    .tech-items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .tech-item {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .tech-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--purple);
+      flex-shrink: 0
+    }
+
+    /* TESTIMONIALS */
+    #testimonials .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px
+    }
+
+    .testi-card {
+      background: var(--cream-card);
+      border-radius: var(--radius);
+      padding: 32px;
+      border: 1px solid rgba(0, 82, 162, 0.06)
+    }
+
+    .testi-stars {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 14px
+    }
+
+    .testi-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 24px;
+      font-style: italic
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--purple);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0
+    }
+
+    .testi-name {
+      font-weight: 700;
+      font-size: 14px
+    }
+
+    .testi-role {
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    /* FAQ */
+    #faq .faq-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid rgba(0, 82, 162, 0.08);
+      overflow: hidden
+    }
+
+    .faq-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 22px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+      font-family: var(--ff-body)
+    }
+
+    .faq-btn:hover {
+      color: var(--purple)
+    }
+
+    .faq-icon {
+      font-size: 20px;
+      color: var(--purple);
+      flex-shrink: 0;
+      transition: transform .3s;
+      line-height: 1
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg)
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 22px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7
+    }
+
+    .faq-item.open .faq-answer {
+      display: block
+    }
+
+    .faq-aside {
+      position: sticky;
+      top: 100px
+    }
+
+    .faq-aside-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 36px;
+      border: 1px solid rgba(0, 82, 162, 0.1);
+      box-shadow: 0 4px 24px rgba(0, 82, 162, 0.08)
+    }
+
+    .faq-aside-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px
+    }
+
+    .faq-aside-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.65
+    }
+
+    .faq-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px
+    }
+
+    .faq-perk {
+      font-size: 14px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .faq-perk::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 800;
+      flex-shrink: 0
+    }
+
+    /* CONTACT */
+    #contact {
+      padding: 96px 14%;
+    }
+
+    .contact-inner {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 50%;
+      gap: 64px;
+      align-items: start
+    }
+
+    .contact-left .section-lead {
+      margin-bottom: 32px
+    }
+
+    .contact-checks {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px
+    }
+
+    .contact-check {
+      font-size: 15px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .contact-check::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 800;
+      flex-shrink: 0
+    }
+
+    .contact-mini-stats {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap
+    }
+
+    .mini-stat .num {
+      font-family: var(--ff-display);
+      font-size: 28px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--purple);
+      line-height: 1
+    }
+
+    .mini-stat .lbl {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px
+    }
+
+    .contact-form {
+      background: var(--cream);
+      border-radius: 14px;
+      padding: 36px;
+      border: 1px solid rgba(0, 82, 162, 0.08)
+    }
+
+    .contact-form h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px
+    }
+
+    .contact-form p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.55);
+      padding: 72px 14% 40px
+    }
+
+    .footer-inner {
+      margin: 0 auto
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px
+    }
+    .footer-brand .footer-logo img{
+      filter: brightness(0) invert(1);  
+    }
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 280px;
+      margin-top: 14px
+    }
+
+    .footer-brand .contact-info {
+      margin-top: 16px;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .footer-brand .contact-info a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    .footer-brand .contact-info a:hover {
+      color: #fff
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px
+    }
+
+    .footer-col a {
+      display: block;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: color .2s
+    }
+
+    .footer-col a:hover {
+      color: #fff
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap
+    }
+
+    .footer-bottom p {
+      font-size: 13px
+    }
+
+    .footer-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .f-badge {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5)
+    }
+
+    .footer-logo {
+      font-family: var(--ff-display);
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff
+    }
+
+    .footer-logo em {
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.4)
+    }
+
+    /* PRICING */
+    #pricing .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px
+    }
+
+    .pricing-card {
+      background: var(--cream);
+      border-radius: 14px;
+      padding: 40px 32px;
+      border: 1px solid rgba(0, 82, 162, 0.08);
+      position: relative;
+      transition: all .25s
+    }
+
+    .pricing-card:hover {
+      box-shadow: 0 12px 40px rgba(0, 82, 162, 0.1)
+    }
+
+    .pricing-card.popular {
+      background: #0052A2;
+      border-color: transparent
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #1A1A2E;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 16px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      white-space: nowrap
+    }
+
+    .pricing-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px
+    }
+
+    .pricing-card.popular h3,
+    .pricing-card.popular p,
+    .pricing-card.popular .price-desc {
+      color: #fff
+    }
+
+    .price {
+      font-family: var(--ff-display);
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1;
+      margin: 20px 0 4px
+    }
+
+    .price-desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 28px
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .pricing-features li {
+      font-size: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px
+    }
+
+    .pricing-features li::before {
+      content: '✓';
+      color: var(--purple);
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px
+    }
+
+    .pricing-card.popular .pricing-features li {
+      color: rgba(255, 255, 255, 0.9)
+    }
+
+    .pricing-card.popular .pricing-features li::before {
+      color: var(--gold)
+    }
+
+    .pricing-cta {
+      display: block;
+      text-align: center;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .2s;
+      background: var(--purple);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(0, 82, 162, 0.25)
+    }
+
+    .pricing-card.popular .pricing-cta {
+      background: #fff;
+      color: var(--purple)
+    }
+
+    .pricing-cta:hover {
+      transform: translateY(-1px);
+      opacity: .92
+    }
+
+    @media(max-width:1024px) {
+      nav{
+        padding: 0 32px;
+      }
+      #hero {
+        grid-template-columns: 1fr;
+        padding: 40px 10px 60px
+      }
+      .hero-wrap {
+        padding: 0 24px;
+      }
+      .hero-form {
+        max-width: 480px
+      }
+      .stats-inner{
+        padding: 0 24px;
+      }
+      .section {
+        padding: 80px 32px !important;
+      }
+      #services .services-grid,
+      #results .results-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      #process .process-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      #tech .tech-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .cta-inner,
+      .contact-inner {
+        grid-template-columns: 1fr
+      }
+
+      #faq .faq-layout {
+        grid-template-columns: 1fr
+      }
+
+      .faq-aside {
+        position: static
+      }
+
+      #expertise .exp-inner {
+        grid-template-columns: 1fr
+      }
+
+      #pricing .pricing-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:768px) {
+      nav {
+        padding: 0 20px;
+      }
+      .hero-wrap {
+        padding: 0 20px;
+      }
+
+      .nav-links>a:not(.nav-cta) {
+        display: none
+      }
+
+      .section {
+        padding: 64px 10px;
+      }
+
+      #stats {
+        padding: 40px 20px
+      }
+
+      #logos {
+        padding: 36px 20px
+      }
+
+      #contact {
+        padding: 64px 20px
+      }
+
+      footer {
+        padding: 56px 20px 32px
+      }
+
+      #services .services-grid,
+      #results .results-grid,
+      #why .why-grid {
+        grid-template-columns: 1fr
+      }
+
+      #process .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .exp-cards {
+        grid-template-columns: 1fr
+      }
+
+      .testi-grid {
+        grid-template-columns: 1fr !important
+      }
+
+      #tech .tech-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .footer-brand {
+        grid-column: 1/-1
+      }
+
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 18px
+      }
+
+      .stat-item:last-child {
+        border-bottom: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3BGSP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="#" class="logo">
+        <img src="../assets/cms-logo.png" alt="CmsToWP Logo" style="height:36px;width:auto;display:block;">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#results">Results</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- HERO (Cream) -->
+  <div class="hero-wrap">
+    <section id="hero">
+      <div class="hero-left">
+        <div class="hero-badge">✦ WooCommerce Development Agency</div>
+        <h1>The WooCommerce Agency Behind <em>800+ High-Revenue Stores</em></h1>
+        <p class="hero-sub">CartCraft is a full-service WooCommerce development agency trusted by eCommerce brands
+          worldwide. From custom store builds to complex migrations, plugin development, and ongoing growth — we do it
+          all.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">🚀 Start Your Project</a>
+          <a href="#results" class="btn-ghost">See Our Work</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-row">
+            <div class="trust-dot"></div>Official WooCommerce & WordPress Partner
+          </div>
+          <div class="trust-row">
+            <div class="trust-dot"></div>80+ In-House Developers & Designers
+          </div>
+          <div class="trust-row">
+            <div class="trust-dot"></div>98% Client Satisfaction — Guaranteed
+          </div>
+        </div>
+      </div>
+      <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post" data-drip-embedded-form="982483474" id="drip-ef-982483474">
+        <h3>Tell us what you need</h3>
+        <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
+        <div class="hf-group">
+          <label>Full Name <span>*</span></label>
+          <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
+        </div>
+        <div class="hf-group">
+          <label>Email Address <span>*</span></label>
+          <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
+        </div>
+        <div class="hf-group">
+          <label>Store / Company Name</label>
+          <input type="text" placeholder="Your Store" id="drip-company-name" name="fields[company_name]" value="">
+        </div>
+        <div class="hf-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message" name="fields[message]"></textarea>
+        </div>
+
+        <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
+          <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
+          <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
+
+        <input class="hf-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
+        <p class="hf-privacy">🔒 Your information is 100% confidential.</p>
+      </form>
+    </section>
+  </div>
+
+  <!-- STATS (Purple) -->
+  <div class="bg-purple">
+    <div id="stats">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <div class="stat-num"><em>800+</em></div>
+          <div class="stat-label">Stores Delivered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">80+</div>
+          <div class="stat-label">Expert Developers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><em>120+</em></div>
+          <div class="stat-label">Custom Plugins Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><em>10+</em></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- WHAT WE DO (Cream) -->
+  <div class="bg-cream">
+    <section id="services" class="section">
+      <div class="section-inner">
+        <div class="section-header-row">
+          <div>
+            <span class="eyebrow">What We Do</span>
+            <h2>Full-Service WooCommerce<br>Development Agency</h2>
+            <p class="section-lead">From new store launches to enterprise WooCommerce solutions — our agency covers
+              every aspect of your eCommerce journey.</p>
+          </div>
+        </div>
+        <div class="services-grid">
+          <div class="svc-card">
+            <span class="svc-icon">🏗️</span>
+            <h3>Custom WooCommerce Store Development</h3>
+            <p>We design and build WooCommerce stores from scratch — tailored to your brand, optimized for conversions,
+              and engineered to scale from day one.</p>
+            <div class="svc-tags"><span class="tag">Theme Dev</span><span class="tag">UX Design</span><span
+                class="tag">Launch</span></div>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon">🔄</span>
+            <h3>Platform Migration to WooCommerce</h3>
+            <p>Migrate from Shopify, Magento, BigCommerce, PrestaShop, or any platform to WooCommerce — with zero data
+              loss and complete SEO preservation.</p>
+            <div class="svc-tags"><span class="tag">Shopify</span><span class="tag">Magento</span><span
+                class="tag">BigCommerce</span></div>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon">🎨</span>
+            <h3>Custom WooCommerce Theme Development</h3>
+            <p>Pixel-perfect custom themes built for WooCommerce — unique designs with optimized product pages, checkout
+              flows, and mobile-first UX.</p>
+            <div class="svc-tags"><span class="tag">PHP</span><span class="tag">Elementor</span><span class="tag">Custom
+                Blocks</span></div>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon">🔌</span>
+            <h3>Custom Plugin Development</h3>
+            <p>Bespoke WooCommerce plugins — from product configurators and subscription engines to loyalty programs and
+              advanced inventory tools.</p>
+            <div class="svc-tags"><span class="tag">PHP</span><span class="tag">REST API</span><span
+                class="tag">Hooks</span></div>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon">⚡</span>
+            <h3>Performance & Conversion Optimization</h3>
+            <p>Core Web Vitals tuning, checkout optimization, A/B testing setup, and page speed improvements that
+              directly increase your conversion rate.</p>
+            <div class="svc-tags"><span class="tag">Core Web Vitals</span><span class="tag">CRO</span><span
+                class="tag">CDN</span></div>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon">🔗</span>
+            <h3>Third-Party Integrations & APIs</h3>
+            <p>Connect your store to any system — ERPs, CRMs, payment gateways, shipping providers, marketing platforms,
+              and custom REST APIs.</p>
+            <div class="svc-tags"><span class="tag">REST API</span><span class="tag">Webhooks</span><span
+                class="tag">ERP/CRM</span></div>
+          </div>
+        </div>
+        <div class="svc-footer">
+          <a href="#contact">Discuss Your Project →</a>
+          <a href="#process">See How We Work →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PROCESS (Purple) -->
+  <div class="bg-purple">
+    <section id="process" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="eyebrow">Our Process</span>
+          <h2>How We Build Your WooCommerce Store</h2>
+          <p class="section-lead">A proven 5-step agency process — from brief to a live, revenue-generating WooCommerce
+            store.</p>
+        </div>
+        <div class="process-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Discovery Call</h3>
+            <p>We learn your brand, catalog, goals, current platform, and timeline — then propose the right approach.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Strategy & Scoping</h3>
+            <p>Detailed project scope, wireframes, and a clear timeline with milestones and deliverables. No surprises.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Design & Build</h3>
+            <p>Our team builds your store on staging with weekly updates and previews for your feedback throughout.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3>QA & Testing</h3>
+            <p>Full checkout QA, cross-device testing, performance audits, and payment gateway testing before launch.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">05</div>
+            <h3>Launch & Support</h3>
+            <p>Zero-downtime go-live, post-launch monitoring, and ongoing support to keep your store growing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- WHY US (Cream) -->
+  <div class="bg-cream">
+    <section id="why" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="eyebrow">Why CartCraft</span>
+          <h2>Why Choose Us as Your<br>WooCommerce Development Agency?</h2>
+          <p class="section-lead">We're not a freelance marketplace. We're a dedicated WooCommerce agency with in-house
+            developers, designers, and eCommerce strategists.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <span class="why-icon">🏆</span>
+            <h3>Official WooCommerce Partner</h3>
+            <p>Certified WooCommerce and WordPress expert agency with direct access to platform resources, beta
+              features, and dedicated partner support.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-icon">👥</span>
+            <h3>In-House Team, Not Freelancers</h3>
+            <p>All 80+ developers are vetted, trained, and managed in-house — no outsourcing to unknown freelancers or
+              offshore agencies, ever.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-icon">⚡</span>
+            <h3>Fast Turnaround</h3>
+            <p>Most projects kick off within 48 hours of agreement. We work in agile sprints so you see real, measurable
+              progress every week.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-icon">🛡️</span>
+            <h3>NDA & Full IP Ownership</h3>
+            <p>We sign NDAs before any work begins and transfer full IP ownership to you on completion. Every line of
+              code is yours, forever.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-icon">💰</span>
+            <h3>Transparent Pricing</h3>
+            <p>Fixed-price projects or flexible retainers — no surprise invoices, no scope creep charges. You always
+              know exactly what you're paying.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-icon">🔁</span>
+            <h3>Long-Term eCommerce Partner</h3>
+            <p>We don't just build and disappear. Over 75% of our clients stay with us for ongoing development,
+              optimization, and growth support.</p>
+          </div>
+        </div>
+        <div class="why-cta">
+          <a href="#contact" class="btn-primary">Start Risk-Free Today</a>
+          <a href="#faq" class="btn-ghost">Read FAQ</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- EXPERTISE (White) -->
+  <div class="bg-white">
+    <section id="expertise" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="eyebrow">Our Expertise</span>
+          <h2>Agency-Grade WooCommerce Expertise</h2>
+          <p class="section-lead">Every service area is covered by dedicated specialists — not generalists trying to do
+            everything at once.</p>
+        </div>
+        <div class="exp-inner">
+          <div class="exp-cards">
+            <div class="exp-card">
+              <span class="exp-icon">🎨</span>
+              <h3>UX & Conversion Design</h3>
+              <p>Data-driven UX paired with stunning design — stores engineered to turn browsers into buyers at every
+                touchpoint.</p>
+            </div>
+            <div class="exp-card">
+              <span class="exp-icon">⚙️</span>
+              <h3>WooCommerce Core & Hooks</h3>
+              <p>Deep WooCommerce internals expertise — custom hooks, filters, REST API endpoints, and architecture that
+                scales.</p>
+            </div>
+            <div class="exp-card">
+              <span class="exp-icon">🔌</span>
+              <h3>Payment & Shipping Integrations</h3>
+              <p>Stripe, PayPal, Klarna, ShipStation, FedEx, DHL — any gateway or carrier integrated and fully tested.
+              </p>
+            </div>
+            <div class="exp-card">
+              <span class="exp-icon">📊</span>
+              <h3>Performance & SEO</h3>
+              <p>Core Web Vitals, schema markup, technical eCommerce SEO, and speed audits that drive rankings and
+                revenue.</p>
+            </div>
+          </div>
+          <div class="exp-skills">
+            <div class="skill-row">
+              <div class="skill-label"><span>WooCommerce Theme Development</span><span class="skill-pct">98%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:98%"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-label"><span>Platform Migration to WooCommerce</span><span class="skill-pct">97%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:97%"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-label"><span>Custom Plugin Development</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:95%"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-label"><span>Payment & API Integrations</span><span class="skill-pct">94%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:94%"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-label"><span>Headless WooCommerce</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width:88%"></div>
+              </div>
+            </div>
+            <div class="exp-bottom">
+              <div class="big">2–5 Weeks</div>
+              <small>Average project delivery from kickoff to live store launch</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CTA BAND (Purple) -->
+  <div class="bg-purple">
+    <div id="cta-band">
+      <div class="cta-inner">
+        <div class="cta-left">
+          <div class="badge">✦ WooCommerce Partner Agency</div>
+          <h2>Ready to work with a WooCommerce agency that actually delivers?</h2>
+          <div class="cta-checks">
+            <div class="cta-check">Project scoped and quoted within 24 hours</div>
+            <div class="cta-check">Dedicated project manager from day one</div>
+            <div class="cta-check">NDA signed before work begins</div>
+            <div class="cta-check">Not happy with the work? You don't pay.</div>
+          </div>
+          <div class="cta-btns">
+            <a href="#contact" class="btn-white">📞 Get a Free Quote</a>
+            <a href="#results" class="btn-outline-white">See Case Studies →</a>
+          </div>
+        </div>
+        <div class="cta-right">
+          <div class="cta-stat">
+            <div class="num">800+</div>
+            <div class="lbl">Stores Built</div>
+          </div>
+          <div class="cta-stat">
+            <div class="num">80+</div>
+            <div class="lbl">Developers</div>
+          </div>
+          <div class="cta-stat">
+            <div class="num">98%</div>
+            <div class="lbl">Satisfaction</div>
+          </div>
+          <div class="cta-stat">
+            <div class="num">10+</div>
+            <div class="lbl">Years</div>
+          </div>
+          <div class="cta-badges">
+            <div class="cta-badge-item">🛡️ NDA signed before we start</div>
+            <div class="cta-badge-item">💰 No invoice if you're not satisfied</div>
+            <div class="cta-badge-item">⚡ Kickoff within 48 hours</div>
+            <div class="cta-badge-item">🔁 Ongoing support available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS (Cream) -->
+  <div class="bg-cream">
+    <section id="results" class="section">
+      <div class="section-inner">
+        <div class="section-header-row">
+          <div>
+            <span class="eyebrow">Client Results</span>
+            <h2>What Our Agency Has Delivered</h2>
+            <p class="section-lead">Real results from real WooCommerce projects — measurable business outcomes, not just
+              pretty screenshots.</p>
+          </div>
+        </div>
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-header">
+              <div class="result-client">PeakGear · Outdoor Apparel</div>
+              <div class="result-title">Shopify to WooCommerce Migration</div>
+            </div>
+            <div class="result-metrics">
+              <div class="metric">
+                <div class="metric-val">+71%</div>
+                <div class="metric-label">Conversion Rate</div>
+              </div>
+              <div class="metric">
+                <div class="metric-val">1.6s</div>
+                <div class="metric-label">Page Load Time</div>
+              </div>
+              <div class="metric">
+                <div class="metric-val">+44%</div>
+                <div class="metric-label">Organic Traffic</div>
+              </div>
+            </div>
+            <div class="result-body">
+              <p>Full Shopify to WooCommerce migration with custom theme development, 8,000 SKUs preserved, SEO URL
+                mapping, and a complete checkout overhaul — driving record conversion rates post-launch.</p>
+              <div class="result-tags"><span class="tag">Migration</span><span class="tag">Theme Dev</span><span
+                  class="tag">SEO</span></div>
+            </div>
+          </div>
+          <div class="result-card">
+            <div class="result-header">
+              <div class="result-client">LuxeThread · Fashion eCommerce</div>
+              <div class="result-title">Magento to WooCommerce Migration</div>
+            </div>
+            <div class="result-metrics">
+              <div class="metric">
+                <div class="metric-val">100%</div>
+                <div class="metric-label">Data Preserved</div>
+              </div>
+              <div class="metric">
+                <div class="metric-val">+38%</div>
+                <div class="metric-label">Revenue Growth</div>
+              </div>
+              <div class="metric">
+                <div class="metric-val">0%</div>
+                <div class="metric-label">SEO Loss</div>
+              </div>
+            </div>
+            <div class="result-body">
+              <p>Complex Magento 2 to WooCommerce migration with 12,000+ product SKUs, full customer account data, order
+                history, subscriptions, and complete SEO structure — zero ranking drops at launch.</p>
+              <div class="result-tags"><span class="tag">Magento</span><span class="tag">WooCommerce</span><span
+                  class="tag">Subscriptions</span></div>
+            </div>
+          </div>
+          <div class="result-card">
+            <div class="result-header">
+              <div class="result-client">NovaHealth · Supplements & Wellness</div>
+              <div class="result-title">Custom WooCommerce Subscription Store</div>
+            </div>
+            <div class="result-metrics">
+              <div class="metric">
+                <div class="metric-val">+92%</div>
+                <div class="metric-label">Subscription Revenue</div>
+              </div>
+              <div class="metric">
+                <div class="metric-val">18+</div>
+                <div class="metric-label">Countries Served</div>
+              </div>
+              <div class="metric">
+                <div class="metric-val">+61%</div>
+                <div class="metric-label">AOV Increase</div>
+              </div>
+            </div>
+            <div class="result-body">
+              <p>Custom WooCommerce subscription store with a bespoke product builder, multi-currency checkout, loyalty
+                rewards, and a mobile-first UX — transforming one-time buyers into subscribers.</p>
+              <div class="result-tags"><span class="tag">Custom Build</span><span class="tag">Subscriptions</span><span
+                  class="tag">Multi-Currency</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PRICING (White) -->
+  <div class="bg-white">
+    <section id="pricing" class="section">
+      <div class="section-inner">
+        <div class="section-header" style="text-align:center">
+          <span class="eyebrow" style="display:block;text-align:center">Transparent Pricing</span>
+          <h2>Simple Plans, <em>No Surprises</em></h2>
+          <p class="section-lead" style="margin:0 auto">Fixed-price engagements so you know exactly what you're getting
+            — before a single line of code is written.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter Store</h3>
+            <p style="font-size:14px;color:var(--muted)">For new stores & small businesses</p>
+            <div class="price">$1,999</div>
+            <div class="price-desc">one-time fixed fee</div>
+            <ul class="pricing-features">
+              <li>WooCommerce setup & configuration</li>
+              <li>Up to 15 pages / product catalog</li>
+              <li>Responsive mobile design</li>
+              <li>Payment gateway integration (1)</li>
+              <li>Speed & SEO foundation</li>
+              <li>14-day post-launch support</li>
+            </ul>
+            <a href="#contact" class="pricing-cta">Get Started</a>
+          </div>
+          <div class="pricing-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <h3>Growth Store</h3>
+            <p>For scaling eCommerce brands</p>
+            <div class="price" style="color:#fff">$4,999</div>
+            <div class="price-desc">one-time fixed fee</div>
+            <ul class="pricing-features">
+              <li>Custom WooCommerce theme</li>
+              <li>Up to 500 products / migration</li>
+              <li>2 payment gateways + shipping</li>
+              <li>Subscriptions or memberships</li>
+              <li>Performance to Core Web Vitals pass</li>
+              <li>CRM / email marketing integration</li>
+              <li>30-day post-launch support</li>
+            </ul>
+            <a href="#contact" class="pricing-cta">Get Started</a>
+          </div>
+          <div class="pricing-card">
+            <h3>Enterprise</h3>
+            <p style="font-size:14px;color:var(--muted)">For large catalogs & complex needs</p>
+            <div class="price">Custom</div>
+            <div class="price-desc">tailored to your project</div>
+            <ul class="pricing-features">
+              <li>Unlimited products & pages</li>
+              <li>Custom plugin development</li>
+              <li>ERP / CRM / 3PL integrations</li>
+              <li>Headless WooCommerce option</li>
+              <li>Dedicated account manager</li>
+              <li>Ongoing retainer available</li>
+            </ul>
+            <a href="#contact" class="pricing-cta">Talk to Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- TECH STACK (Cream) -->
+  <div class="bg-cream">
+    <section id="tech" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="eyebrow">Technology</span>
+          <h2>Our Agency's Tech Stack</h2>
+          <p class="section-lead">We work with the full WooCommerce and WordPress ecosystem plus the best eCommerce
+            tools — so your store is built on a foundation that lasts.</p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-group">
+            <h4>WooCommerce Platform</h4>
+            <div class="tech-items">
+              <div class="tech-item">WooCommerce Core</div>
+              <div class="tech-item">WooCommerce Blocks</div>
+              <div class="tech-item">WooCommerce Subscriptions</div>
+              <div class="tech-item">WooCommerce B2B</div>
+              <div class="tech-item">Multisite / Multistore</div>
+            </div>
+          </div>
+          <div class="tech-group">
+            <h4>Frontend & Theme</h4>
+            <div class="tech-items">
+              <div class="tech-item">PHP / Twig</div>
+              <div class="tech-item">React / Next.js</div>
+              <div class="tech-item">JavaScript / Alpine.js</div>
+              <div class="tech-item">HTML / CSS / Tailwind</div>
+              <div class="tech-item">Gutenberg / FSE</div>
+            </div>
+          </div>
+          <div class="tech-group">
+            <h4>Payments & Shipping</h4>
+            <div class="tech-items">
+              <div class="tech-item">Stripe / PayPal</div>
+              <div class="tech-item">Klarna / Afterpay</div>
+              <div class="tech-item">ShipStation / ShipBob</div>
+              <div class="tech-item">FedEx / UPS / DHL</div>
+              <div class="tech-item">Avalara / TaxJar</div>
+            </div>
+          </div>
+          <div class="tech-group">
+            <h4>Integrations & Tools</h4>
+            <div class="tech-items">
+              <div class="tech-item">Klaviyo / Mailchimp</div>
+              <div class="tech-item">HubSpot / Salesforce</div>
+              <div class="tech-item">Yotpo / Judge.me</div>
+              <div class="tech-item">Google Analytics 4</div>
+              <div class="tech-item">Zapier / Make</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- TESTIMONIALS (White) -->
+  <div class="bg-white">
+    <section id="testimonials" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="eyebrow">Client Stories</span>
+          <h2>What Our Clients Say About Us</h2>
+          <p class="section-lead">Real reviews from merchants who hired WooCommerce developers through CartCraft.</p>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"CartCraft migrated our entire Shopify store to WooCommerce without losing a single
+              product, customer record, or Google ranking. The team was communicative, fast, and genuinely cared about
+              the outcome."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">RK</div>
+              <div>
+                <div class="testi-name">Rachel Kim</div>
+                <div class="testi-role">Founder, PeakGear Outdoors</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The custom subscription plugin they built for us is exactly what we needed — and they
+              delivered on time and on budget. Our subscription revenue is up 92% since launch. Incredible team."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">DM</div>
+              <div>
+                <div class="testi-name">David Mills</div>
+                <div class="testi-role">CEO, NovaHealth Supplements</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"After two failed Magento migrations with other agencies, CartCraft got it right first
+              time. 12,000 SKUs, zero data loss, zero SEO impact. I wish I'd found them sooner."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">SL</div>
+              <div>
+                <div class="testi-name">Sophie Laurent</div>
+                <div class="testi-role">Head of eCommerce, LuxeThread</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The checkout redesign alone paid for the entire project within 6 weeks. CartCraft
+              doesn't just build — they think about your business. That's rare in a development agency."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">JB</div>
+              <div>
+                <div class="testi-name">James Brennan</div>
+                <div class="testi-role">Director, BrightBasket Foods</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQ (Cream) -->
+  <div class="bg-cream">
+    <section id="faq" class="section">
+      <div class="section-inner">
+        <span class="eyebrow">FAQ</span>
+        <h2 style="margin-bottom:48px">Questions About Our WooCommerce Agency</h2>
+        <div class="faq-layout">
+          <div class="faq-list">
+            <div class="faq-item open">
+              <button class="faq-btn" onclick="toggleFaq(this)">What makes CartCraft different from other WooCommerce
+                agencies?<span class="faq-icon">+</span></button>
+              <div class="faq-answer">We're a fully in-house agency — every developer is vetted and managed by us. We
+                also offer a satisfaction guarantee: if you're not happy with the delivered work, you don't pay. We also
+                sign NDAs before any work begins, which most agencies skip.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">How long does a WooCommerce build or migration
+                take?<span class="faq-icon">+</span></button>
+              <div class="faq-answer">Starter projects complete in 1–2 weeks. Growth builds run 3–5 weeks. Enterprise
+                projects are individually scoped. You'll receive a precise timeline in your free quote before any
+                commitment.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">Can you migrate from Shopify, Magento, or BigCommerce to
+                WooCommerce?<span class="faq-icon">+</span></button>
+              <div class="faq-answer">Yes — we've migrated from Shopify, Magento 1 & 2, BigCommerce, PrestaShop,
+                Volusion, OpenCart, and more. All products, customers, orders, and SEO URLs are preserved with zero data
+                loss.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">Will I lose my search rankings during migration?<span
+                  class="faq-icon">+</span></button>
+              <div class="faq-answer">No. We map every URL with 301 redirects, preserve all meta data, and run a full
+                post-launch crawl audit. Most of our clients see no ranking loss — many see improvements within weeks.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">How much does WooCommerce development cost?<span
+                  class="faq-icon">+</span></button>
+              <div class="faq-answer">Starter stores begin at $1,999. Growth projects from $4,999. Enterprise is
+                custom-quoted. All pricing is fixed — no surprise invoices. You'll have a detailed quote before we
+                start.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">Do you offer ongoing WooCommerce support after
+                launch?<span class="faq-icon">+</span></button>
+              <div class="faq-answer">Yes. Every project includes 30 days of post-launch support. We offer monthly
+                retainer plans covering WordPress/WooCommerce updates, security monitoring, backups, and priority
+                support from $149/month.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">Is my project and store data kept confidential?<span
+                  class="faq-icon">+</span></button>
+              <div class="faq-answer">Absolutely. NDAs are signed before any work begins. All code, store data, and
+                business logic remains 100% confidential. Full IP transfers to you on project completion.</div>
+            </div>
+            <p style="margin-top:24px;font-size:14px;color:var(--muted)">Still have questions? <a href="#contact"
+                style="color:var(--purple);font-weight:600">Let's talk.</a></p>
+          </div>
+          <div class="faq-aside">
+            <div class="faq-aside-card">
+              <h3>Book a Free Consultation</h3>
+              <p>Talk to one of our WooCommerce experts. No sales pitch — just honest advice about your project and the
+                best path forward.</p>
+              <div class="faq-perks">
+                <div class="faq-perk">Free store audit & project assessment</div>
+                <div class="faq-perk">Clear scope & timeline estimate</div>
+                <div class="faq-perk">No obligation to proceed</div>
+                <div class="faq-perk">NDA available on request</div>
+              </div>
+              <a href="#contact" class="btn-primary" style="display:flex;justify-content:center">📞 Book a Free
+                Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT (White) -->
+  <div class="bg-white">
+    <section id="contact">
+      <div class="contact-inner">
+        <div class="contact-left">
+          <span class="eyebrow">Get In Touch</span>
+          <h2>Start Your WooCommerce Project Today</h2>
+          <p class="section-lead">Tell us about your store and we'll get back to you within 24 hours with a free
+            consultation and project estimate. No obligation, no pressure.</p>
+          <div class="contact-checks">
+            <div class="contact-check">Free consultation & project scoping</div>
+            <div class="contact-check">Detailed quote within 24 hours</div>
+            <div class="contact-check">NDA signed before we start</div>
+            <div class="contact-check">Dedicated project manager assigned</div>
+            <div class="contact-check">30-day post-launch support included</div>
+          </div>
+          <div class="contact-mini-stats">
+            <div class="mini-stat">
+              <div class="num">800+</div>
+              <div class="lbl">Stores Built</div>
+            </div>
+            <div class="mini-stat">
+              <div class="num">98%</div>
+              <div class="lbl">Satisfaction</div>
+            </div>
+            <div class="mini-stat">
+              <div class="num">24hr</div>
+              <div class="lbl">Response Time</div>
+            </div>
+          </div>
+        </div>
+        <form class="hero-form" action="https://www.getdrip.com/forms/982483474/submissions" method="post" data-drip-embedded-form="982483474" id="drip-ef-982483474">
+        <h3>Tell us what you need</h3>
+        <p>We'll match you with the right WooCommerce expert within 24 hours.</p>
+        <div class="hf-group">
+          <label>Full Name <span>*</span></label>
+          <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="">
+        </div>
+        <div class="hf-group">
+          <label>Email Address <span>*</span></label>
+          <input type="email" placeholder="jane@store.com" id="drip-email" name="fields[email]" value="">
+        </div>
+        <div class="hf-group">
+          <label>Store / Company Name</label>
+          <input type="text" placeholder="Your Store" id="drip-company-name" name="fields[company_name]" value="">
+        </div>
+        <div class="hf-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us about your store, current platform, and goals..." id="drip-message" name="fields[message]"></textarea>
+        </div>
+
+        <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
+          <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
+          <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
+
+        <input class="hf-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
+        <p class="hf-privacy">🔒 Your information is 100% confidential.</p>
+      </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER (Navy) -->
+  <div class="bg-navy">
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="nav-logo footer-logo">
+              <a href="#" class="logo">
+                <img src="../assets/cms-logo.png" alt="CmsToWP Logo" style="height:36px;width:auto;display:block;">
+              </a>
+            </div>
+            <p>A full-service WooCommerce development agency trusted by 800+ brands worldwide. We build, migrate, and
+              scale WooCommerce stores that grow revenue.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#">WooCommerce Development</a>
+            <a href="#">Platform Migration</a>
+            <a href="#">Custom Theme Dev</a>
+            <a href="#">Plugin Development</a>
+            <a href="#">Performance Optimization</a>
+            <a href="#">API Integrations</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#">About CartCraft</a>
+            <a href="#">Our Portfolio</a>
+            <a href="#">Case Studies</a>
+            <a href="#">eCommerce Blog</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">NDA Request</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 CartCraft. All rights reserved. A WooCommerce Partner Agency.</p>
+          <div class="footer-badges">
+            <span class="f-badge">WooCommerce Partner</span>
+            <span class="f-badge">WordPress Expert</span>
+            <span class="f-badge">SOC 2 Compliant</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)' }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.svc-card,.step-card,.why-card,.result-card,.testi-card,.exp-card,.tech-group,.pricing-card').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.45s ease,transform 0.45s ease';
+      obs.observe(el);
+    });
+
+     <!-- hidden fields -->
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+
+      // UTM Fields
+      const utmSource = params.get("utm_source") || "";
+      const utmCampaign = params.get("utm_campaign") || "";
+
+      // Landing Page
+      const landingPage = window.location.href;
+
+      // Set UTM + landing page fields right away for top form
+      document.getElementById("hidden-source").value = utmSource;
+      document.getElementById("hidden-campaign").value = utmCampaign;
+      document.getElementById("hidden-landing-page").value = landingPage;
+
+      // Set UTM + landing page fields right away for bottom form
+      document.getElementById("hidden-source-2").value = utmSource;
+      document.getElementById("hidden-campaign-2").value = utmCampaign;
+      document.getElementById("hidden-landing-page-2").value = landingPage;
+
+    });
+  </script>
+</body>
+
+</html>
