@@ -1572,11 +1572,17 @@
       nav {
         padding: 0 32px;
       }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
 
       #hero {
         grid-template-columns: 1fr;
         padding: 40px 0 60px;
         gap: 38px;
+      }
+      .hidden-mobile{
+        display: none;
       }
 
       .hero-wrap {
@@ -1961,7 +1967,7 @@
           <div class="stat-num">80+</div>
           <div class="stat-label">Expert Developers</div>
         </div>
-        <div class="stat-item">
+        <div class="stat-item hidden-mobile">
           <div class="stat-num"><em>120+</em></div>
           <div class="stat-label">Custom Plugins Built</div>
         </div>

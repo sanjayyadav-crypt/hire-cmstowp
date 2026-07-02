@@ -1552,7 +1552,15 @@
       .hero-form {
         max-width: 480px
       }
-
+       .hidden-mobile{
+        display: none;
+      }
+      .testimonials-grid{
+        grid-template-columns: 1fr;
+      }
+      .first-row{
+        flex-direction: column;
+      }
      
       #services .svc-grid,
       #whatyouget .get-grid,
@@ -1773,7 +1781,7 @@
           <div class="stat-num">5+</div>
           <div class="stat-label">Avg. Years Experience</div>
         </div>
-        <div class="stat-item">
+        <div class="stat-item hidden-mobile">
           <div class="stat-num"><em>800+</em></div>
           <div class="stat-label">Stores Delivered</div>
         </div>
