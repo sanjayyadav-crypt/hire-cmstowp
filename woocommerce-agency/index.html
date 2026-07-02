@@ -1575,15 +1575,35 @@
 
       #hero {
         grid-template-columns: 1fr;
-        padding: 40px 10px 60px
+        padding: 40px 0 60px;
+        gap: 38px;
       }
 
       .hero-wrap {
         padding: 0 24px;
       }
 
+      .hero-sub {
+        max-width: 100%;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-btns .btn-primary,
+      .hero-btns .btn-ghost {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-trust {
+        flex-wrap: wrap;
+      }
+
       .hero-form {
-        max-width: 480px
+        max-width: 560px;
       }
 
       .stats-inner {
@@ -1631,35 +1651,115 @@
 
     @media(max-width:768px) {
       nav {
-        padding: 0 20px;
+        padding: 0 16px;
+        height: 60px;
+      }
+
+      .nav-logo img {
+        height: 30px;
       }
 
       .hero-wrap {
-        padding: 0 20px;
+        padding: 0 16px;
       }
 
       .nav-links>a:not(.nav-cta) {
         display: none
       }
 
+      .nav-cta {
+        padding: 9px 14px;
+        font-size: 13px;
+      }
+
+      #hero {
+        padding: 24px 0 48px;
+        gap: 28px;
+      }
+
+      .hero-badge {
+        margin-bottom: 16px;
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+
+      h1 {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.1;
+        margin-bottom: 16px;
+      }
+
+      .hero-sub {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .hero-btns {
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .hero-trust {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .trust-row {
+        font-size: 11px;
+      }
+
+      .hero-form {
+        padding: 24px 18px;
+        border-radius: 14px;
+      }
+
+      .first-row {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .hf-group {
+        margin-bottom: 12px;
+      }
+
+      .hf-group input,
+      .hf-group select,
+      .hf-group textarea {
+        padding: 12px 13px;
+      }
+
       .section {
-        padding: 64px 10px;
+        padding: 56px 16px !important;
+      }
+
+      .section-header {
+        margin-bottom: 24px;
+      }
+
+      .section-title,
+      .section-header h2 {
+        font-size: 26px;
+        line-height: 1.2;
+      }
+
+      .section-lead {
+        font-size: 15px;
       }
 
       #stats {
-        padding: 40px 20px
+        padding: 36px 16px
       }
 
       #logos {
-        padding: 36px 20px
+        padding: 32px 16px
       }
 
       #contact {
-        padding: 64px 20px
+        padding: 56px 16px
       }
 
       footer {
-        padding: 56px 20px 32px
+        padding: 48px 16px 28px
       }
 
       #services .services-grid,
@@ -1702,29 +1802,64 @@
         border-bottom: none
       }
     }
-      @media(min-width:1025px) and (max-width: 1600px) {
-      nav{
+
+    @media(max-width:480px) {
+      nav {
+        padding: 0 12px;
+      }
+
+      .hero-wrap {
+        padding: 0 12px;
+      }
+
+      .section {
+        padding: 48px 12px !important;
+      }
+
+      .hero-form {
+        padding: 20px 14px;
+      }
+
+      .hf-submit {
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      .nav-cta {
+        padding: 8px 12px;
+      }
+    }
+
+    @media(min-width:1025px) and (max-width: 1600px) {
+      nav {
         padding: 0 5%;
       }
-      .hero-wrap{
+
+      .hero-wrap {
         padding-top: 20px;
       }
+
       #hero {
         padding: 20px 5%;
       }
-      #stats{
+
+      #stats {
         padding: 40px 5% !important;
       }
-      .stats-inner{
+
+      .stats-inner {
         padding: 0 !important;
       }
-      .section{
+
+      .section {
         padding: 64px 5% !important;
       }
-      #contact{
+
+      #contact {
         padding: 64px 5% !important;
       }
-      footer{
+
+      footer {
         padding: 64px 5% !important;
       }
     }
