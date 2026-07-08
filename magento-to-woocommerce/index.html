@@ -1178,7 +1178,7 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       margin-top: 12px;
     }
@@ -1341,13 +1341,15 @@
     }
 
     .price-btn-solid {
-      background: var(--cream);
-      color: var(--blue);
+      background: var(--blue);
+      color: var(--white);
       box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
     }
 
     .price-btn-solid:hover {
-      background: var(--white);
+      background: transparent;
+      border: 2px solid var(--blue);
+      color: var(--blue);
       transform: translateY(-1px);
     }
 
@@ -1929,7 +1931,7 @@
     <form class="hero-form-card" action="https://www.getdrip.com/forms/982483474/submissions" method="post"
       data-drip-embedded-form="982483474" id="drip-ef-982483474">
       <h4>Tell us what you need</h4>
-      <p>A scoped plan and senior WordPress engineer assigned within 24 hours.</p>
+      <p>A scoped plan and senior Woocommerce engineer assigned within 24 hours.</p>
       <div class="form-row-2">
         <div class="form-group">
           <label>Full Name *</label>
@@ -2343,7 +2345,7 @@
         <div class="testi-card">
           <div class="stars">★★★★★</div>
           <blockquote>"I am 56, working on a E-Learning Plattform. You helped me to transfer the data from Joomla to
-            woocommerce. The best thing is the quick response, when there is a problem."</blockquote>
+            Wordpress. The best thing is the quick response, when there is a problem."</blockquote>
           <div class="testi-author">
             <div class="author-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">
               <img src="../assets/avatar-1.jpg" alt="OJ">
@@ -2381,25 +2383,8 @@
         store's size and complexity. No hidden fees, no hourly surprises.</p>
       <div class="pricing-grid">
 
-        <div class="price-card basic">
-          <div class="price-name">Starter</div>
-          <div class="price-num">$1,499</div>
-          <div class="price-period">one-time project</div>
-          <div class="price-tagline">For small Magento stores moving to WooCommerce</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li>Up to 500 products migrated</li>
-            <li>Customer accounts & addresses</li>
-            <li>Up to 2 years order history</li>
-            <li>Basic SEO redirects (301s)</li>
-            <li>CMS pages & blog posts</li>
-            <li>Product images & media</li>
-            <li>14-day post-launch support</li>
-          </ul>
-          <a href="#contact" class="price-btn price-btn-outline">Get Started</a>
-        </div>
 
-        <div class="price-card pro">
+        <div class="price-card basic">
           <div class="price-badge">Most Popular</div>
           <div class="price-name">Professional</div>
           <div class="price-num">$2,999</div>
