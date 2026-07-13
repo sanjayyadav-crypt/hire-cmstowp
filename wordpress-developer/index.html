@@ -75,7 +75,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 14%;
+      padding: 0 5%;
       height: 68px;
     }
 
@@ -170,7 +170,6 @@
     }
 
     .hero-inner {
-      max-width: 1300px;
       margin: 0 auto;
       width: 100%;
       display: grid;
@@ -466,7 +465,6 @@
     }
 
     .inline-cta-inner {
-      max-width: 1300px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -527,7 +525,7 @@
     }
 
     .section-inner {
-      max-width: 1240px;
+      
       margin: 0 auto;
       width: 100%
     }
@@ -617,19 +615,14 @@
       }
 
       /* Lateral padding for laptops and MacBooks */
-      @media (min-width: 1024px) and (max-width: 1439px) {
+      @media (min-width: 1024px) and (max-width: 1600px) {
         nav { padding: 0 5%; }
         .hero { padding-left: 5%; padding-right: 5%; }
         section { padding-left: 5%; padding-right: 5%; }
         .hero-inner { max-width: 1150px; grid-template-columns: 1fr 420px; }
       }
 
-      @media (min-width: 1440px) {
-        nav { padding: 0 14%; }
-        .hero { padding-left: 14%; padding-right: 14%; }
-        section { padding-left: 14%; padding-right: 14%; }
-        .hero-inner { max-width: 1300px; grid-template-columns: 1fr 500px; }
-      }
+     
     
 
     .service-icon {
