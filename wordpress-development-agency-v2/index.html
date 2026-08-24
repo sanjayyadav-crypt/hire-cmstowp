@@ -448,51 +448,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     .logos-strip-label {
       text-align: center;
-      font-size: 1rem;
+      font-size: 2.5rem;
       font-weight: 800;
-      color: rgba(255, 255, 255, 0.6);
+      color: white;
       text-transform: uppercase;
       letter-spacing: .1em;
       margin-bottom: 28px;
     }
-
-    .logos-track-wrap {
-      overflow: hidden;
+    .desktop-img{
+      display: block;
+      margin: 0 auto;
     }
-
-    .logos-track {
-      display: flex;
-      gap: 0;
-      animation: scrollLogos 28s linear infinite;
-      width: max-content;
+    .mobile-img{
+      display: none;
     }
-
-    .logos-track .logo-item {
-      padding: 0 40px;
-      border-right: 1px solid rgba(255, 255, 255, 0.12);
-      font-weight: 800;
-      font-size: .95rem;
-      color: rgba(255, 255, 255, 0.55);
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .logos-track .logo-item:last-child {
-      border-right: none;
-    }
-
-    @keyframes scrollLogos {
-      from {
-        transform: translateX(0)
-      }
-
-      to {
-        transform: translateX(-50%)
-      }
-    }
-
+   
     /* ── SECTION COMMONS ── */
     section {
       padding: 88px 5vw;
@@ -2012,9 +1982,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .process-steps::before {
         display: none;
       }
+      .desktop-img{
+        max-width: 100%;
+      }
+      .logos-strip-label{
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+      }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       .hero {
         grid-template-columns: 1fr;
       }
@@ -2024,6 +2001,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .stats-bar {
 
         gap: 16px;
+      }
+      .mobile-img{
+        display: block;
+        margin: 0 auto;
+      }
+      .desktop-img{
+        display: none;
+      }
+       .logos-strip-label{
+        font-size: 1rem;
+        margin-bottom: 0px;
       }
       .stat-num{
         font-size: 1.5rem;
@@ -2249,28 +2237,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="logos-strip">
     <div class="logos-strip-label">Trusted by businesses worldwide</div>
-    <div class="logos-track-wrap">
-      <div class="logos-track">
-        <div class="logo-item">🏛️ Macmillan Publishers</div>
-        <div class="logo-item">🌍 WRI India</div>
-        <div class="logo-item">📊 CFA Institute</div>
-        <div class="logo-item">⛳ Golf Asian</div>
-        <div class="logo-item">🐱 Hardcat</div>
-        <div class="logo-item">🎓 Learning Portal</div>
-        <div class="logo-item">🛒 NordicWear</div>
-        <div class="logo-item">⚖️ LegalDesk Pro</div>
-        <div class="logo-item">📡 Clarity Digital</div>
-        <div class="logo-item">🏛️ Macmillan Publishers</div>
-        <div class="logo-item">🌍 WRI India</div>
-        <div class="logo-item">📊 CFA Institute</div>
-        <div class="logo-item">⛳ Golf Asian</div>
-        <div class="logo-item">🐱 Hardcat</div>
-        <div class="logo-item">🎓 Learning Portal</div>
-        <div class="logo-item">🛒 NordicWear</div>
-        <div class="logo-item">⚖️ LegalDesk Pro</div>
-        <div class="logo-item">📡 Clarity Digital</div>
-      </div>
-    </div>
+      <img src="../assets/client-logo-desktop.webp" class="desktop-img" alt="Trusted by businesses worldwide">
+      <img src="../assets/client-logo-mobile.webp" class="mobile-img" alt="Trusted by businesses worldwide">
   </div>
 
 
