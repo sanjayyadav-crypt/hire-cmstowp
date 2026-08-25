@@ -184,6 +184,141 @@
       align-items: center;
     }
 
+
+    .results {
+      background: var(--cream);
+    }
+
+    .results .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px
+    }
+
+    .result-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 82, 162, 0.12);
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      margin-top: 20px;
+    }
+
+    .card-img {
+      background: var(--cream-card);
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+    }
+
+    .card-img img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .result-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 48px rgba(0, 82, 162, 0.14);
+      border-color: rgba(0, 82, 162, 0.18);
+    }
+
+    .result-header {
+      background: var(--blue);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .result-client {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .result-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin-top: 0;
+    }
+
+    .result-metrics {
+      display: flex;
+      border-bottom: 1px solid rgba(0, 82, 162, 0.1);
+      background: #f6f9ff;
+    }
+
+    .metric {
+      flex: 1;
+      padding: 20px 14px;
+      text-align: center;
+      border-right: 1px solid rgba(0, 82, 162, 0.07)
+    }
+
+    .metric:last-child {
+      border-right: none
+    }
+
+    .metric-val {
+      font-family: var(--ff-display);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--blue);
+      font-style: italic;
+      line-height: 1;
+      margin-bottom: 4px
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500
+    }
+
+    .result-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: auto;
+    }
+
+    .result-body p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .result-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .result-tags .tag {
+      background: rgba(0, 82, 162, 0.1);
+      color: var(--blue);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+
     /* Responsive hero tweaks */
     @media (max-width: 1200px) {
       .hero-inner {
@@ -197,7 +332,7 @@
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .hero {
         padding: 60px 4% 30px;
         min-height: auto;
@@ -208,6 +343,12 @@
         grid-template-columns: 1fr;
         gap: 24px;
         align-items: start;
+      }
+      .story-text{
+        flex-direction:column;
+      }
+      .story .story-text div{
+        width:100% !important;
       }
 
       .hero h1 {
@@ -330,116 +471,100 @@
     }
 
     /* ── HERO FORM ── */
-    .hero-form-wrap {
-      animation: fadeUp 0.6s 0.15s ease both;
-    }
-
-    .form-card {
-      background: #ffffff;
-      border: 1px solid #d4d89a;
-      border-radius: 16px;
-      padding: 24px 26px;
+        .hero-form-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px 28px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      position: relative;
+      z-index: 1;
+      animation: fadeUp .7s .15s ease both;
+      border: 1.5px solid var(--cream-border);
     }
 
-    .form-card h3 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #1F1F1F;
-      margin-bottom: 4px;
+    .hero-form-card h4 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 5px;
     }
 
-    .form-card p {
-      color: #64748b;
-      font-size: 0.83rem;
-      margin-bottom: 14px;
+    .hero-form-card>p {
+      font-size: .82rem;
+      color: var(--muted);
+      margin-bottom: 18px;
     }
 
-    .form-field {
-      margin-bottom: 10px;
+    .form-group {
+      margin-bottom: 11px;
     }
 
-    .form-field label {
+    .form-group label {
       display: block;
-      color: #4a5568;
-      font-size: 0.76rem;
-      font-weight: 500;
-      margin-bottom: 3px;
+      font-size: .73rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+      letter-spacing: .03em;
     }
 
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
       width: 100%;
-      background: white;
+      padding: 9px 12px;
       border: 1px solid #c8d9ee;
-      border-radius: 10px;
-      color: #0f1f38;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.875rem;
-      padding: 8px 12px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: .87rem;
+      color: var(--text);
+      background: white;
+      transition: border-color .2s;
       outline: none;
-      transition: border-color .2s, background .2s;
     }
 
-    .form-field select option {
-      background: #ffffff;
-      color: #001a3a;
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--blue);
+      background: var(--white);
     }
 
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: #c8d9ee;
-    }
-
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus {
-      border-color: #0052A2;
-      background: rgba(0, 82, 162, 0.04);
-    }
-
-    .form-field textarea {
+    .form-group textarea {
+      height: 74px;
       resize: none;
-      height: 66px;
     }
 
-    .form-row {
+    .form-row-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 11px;
     }
 
-    .btn-primary {
+    .form-submit {
       width: 100%;
-      background: #0052A2;
+      background: var(--blue);
       color: var(--white);
+      font-family: inherit;
+      font-weight: 800;
+      font-size: .95rem;
+      padding: 13px;
       border: none;
-      border-radius: 10px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 14px;
+      border-radius: 9rem;
       cursor: pointer;
-      transition: transform .15s, box-shadow .15s;
+      transition: all .2s;
       margin-top: 4px;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 82, 162, 0.4);
+    .form-submit:hover {
+      background: var(--blue-light);
+      transform: translateY(-1px);
     }
 
     .form-note {
+      font-size: .72rem;
+      color: var(--muted);
       text-align: center;
-      color: #9aa080;
-      font-size: 0.75rem;
-      margin-top: 12px;
-    }
-
-    .form-note span {
-      color: #0052A2;
+      margin-top: 8px;
     }
 
     @keyframes fadeUp {
@@ -1731,15 +1856,15 @@
     <div class="hero-inner">
       <!-- LEFT -->
       <div>
-        <div class="hero-badge"><span class="badge-dot"></span> #1 Platform to Hire WordPress Developers — 3,000+
-          Clients</div>
+        <!-- <div class="hero-badge"><span class="badge-dot"></span> #1 Platform to Hire WordPress Developers — 3,000+
+          Clients</div> -->
         <h1>We Build <em> High Converting WordPress </em> Websites</h1>
         <p class="hero-desc">Looking to hire WordPress developers? Our team of 45+ WordPress experts has delivered
           2,500+ custom websites over 15+ years, helping businesses build, redesign, and maintain high-performing
           WordPress sites with transparent project management and agile development.</p>
         <div class="hero-stats">
           <div class="stat">
-            <div class="stat-num">500<span>+</span></div>
+            <div class="stat-num">50<span>+</span></div>
             <div class="stat-label">Expert Developers</div>
           </div>
           <div class="stat">
@@ -1752,59 +1877,39 @@
           </div>
         </div>
         <div class="hero-ctas">
-          <a href="#hire" class="hero-btn-primary">Hire a WordPress Developer →</a>
-          <a href="#process" class="hero-btn-ghost">How It Works ↓</a>
+          <a href="#hire" class="hero-btn-primary">🚀 Start Your Project</a>
+        <a href="#results" class="hero-btn-ghost">See Our Work</a>
         </div>
       </div>
       <!-- RIGHT FORM -->
-      <form class="hero-form-wrap" id="adsdash-form-frm_c591aabd0473422a">
-        <div class="form-card">
-          <h3>Hire a WordPress Developer Today</h3>
-          <p>Share your project details — we'll match you with the perfect WordPress developer within 24 hours.</p>
-          <div class="form-row">
-            <div class="form-field">
-              <label>First Name</label>
-              <input type="text" placeholder="John" name="name" required>
-            </div>
-            <div class="form-field">
-              <label>Last Name</label>
-              <input type="text" placeholder="Doe" name="cf_8cee7a5e" value="">
-            </div>
-          </div>
-          <div class="form-field">
-            <label>Business Email</label>
-            <input type="email" placeholder="john@company.com" name="email" value="" required>
-          </div>
-          <div class="form-field">
-            <label>Website URL</label>
-            <input type="text" placeholder="https://yourwebsite.com" name="phone" value="" required>
-          </div>
-          <div class="form-field">
-            <label>Service Needed</label>
-            <select name="cf_522202f6" required>
-              <option value=" ">Select a service…</option>
-              <option value="Custom WordPress Theme">Custom WordPress Theme</option>
-              <option value="Plugin Development">Plugin Development</option>
-              <option value="WooCommerce Store">WooCommerce Store</option>
-              <option value="CMS Migration">CMS Migration</option>
-              <option value="Speed Optimization">Speed Optimization</option>
-              <option value="Ongoing Maintenance">Ongoing Maintenance</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label>Project Details</label>
-            <textarea placeholder="Briefly describe your project…" name="message" required></textarea>
-          </div>
-
-          <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
-          <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
-          <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
-
-
-          <button type="submit" class="btn-primary">Get My Free Quote →</button>
-          <p class="form-note">🔒 <span>100% confidential.</span> No spam, ever.</p>
+      <form class="hero-form-card" id="adsdash-form-frm_9899f8aefa2f5987">
+      <h4>Tell us what you need</h4>
+      <p>A scoped plan and senior WordPress engineer assigned within 24 hours.</p>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" placeholder="Jane Smith" name="name" value="" required>
         </div>
-      </form>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" placeholder="jane@company.com" name="email" value="" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Company / Website URL</label>
+        <input type="text" placeholder="https://yoursite.com" name="company" value="" required>
+      </div>
+      <div class="form-group">
+        <label>Project Details</label>
+        <textarea placeholder="Briefly describe your project or requirements…" name="message"></textarea>
+      </div>
+      <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
+      <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
+      <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
+
+      <button class="form-submit" type="submit">Get A Free Quote</button>
+      <p class="form-note">🔒 Your information is 100% confidential.</p>
+    </form>
     </div>
   </section>
 
@@ -2214,6 +2319,94 @@
     </div>
   </section>
 
+  <section id="results" class="results">
+    <div class="section-tag">Client Results</div>
+    <h2 class="section-title">What Our Agency Has <em>Delivered</em></h2>
+    <p class="section-sub">Real outcomes from real WordPress projects — measurable business results, not just
+      screenshots.</p>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="card-img">
+          <img src="../assets/veto.png" alt="Veto Pro Pac">
+        </div>
+        <div class="result-header">
+          <div class="result-title">Veto Pro Pac</div>
+        </div>
+        <div class="result-metrics">
+          <div class="metric">
+            <div class="metric-val">96%</div>
+            <div class="metric-label">Improved Performance</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">100%</div>
+            <div class="metric-label">Data Preserved</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">0%</div>
+            <div class="metric-label">SEO Loss</div>
+          </div>
+        </div>
+        <div class="result-body">
+          <p>Rebuilt the WooCommerce store for a global tool bag brand, improving site speed, mobile experience, and
+            inventory management while preserving all data and search rankings.</p>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="card-img">
+          <img src="../assets/directmobile.jpg" alt="Direct Mobile">
+        </div>
+        <div class="result-header">
+          <div class="result-title">Direct Mobile Accessories</div>
+        </div>
+        <div class="result-metrics">
+          <div class="metric">
+            <div class="metric-val">96%</div>
+            <div class="metric-label">Performance Lift</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">100%</div>
+            <div class="metric-label">Data Preserved</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">0%</div>
+            <div class="metric-label">SEO Loss</div>
+          </div>
+        </div>
+        <div class="result-body">
+          <p>Migrated the online store to WooCommerce with a mobile-first redesign, optimized checkout, and seamless
+            data transfer, resulting in better performance and uninterrupted sales.</p>
+
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="card-img">
+          <img src="../assets/macmillan.png" alt="Macmillan">
+        </div>
+        <div class="result-header">
+          <div class="result-title">Macmillan</div>
+        </div>
+        <div class="result-metrics">
+          <div class="metric">
+            <div class="metric-val">12+</div>
+            <div class="metric-label">Sites Delivered</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">100%</div>
+            <div class="metric-label">SEO Retained</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">1 Year</div>
+            <div class="metric-label">Support Contract</div>
+          </div>
+        </div>
+        <div class="result-body">
+          <p>Migrated 12+ publishing websites from Drupal to WordPress with WooCommerce, preserving SEO and
+            improving performance. Delivered custom book management features with zero downtime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── BOTTOM CTA + FORM (dark) ── -->
   <section class="bottom-cta" id="hire">
     <div class="bottom-cta-inner">
@@ -2232,54 +2425,34 @@
         </ul>
       </div>
       <!-- RIGHT FORM -->
-      <form class="hero-form-wrap" id="adsdash-form-frm_c591aabd0473422a">
-        <div class="form-card">
-          <h3>Hire a WordPress Developer Today</h3>
-          <p>Share your project details — we'll match you with the perfect WordPress developer within 24 hours.</p>
-          <div class="form-row">
-            <div class="form-field">
-              <label>First Name</label>
-              <input type="text" placeholder="John" name="name" required>
-            </div>
-            <div class="form-field">
-              <label>Last Name</label>
-              <input type="text" placeholder="Doe" name="cf_8cee7a5e" value="">
-            </div>
-          </div>
-          <div class="form-field">
-            <label>Business Email</label>
-            <input type="email" placeholder="john@company.com" name="email" value="" required>
-          </div>
-          <div class="form-field">
-            <label>Website URL</label>
-            <input type="text" placeholder="https://yourwebsite.com" name="phone" value="" required>
-          </div>
-          <div class="form-field">
-            <label>Service Needed</label>
-            <select name="cf_522202f6" required>
-              <option value=" ">Select a service…</option>
-              <option value="Custom WordPress Theme">Custom WordPress Theme</option>
-              <option value="Plugin Development">Plugin Development</option>
-              <option value="WooCommerce Store">WooCommerce Store</option>
-              <option value="CMS Migration">CMS Migration</option>
-              <option value="Speed Optimization">Speed Optimization</option>
-              <option value="Ongoing Maintenance">Ongoing Maintenance</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label>Project Details</label>
-            <textarea placeholder="Briefly describe your project…" name="message" required></textarea>
-          </div>
-
-          <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
-          <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
-          <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
-
-
-          <button type="submit" class="btn-primary">Get My Free Quote →</button>
-          <p class="form-note">🔒 <span>100% confidential.</span> No spam, ever.</p>
+      <form class="hero-form-card" id="adsdash-form-frm_9899f8aefa2f5987">
+      <h4>Tell us what you need</h4>
+      <p>A scoped plan and senior WordPress engineer assigned within 24 hours.</p>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" placeholder="Jane Smith" name="name" value="" required>
         </div>
-      </form>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" placeholder="jane@company.com" name="email" value="" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Company / Website URL</label>
+        <input type="text" placeholder="https://yoursite.com" name="company" value="" required>
+      </div>
+      <div class="form-group">
+        <label>Project Details</label>
+        <textarea placeholder="Briefly describe your project or requirements…" name="message"></textarea>
+      </div>
+      <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
+      <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
+      <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
+
+      <button class="form-submit" type="submit">Get A Free Quote</button>
+      <p class="form-note">🔒 Your information is 100% confidential.</p>
+    </form>
     </div>
   </section>
 
@@ -2393,120 +2566,120 @@
     });
   </script>
 
-  <script>
-    (function () {
+   <script>
+(function () {
 
-      var forms = document.querySelectorAll('#adsdash-form-frm_c591aabd0473422a');
+  var forms = document.querySelectorAll('#adsdash-form-frm_c591aabd0473422a');
 
-      forms.forEach(function (form) {
+  forms.forEach(function (form) {
 
-        var renderedAt = Date.now();
+    var renderedAt = Date.now();
 
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-          var btn = form.querySelector('button[type="submit"]');
-          var msg = form.querySelector('.adsdash-message'); // adjust selector if needed
+      var btn = form.querySelector('button[type="submit"]');
+      var msg = form.querySelector('.adsdash-message'); // adjust selector if needed
 
-          var data = {};
-          new FormData(form).forEach(function (v, k) {
-            data[k] = v;
-          });
-
-          data._ts = renderedAt;
-          data.pageUrl = window.location.href;
-
-          var origLabel = btn.textContent;
-
-          btn.disabled = true;
-          btn.textContent = 'Sending…';
-
-          fetch('https://adsdash.ebizondigital.com/api/leads/submit/frm_c591aabd0473422a', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          })
-            .then(function (r) {
-              return r.json().then(function (d) {
-                return { ok: r.ok, d: d };
-              });
-            })
-            .then(function (res) {
-
-              if (res.ok) {
-
-                if (
-                  typeof window.gtag === 'function' &&
-                  res.d.gtagConversionId &&
-                  res.d.gtagConversionLabel
-                ) {
-                  if (res.d.enhancedConversions) {
-                    gtag('set', 'user_data', {
-                      email: data.email || undefined,
-                      phone_number: data.phone || undefined
-                    });
-                  }
-
-                  gtag('event', 'conversion', {
-                    send_to: res.d.gtagConversionId + '/' + res.d.gtagConversionLabel
-                  });
-                }
-
-                if (res.d.redirectUrl) {
-                  window.location.href = res.d.redirectUrl;
-                  return;
-                }
-
-                form.querySelectorAll('input, textarea').forEach(function (el) {
-                  if (el.name !== '_hp') {
-                    el.style.display = 'none';
-                  }
-                });
-
-                form.querySelectorAll('label').forEach(function (el) {
-                  el.style.display = 'none';
-                });
-
-                btn.style.display = 'none';
-
-                if (msg) {
-                  msg.style.display = 'block';
-                  msg.style.color = '#16a34a';
-                  msg.textContent = res.d.message || 'Thanks!';
-                }
-
-              } else {
-
-                if (msg) {
-                  msg.style.display = 'block';
-                  msg.style.color = '#dc2626';
-                  msg.textContent =
-                    res.d.error || 'Something went wrong. Please try again.';
-                }
-
-                btn.disabled = false;
-                btn.textContent = origLabel;
-              }
-            })
-            .catch(function () {
-
-              if (msg) {
-                msg.style.display = 'block';
-                msg.style.color = '#dc2626';
-                msg.textContent = 'Network error. Please try again.';
-              }
-
-              btn.disabled = false;
-              btn.textContent = origLabel;
-            });
-        });
-
+      var data = {};
+      new FormData(form).forEach(function (v, k) {
+        data[k] = v;
       });
 
-    })();
-  </script>
+      data._ts = renderedAt;
+      data.pageUrl = window.location.href;
+
+      var origLabel = btn.textContent;
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      fetch('https://adsdash.ebizondigital.com/api/leads/submit/frm_c591aabd0473422a', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(function (r) {
+        return r.json().then(function (d) {
+          return { ok: r.ok, d: d };
+        });
+      })
+      .then(function (res) {
+
+        if (res.ok) {
+
+          if (
+            typeof window.gtag === 'function' &&
+            res.d.gtagConversionId &&
+            res.d.gtagConversionLabel
+          ) {
+            if (res.d.enhancedConversions) {
+              gtag('set', 'user_data', {
+                email: data.email || undefined,
+                phone_number: data.phone || undefined
+              });
+            }
+
+            gtag('event', 'conversion', {
+              send_to: res.d.gtagConversionId + '/' + res.d.gtagConversionLabel
+            });
+          }
+
+          if (res.d.redirectUrl) {
+            window.location.href = res.d.redirectUrl;
+            return;
+          }
+
+          form.querySelectorAll('input, textarea').forEach(function (el) {
+            if (el.name !== '_hp') {
+              el.style.display = 'none';
+            }
+          });
+
+          form.querySelectorAll('label').forEach(function (el) {
+            el.style.display = 'none';
+          });
+
+          btn.style.display = 'none';
+
+          if (msg) {
+            msg.style.display = 'block';
+            msg.style.color = '#16a34a';
+            msg.textContent = res.d.message || 'Thanks!';
+          }
+
+        } else {
+
+          if (msg) {
+            msg.style.display = 'block';
+            msg.style.color = '#dc2626';
+            msg.textContent =
+              res.d.error || 'Something went wrong. Please try again.';
+          }
+
+          btn.disabled = false;
+          btn.textContent = origLabel;
+        }
+      })
+      .catch(function () {
+
+        if (msg) {
+          msg.style.display = 'block';
+          msg.style.color = '#dc2626';
+          msg.textContent = 'Network error. Please try again.';
+        }
+
+        btn.disabled = false;
+        btn.textContent = origLabel;
+      });
+    });
+
+  });
+
+})();
+</script>
 
 </body>
 
