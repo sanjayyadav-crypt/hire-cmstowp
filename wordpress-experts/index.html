@@ -339,10 +339,14 @@
         align-items: start;
       }
 
+
       .hero-inner {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 40px;
         align-items: start;
+      }
+      .hero-ctas{
+        margin-bottom: 20px;
       }
       .story-text{
         flex-direction:column;
@@ -350,7 +354,17 @@
       .story .story-text div{
         width:100% !important;
       }
-
+      .mobile-img{
+        display: block;
+        margin: 0 auto;
+      }
+      .desktop-img{
+        display: none;
+      }
+       .logos-strip-label{
+        font-size: 1rem;
+        margin-bottom: 0px;
+      }
       .hero h1 {
         font-size: clamp(1.8rem, 6.5vw, 2.6rem);
       }
@@ -358,10 +372,16 @@
       .hero-desc {
         font-size: 0.98rem;
       }
-
+      .results .results-grid{
+        grid-template-columns: 1fr;
+      }
+      footer{
+        grid-template-columns: 1fr !important;
+      }
       .form-card {
         padding: 18px;
       }
+      
 
       .form-row {
         grid-template-columns: 1fr;
@@ -1766,6 +1786,29 @@ footer {
       width: 50%;
     }
 
+    .logos-strip {
+      background: var(--blue);
+      padding: 36px 5vw;
+      border-bottom: 1.5px solid var(--cream-border);
+    }
+
+    .logos-strip-label {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 28px;
+    }
+    .desktop-img{
+      display: block;
+      margin: 0 auto;
+    }
+    .mobile-img{
+      display: none;
+    }
+
     .capabilities {
   background-color: #FAFBED;
   padding: 60px 40px;
@@ -1849,6 +1892,9 @@ footer {
         display: block;
         margin: 0px auto;
       }
+      .desktop-img{
+        max-width: 100%;
+      }
 
       .process-steps {
         grid-template-columns: 1fr 1fr;
@@ -1878,6 +1924,19 @@ footer {
 
       .inline-cta-text {
         width: 100%;
+      }
+    }
+    @media (max-width: 768px){
+      .mobile-img{
+        display: block;
+        margin: 0 auto;
+      }
+      .desktop-img{
+        display: none;
+      }
+       .logos-strip-label{
+        font-size: 1rem;
+        margin-bottom: 0px;
       }
     }
   </style>
@@ -1966,6 +2025,51 @@ footer {
       <p class="form-note">🔒 Your information is 100% confidential.</p>
     </form>
     </div>
+  </section>
+
+  <div class="logos-strip">
+    <div class="logos-strip-label">Trusted by businesses worldwide</div>
+      <img src="../assets/client-logo-desktop.webp" class="desktop-img" alt="Trusted by businesses worldwide">
+      <img src="../assets/client-logo-mobile.webp" class="mobile-img" alt="Trusted by businesses worldwide">
+  </div>
+
+  <section class="story">
+    <h2 class="section-title">Success Story</h2>
+    <div class="story-text">
+      <div>
+      <i class="fas fa-quote-left"></i>
+      <p>My name is Beverly Hilton, I am a Product Manager for Macmillan in New York. We had an outdated Drupal website
+        that started experiencing malware/spam issues. Upon receiving the direction to migrate the website to WordPress,
+        I found CMStoWP.com when I Googled “Drupal to WordPress migrators”. Within twenty four hours, CMStoWP responded
+        to my inquiry. After they evaluated the site, met with the business owners and submitted their proposal, we
+        entered into an agreement to re-platform the website and migrate the data from Drupal to WordPress. My customer
+        is very happy with the WordPress environment and the website CMStoWP delivered. Satisfied with their work, we
+        entered into a one year maintenance/support agreement.
+
+        I would highly recommend CMStoWP, they are professional and responsive. Our project delivered on time and within
+        budget.</p>
+      <span>Beverly Hilton <br>
+        Product Manager, Macmillan Library</span>
+    </div>
+    <div>
+      <img src="../assets/maclibrary-logo-1.png" alt="Macmillan Logo" style="width: 200px; height: auto;">
+      <p>Macmillan Publishers Ltd is an American-British publishing company traditionally considered to be one of the
+        'Big Five' English language publishers. They engaged CMStoWP initially for re-platforming their flagship -
+        Macmillan Library website that presents all e-books in various categories on WordPress. After their first
+        successful migration, the Childeren's Publishing group of Macmillan also engaged us to move other dozen websites
+        from legay platforms like Django to WordPress.</p>
+      <ul>
+        <li>In addition to a sharp focus on content migration & structural improvement, maintaining the SEO richness has
+          been critical.</li>
+        <li>Enhancing user experience by making use of Javascript visuals/patterns to apply visual effects</li>
+        <li>Implementing short codes for displaying multiple books on a single page with multiple purchase options for
+          each book</li>
+      </ul>
+    </div>
+    </div>
+     
+
+
   </section>
 
   <!-- ── SERVICES (light) ── -->
@@ -2123,44 +2227,7 @@ footer {
     </div>
   </section>
 
-  <section class="story">
-    <h2 class="section-title">Success Story</h2>
-    <div class="story-text">
-      <div>
-      <i class="fas fa-quote-left"></i>
-      <p>My name is Beverly Hilton, I am a Product Manager for Macmillan in New York. We had an outdated Drupal website
-        that started experiencing malware/spam issues. Upon receiving the direction to migrate the website to WordPress,
-        I found CMStoWP.com when I Googled “Drupal to WordPress migrators”. Within twenty four hours, CMStoWP responded
-        to my inquiry. After they evaluated the site, met with the business owners and submitted their proposal, we
-        entered into an agreement to re-platform the website and migrate the data from Drupal to WordPress. My customer
-        is very happy with the WordPress environment and the website CMStoWP delivered. Satisfied with their work, we
-        entered into a one year maintenance/support agreement.
-
-        I would highly recommend CMStoWP, they are professional and responsive. Our project delivered on time and within
-        budget.</p>
-      <span>Beverly Hilton <br>
-        Product Manager, Macmillan Library</span>
-    </div>
-    <div>
-      <img src="../assets/maclibrary-logo-1.png" alt="Macmillan Logo" style="width: 200px; height: auto;">
-      <p>Macmillan Publishers Ltd is an American-British publishing company traditionally considered to be one of the
-        'Big Five' English language publishers. They engaged CMStoWP initially for re-platforming their flagship -
-        Macmillan Library website that presents all e-books in various categories on WordPress. After their first
-        successful migration, the Childeren's Publishing group of Macmillan also engaged us to move other dozen websites
-        from legay platforms like Django to WordPress.</p>
-      <ul>
-        <li>In addition to a sharp focus on content migration & structural improvement, maintaining the SEO richness has
-          been critical.</li>
-        <li>Enhancing user experience by making use of Javascript visuals/patterns to apply visual effects</li>
-        <li>Implementing short codes for displaying multiple books on a single page with multiple purchase options for
-          each book</li>
-      </ul>
-    </div>
-    </div>
-     
-
-
-  </section>
+  
 
 
   <!-- ── INLINE CTA 2: after Process ── -->
