@@ -242,12 +242,23 @@
   .cta-benefits li .icon { width: 28px; height: 28px; background: rgba(0,82,162,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
 
   /* FAQ */
+  .faq-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-top: 36px; }
   .faq-item { border-bottom: 1.5px solid #dde0b8; }
   .faq-q { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; cursor: pointer; font-family: 'Nunito Sans', sans-serif; font-size: .95rem; font-weight: 700; color: #1F1F1F; gap: 16px; }
   .faq-q .faq-icon { font-size: 1.2rem; color: #0052A2; flex-shrink: 0; transition: transform .25s; }
   .faq-a { font-size: 0.92rem; color: #5a5f4e; line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; }
   .faq-item.open .faq-a { max-height: 400px; padding-bottom: 18px; }
   .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-cta-panel { background: #0052A2; border-radius: 20px; padding: 40px 36px; position: sticky; top: 100px; }
+  .faq-cta-panel h3 { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 1.5rem; color: #ffffff; margin-bottom: 12px; line-height: 1.25; }
+  .faq-cta-panel h3 em { font-style: normal; color: #FAFBED; }
+  .faq-cta-panel p { color: rgba(255,255,255,.72); font-size: .88rem; margin-bottom: 24px; line-height: 1.7; }
+  .faq-cta-panel ul { list-style: none; margin-bottom: 28px; }
+  .faq-cta-panel ul li { font-size: .86rem; color: rgba(255,255,255,.82); padding: 7px 0; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .faq-cta-panel ul li::before { content: '✓'; color: #FAFBED; font-weight: 900; flex-shrink: 0; }
+  .faq-cta-panel ul li:last-child { border-bottom: none; }
+  .faq-cta-btn { display: block; text-align: center; background: #ffffff; color: #0052A2; font-weight: 800; font-size: .95rem; padding: 14px; border-radius: 9rem; text-decoration: none; transition: all .2s; }
+  .faq-cta-btn:hover { background: #FAFBED; transform: translateY(-1px); }
 
   /* FOOTER */
   footer { background: #0052A2; color: rgba(255,255,255,0.8); padding: 60px 5vw 24px; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 48px; }
@@ -273,6 +284,8 @@
     .pcard { grid-template-columns: 1fr 1fr; }
     .pcard-btn { grid-column: 1 / -1; }
     .pi-grid { grid-template-columns: 1fr; }
+    .faq-layout { grid-template-columns: 1fr; }
+    .faq-cta-panel { position: static; }
     footer { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 600px) {
@@ -713,7 +726,20 @@
     <div class="faq-content">
       <span class="section-tag">FAQ</span>
       <h2 class="section-title" style="max-width:100%">Migration Questions We Get Asked Every Week</h2>
-      <div style="margin-top:36px;display:flex;flex-direction:column;gap:0;" id="faq"></div>
+      <div class="faq-layout">
+        <div id="faq" class="faq-list"></div>
+        <div class="faq-cta-panel">
+          <h3>Still have questions?<br><em>Let's talk.</em></h3>
+          <p>Book a free 30-minute call with a WordPress specialist. No sales pitch — honest advice for your specific project.</p>
+          <ul>
+            <li>Free project scoping</li>
+            <li>Clear scope &amp; timeline estimate</li>
+            <li>No obligation to proceed</li>
+            <li>NDA available on request</li>
+          </ul>
+          <a href="#hire" class="faq-cta-btn">📞 Book a Free Consultation</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
