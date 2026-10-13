@@ -249,8 +249,16 @@
   .faq-item.open .faq-icon { transform: rotate(45deg); }
 
   /* FOOTER */
-  footer { background: #0052A2; padding: 40px 5%; text-align: center; color: rgba(255,255,255,0.85); font-size: 0.8rem; }
-  footer a { color: #FAFBED; text-decoration: none; }
+  footer { background: #0052A2; color: rgba(255,255,255,0.8); padding: 60px 5vw 24px; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 48px; }
+  .footer-logo { margin-bottom: 14px; }
+  .footer-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); }
+  .footer-brand p { font-size: .85rem; line-height: 1.7; color: rgba(255,255,255,0.72); }
+  .footer-col h4 { font-weight: 800; font-size: .85rem; color: #ffffff; margin-bottom: 16px; letter-spacing: .04em; }
+  .footer-col a { display: block; font-size: .83rem; color: rgba(255,255,255,0.72); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: #FAFBED; }
+  .footer-bottom { background: #0052A2; border-top: 1px solid rgba(255,255,255,.12); padding: 20px 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.65); }
+  .disclaimer { font-size: .72rem; color: rgba(255,255,255,.6); max-width: 480px; text-align: right; }
 
   /* RESPONSIVE */
   @media (max-width: 1024px) { .process-steps { grid-template-columns: repeat(3, 1fr); } .process-steps::before { display: none; } }
@@ -265,12 +273,15 @@
     .pcard { grid-template-columns: 1fr 1fr; }
     .pcard-btn { grid-column: 1 / -1; }
     .pi-grid { grid-template-columns: 1fr; }
+    footer { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 600px) {
     .services-grid { grid-template-columns: 1fr; }
     .form-row, .form-row-2 { grid-template-columns: 1fr; }
     .pcard { grid-template-columns: 1fr; text-align: center; }
     nav .nav-links { display: none; }
+    footer { grid-template-columns: 1fr; }
+    .disclaimer { text-align: left; }
   }
 </style>
 </head>
@@ -790,8 +801,36 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 CmsToWP · <a href="https://www.cmstowp.com/privacy-policy/">Privacy Policy</a> · <a href="https://www.cmstowp.com/terms-and-conditions/">Terms of Service</a> · <a href="https://www.cmstowp.com/wordpress-migration-services/">WordPress Migration Services</a> · <a href="https://www.cmstowp.com/woocommerce-migration/">WooCommerce Migration</a> · <a href="https://www.cmstowp.com/wordpress-development-agency/">WordPress Agency</a></p>
+  <div class="footer-brand">
+    <div class="footer-logo"><img src="../assets/cms-logo.png" alt="CMStoWP"></div>
+    <p>CmsToWP specializes in moving websites from any CMS or eCommerce platform to WordPress, with SEO preservation and zero downtime.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Migration Services</h4>
+    <a href="#platforms">Platforms We Migrate</a>
+    <a href="#what-moves">What We Migrate</a>
+    <a href="#process">Our Process</a>
+    <a href="#pricing">Migration Pricing</a>
+  </div>
+  <div class="footer-col">
+    <h4>Company</h4>
+    <a href="https://www.cmstowp.com/about/">About CMStoWP</a>
+    <a href="https://www.cmstowp.com/our-clients/">Our Clients</a>
+    <a href="https://www.cmstowp.com/case-studies/">Case Studies</a>
+    <a href="https://www.cmstowp.com/blog/">Blog</a>
+  </div>
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <a href="#hire">Get a Free Migration Quote</a>
+    <a href="https://www.cmstowp.com/get-in-touch/">Get In Touch</a>
+    <a href="https://www.cmstowp.com/privacy-policy/">Privacy Policy</a>
+    <a href="https://www.cmstowp.com/terms-and-conditions/">Terms of Service</a>
+  </div>
 </footer>
+<div class="footer-bottom">
+  <p>© 2026 CMStoWP (A Brand of EbizON & Appifycart Inc). All rights reserved. WordPress Migration Services.</p>
+  <p class="disclaimer">CMStoWP is an independent WordPress services provider and is not affiliated with or endorsed by Automattic or WordPress.org.</p>
+</div>
 
 <script>
 (function(){
