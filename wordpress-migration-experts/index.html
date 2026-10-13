@@ -94,9 +94,9 @@
   .section-inner [style*="text-align:center"] .section-tag { margin-left: auto; margin-right: auto; }
   .section-tag::before { content: ''; width: 24px; height: 2px; background: #0052A2; border-radius: 2px; }
   .section-title { font-family: 'Nunito Sans', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; line-height: 1.15; letter-spacing: -0.025em; margin-bottom: 14px; }
+  .section-title em { color: #0052A2; font-style: normal; }
   .section-sub { color: #5a5f4e; font-size: 1rem; line-height: 1.65; max-width: 560px; }
-  .about-content, .faq-content { width: 100%; max-width: 100%; margin: 0 auto; }
-  .comparison-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 8px; }
+  .faq-content { width: 100%; max-width: 100%; margin: 0 auto; }
   .section-light { background: #ffffff; color: #1F1F1F; }
   .section-tinted { background: #FAFBED; color: #1F1F1F; }
   .section-dark { background: #FAFBED; color: #1F1F1F; }
@@ -182,11 +182,13 @@
 
   /* PRICING */
   .pricing-layout { display: grid; grid-template-columns: 1fr 300px; gap: 28px; align-items: start; margin-top: 52px; }
+  .pricing-heading { margin-bottom: 0; }
+  .pricing-heading .section-title em { color: #0052A2; font-style: normal; }
   .pricing-cards-col { display: flex; flex-direction: column; gap: 20px; }
   .pcard { border-radius: 16px; padding: 24px 26px; display: grid; grid-template-columns: 1fr 1fr 1fr auto; align-items: center; gap: 20px; position: relative; transition: transform .2s, box-shadow .2s; }
   .pcard:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,82,162,.12); }
-  .pcard-basic { background: #FAFBED; border: 1.5px solid #dde0b8; }
-  .pcard-pro { background: linear-gradient(145deg, #0052A2, #003a80); color: var(--white); box-shadow: 0 20px 60px rgba(0,82,162,0.3); }
+  .pcard-basic { background: #ffffff; border: 1.5px solid #dde0b8; }
+  .pcard-pro { background: #0052A2; border: 1.5px solid #003d7a; color: var(--white); box-shadow: 0 8px 32px rgba(0,82,162,0.28); }
   .pcard-badge { position: absolute; top: -13px; left: 28px; background: #FAFBED; color: #0052A2; font-family: 'Nunito Sans', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 100px; border: 1.5px solid #0052A2; }
   .pcard-name { font-family: 'Nunito Sans', sans-serif; font-size: 1.15rem; font-weight: 800; color: #1F1F1F; margin-bottom: 4px; }
   .pcard-pro .pcard-name { color: #ffffff; }
@@ -206,7 +208,7 @@
   .pcard-btn-outline:hover { background: #0052A2; color: #ffffff; }
   .pcard-btn-white { background: #ffffff; color: #0052A2; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
   .pcard-btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
-  .plans-include { background: #FAFBED; border: 1.5px solid #dde0b8; border-radius: 14px; padding: 22px 28px; }
+  .plans-include { background: #ffffff; border: 1.5px solid #dde0b8; border-radius: 14px; padding: 24px 28px; }
   .pi-title { font-family: 'Nunito Sans', sans-serif; font-size: 0.9rem; font-weight: 700; color: #1F1F1F; margin-bottom: 14px; }
   .pi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; }
   .pi-item { font-size: 0.84rem; color: #5a5f4e; line-height: 1.5; }
@@ -229,36 +231,47 @@
   .hb-link:hover { border-color: #0052A2; }
 
   /* BOTTOM CTA + FORM */
-  .bottom-cta { background: #0052A2; position: relative; overflow: hidden; }
-  .bottom-cta::before { content: ''; position: absolute; top: -150px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%); pointer-events: none; }
+  .bottom-cta { background: #F4F3DC; position: relative; overflow: hidden; }
+  .bottom-cta::before { content: ''; position: absolute; top: -150px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,82,162,0.07) 0%, transparent 70%); pointer-events: none; }
   .bottom-cta-inner { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-  .bl-tag { color: #5ba8e5; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 12px; }
-  .cta-left h2 { font-family: 'Nunito Sans', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 20px; }
-  .cta-left h2 em { font-style: normal; color: #5ba8e5; }
-  .cta-left p { color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 32px; }
+  .bl-tag { color: #0052A2; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 12px; }
+  .cta-left h2 { font-family: 'Nunito Sans', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: #1F1F1F; line-height: 1.15; margin-bottom: 20px; }
+  .cta-left h2 em { font-style: normal; color: #0052A2; }
+  .cta-left p { color: #5a5f4e; line-height: 1.7; margin-bottom: 32px; }
   .cta-benefits { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .cta-benefits li { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 0.92rem; }
-  .cta-benefits li .icon { width: 28px; height: 28px; background: rgba(91,168,229,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
+  .cta-benefits li { display: flex; align-items: center; gap: 12px; color: #1F1F1F; font-size: 0.92rem; }
+  .cta-benefits li .icon { width: 28px; height: 28px; background: rgba(0,82,162,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
 
   /* FAQ */
+  .faq-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-top: 36px; }
   .faq-item { border-bottom: 1.5px solid #dde0b8; }
   .faq-q { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; cursor: pointer; font-family: 'Nunito Sans', sans-serif; font-size: .95rem; font-weight: 700; color: #1F1F1F; gap: 16px; }
   .faq-q .faq-icon { font-size: 1.2rem; color: #0052A2; flex-shrink: 0; transition: transform .25s; }
   .faq-a { font-size: 0.92rem; color: #5a5f4e; line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; }
   .faq-item.open .faq-a { max-height: 400px; padding-bottom: 18px; }
   .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-cta-panel { background: #0052A2; border-radius: 20px; padding: 40px 36px; position: sticky; top: 100px; }
+  .faq-cta-panel h3 { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 1.5rem; color: #ffffff; margin-bottom: 12px; line-height: 1.25; }
+  .faq-cta-panel h3 em { font-style: normal; color: #FAFBED; }
+  .faq-cta-panel p { color: rgba(255,255,255,.72); font-size: .88rem; margin-bottom: 24px; line-height: 1.7; }
+  .faq-cta-panel ul { list-style: none; margin-bottom: 28px; }
+  .faq-cta-panel ul li { font-size: .86rem; color: rgba(255,255,255,.82); padding: 7px 0; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .faq-cta-panel ul li::before { content: '✓'; color: #FAFBED; font-weight: 900; flex-shrink: 0; }
+  .faq-cta-panel ul li:last-child { border-bottom: none; }
+  .faq-cta-btn { display: block; text-align: center; background: #ffffff; color: #0052A2; font-weight: 800; font-size: .95rem; padding: 14px; border-radius: 9rem; text-decoration: none; transition: all .2s; }
+  .faq-cta-btn:hover { background: #FAFBED; transform: translateY(-1px); }
 
   /* FOOTER */
   footer { background: #0052A2; color: rgba(255,255,255,0.8); padding: 60px 5vw 24px; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 48px; }
   .footer-logo { margin-bottom: 14px; }
   .footer-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); }
-  .footer-brand p { font-size: .85rem; line-height: 1.7; color: rgba(255,255,255,0.72); }
+  .footer-brand p { font-size: .85rem; line-height: 1.7; color: rgba(255,255,255,0.58); }
   .footer-col h4 { font-weight: 800; font-size: .85rem; color: #ffffff; margin-bottom: 16px; letter-spacing: .04em; }
-  .footer-col a { display: block; font-size: .83rem; color: rgba(255,255,255,0.72); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a { display: block; font-size: .83rem; color: rgba(255,255,255,0.58); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
   .footer-col a:hover { color: #FAFBED; }
   .footer-bottom { background: #0052A2; border-top: 1px solid rgba(255,255,255,.12); padding: 20px 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.65); }
-  .disclaimer { font-size: .72rem; color: rgba(255,255,255,.6); max-width: 480px; text-align: right; }
+  .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.4); }
+  .disclaimer { font-size: .72rem; color: rgba(255,255,255,.3); max-width: 480px; text-align: right; }
 
   /* RESPONSIVE */
   @media (max-width: 1024px) { .process-steps { grid-template-columns: repeat(3, 1fr); } .process-steps::before { display: none; } }
@@ -267,12 +280,13 @@
     .services-grid { grid-template-columns: 1fr 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .checklist-grid { grid-template-columns: 1fr; }
-    .comparison-grid { grid-template-columns: 1fr; }
     .pricing-layout { grid-template-columns: 1fr; }
     .bucket-col { position: static; }
     .pcard { grid-template-columns: 1fr 1fr; }
     .pcard-btn { grid-column: 1 / -1; }
     .pi-grid { grid-template-columns: 1fr; }
+    .faq-layout { grid-template-columns: 1fr; }
+    .faq-cta-panel { position: static; }
     footer { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 600px) {
@@ -281,7 +295,6 @@
     .pcard { grid-template-columns: 1fr; text-align: center; }
     nav .nav-links { display: none; }
     footer { grid-template-columns: 1fr; }
-    .disclaimer { text-align: left; }
   }
 </style>
 </head>
@@ -648,10 +661,10 @@
 <!-- PRICING -->
 <section class="section-tinted" id="pricing">
   <div class="section-inner">
-    <div style="text-align:center;margin-bottom:0;">
+    <div class="pricing-heading">
       <span class="section-tag">Migration Pricing</span>
-      <h2 class="section-title">Flat-Rate Migration Pricing — No Hourly Surprises</h2>
-      <p class="section-sub" style="max-width:560px;margin:0 auto;text-align:center;">Every migration is a fixed-price project quoted after a free assessment. The price you see is the price you pay — no extras for redirect setup, SEO work, or post-launch support.</p>
+      <h2 class="section-title">Flat-Rate Migration Pricing — <em>No Hourly Surprises</em></h2>
+      <p class="section-sub">Every migration is a fixed-price project quoted after a free assessment. The price you see is the price you pay — no extras for redirect setup, SEO work, or post-launch support.</p>
     </div>
     <div class="pricing-layout">
       <div class="pricing-cards-col">
@@ -708,43 +721,26 @@
   </div>
 </section>
 
-<!-- SEO BODY -->
-<section class="section-light">
-  <div class="section-inner">
-    <div class="about-content">
-      <span class="section-tag">About Our Service</span>
-      <h2 class="section-title" style="max-width:100%">WordPress Migration Services: What Makes CmsToWP Different?</h2>
-      <div style="color:#5a5f4e;font-size:1rem;line-height:1.85;display:flex;flex-direction:column;gap:20px;margin-top:24px;">
-        <p>CmsToWP is a specialist WordPress migration agency with over 15 years of experience moving websites from every major CMS and eCommerce platform to WordPress and WooCommerce. We've completed 6,200+ migrations — from small business blogs on Wix to enterprise eCommerce stores on Magento with tens of thousands of products. Every migration follows the same rigorous process: zero downtime, 100% data integrity, and full SEO preservation from day one.</p>
-        <p>The technical challenge of migration isn't moving content — it's preserving your Google rankings while doing it. Every platform uses different URL structures, and without expert 301 redirect mapping, a migration can wipe out years of built-up SEO equity in days. Our migration specialists configure the full redirect structure before go-live, rebuild all meta data in WordPress, and run a post-launch SEO audit on every project.</p>
-        <h3 style="font-family:'Nunito Sans',sans-serif;font-size:1.2rem;font-weight:700;color:#1F1F1F;letter-spacing:-0.01em;">Who Uses CmsToWP Migration Services?</h3>
-        <p>Our clients include businesses escaping Drupal's complexity and cost, Joomla store owners whose developer pool is shrinking, Wix and Squarespace users who want to own their platform, and eCommerce brands moving off Magento, Shopify, or BigCommerce to WooCommerce to eliminate monthly platform fees and transaction charges. The common thread: they want a clean migration, no ranking loss, and a WordPress site that their team can actually manage.</p>
-        <div class="comparison-grid">
-          <div style="background:#FAFBED;border-radius:12px;padding:20px;">
-            <div style="font-weight:700;color:#1F1F1F;margin-bottom:6px;font-family:'Nunito Sans',sans-serif;">DIY Migration</div>
-            <div style="font-size:0.85rem;color:#5a5f4e;line-height:1.6;">High risk of SEO loss, data gaps, missed redirects, and broken functionality.</div>
-          </div>
-          <div style="background:linear-gradient(135deg,var(--blue),#003d7a);border-radius:12px;padding:20px;">
-            <div style="font-weight:700;color:#fff;margin-bottom:6px;font-family:'Nunito Sans',sans-serif;">CmsToWP ✓</div>
-            <div style="font-size:0.85rem;color:rgba(255,255,255,0.8);line-height:1.6;">Specialist team, full SEO mapping, dedicated PM, 14-day guarantee, zero downtime.</div>
-          </div>
-          <div style="background:#FAFBED;border-radius:12px;padding:20px;">
-            <div style="font-weight:700;color:#1F1F1F;margin-bottom:6px;font-family:'Nunito Sans',sans-serif;">Generalist Agency</div>
-            <div style="font-size:0.85rem;color:#5a5f4e;line-height:1.6;">Expensive overhead, limited WordPress depth, rarely seen your source platform before.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
-<section class="section-tinted">
+<section class="section-light">
   <div class="section-inner">
     <div class="faq-content">
       <span class="section-tag">FAQ</span>
-      <h2 class="section-title" style="max-width:100%">Migration Questions We Get Asked Every Week</h2>
-      <div style="margin-top:36px;display:flex;flex-direction:column;gap:0;" id="faq"></div>
+      <h2 class="section-title" style="max-width:100%"><em>Migration</em> Questions We Get Asked Every Week</h2>
+      <div class="faq-layout">
+        <div id="faq" class="faq-list"></div>
+        <div class="faq-cta-panel">
+          <h3>Still have questions?<br><em>Let's talk.</em></h3>
+          <p>Book a free 30-minute call with a WordPress migration specialist. No sales pitch — honest advice for your migration.</p>
+          <ul>
+            <li>Free migration scoping</li>
+            <li>Clear scope & timeline estimate</li>
+            <li>No obligation to proceed</li>
+            <li>NDA available on request</li>
+          </ul>
+          <a href="#hire" class="faq-cta-btn">📞 Book a Free Consultation</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
