@@ -64,19 +64,20 @@
 
   /* HERO FORM */
   .hero-form-wrap { animation: fadeUp 0.6s 0.15s ease both; }
-  .hero-form-card { background: #ffffff; border: 1.5px solid #dde0b8; border-radius: 20px; padding: 32px 28px; box-shadow: 0 20px 70px rgba(0,82,162,0.14); position: relative; z-index: 1; animation: fadeUp .7s .15s ease both; }
-  .hero-form-card h4 { font-size: 1rem; font-weight: 800; color: #0052A2; margin-bottom: 5px; }
-  .hero-form-card > p { font-size: .82rem; color: #5a5f4e; margin-bottom: 18px; }
-  .form-group { margin-bottom: 11px; }
-  .form-group label { display: block; color: #1F1F1F; font-size: .73rem; font-weight: 700; margin-bottom: 4px; letter-spacing: .03em; }
-  .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 9px 12px; border: 1.5px solid #dde0b8; border-radius: 8px; font-family: inherit; font-size: .87rem; color: #1F1F1F; background: #FAFBED; transition: border-color .2s; outline: none; }
-  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #0052A2; background: #ffffff; }
-  .form-group textarea { height: 74px; resize: none; }
-  .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
-  .form-submit { width: 100%; background: #0052A2; color: #ffffff; font-family: inherit; font-size: .95rem; font-weight: 800; padding: 13px; border: none; border-radius: 9rem; cursor: pointer; transition: all .2s; margin-top: 4px; }
-  .form-submit:hover { background: #0062c0; transform: translateY(-1px); }
-  .hero-form-card .form-note { text-align: center; color: #5a5f4e; font-size: .72rem; margin-top: 8px; }
+  .form-card { background: #ffffff; border: 1px solid #d4d89a; border-radius: 16px; padding: 24px 26px; box-shadow: 0 8px 32px rgba(0,0,0,.25); }
+  .form-card h3 { font-family: 'Nunito Sans', sans-serif; font-size: 1.15rem; font-weight: 800; color: #1F1F1F; margin-bottom: 4px; }
+  .form-card > p { color: #5a5f4e; font-size: .83rem; margin-bottom: 14px; }
+  .form-field { margin-bottom: 10px; }
+  .form-field label { display: block; color: #4a5568; font-size: .76rem; font-weight: 700; margin-bottom: 3px; }
+  .form-field input, .form-field textarea, .form-field select { width: 100%; background: #fff; border: 1px solid #c8d9ee; border-radius: 10px; color: #0f1f38; font-family: inherit; font-size: .875rem; padding: 8px 12px; outline: none; transition: border-color .2s, background .2s; }
+  .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: #0052A2; background: rgba(0,82,162,.04); }
+  .form-field textarea { resize: vertical; min-height: 66px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .btn-primary { width: 100%; background: #0052A2; color: #fff; border: none; border-radius: 10px; font-family: inherit; font-size: 1rem; font-weight: 800; padding: 14px; cursor: pointer; transition: transform .15s, box-shadow .15s; margin-top: 4px; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,82,162,.4); }
+  .form-note { text-align: center; color: #9aa080; font-size: .75rem; margin-top: 12px; }
   .form-note span { color: #0052A2; }
+  .adsdash-message { display: none; margin-top: 12px; text-align: center; font-size: .9rem; }
 
   /* INLINE CTAs */
   .inline-cta { background: linear-gradient(135deg, #0052A2 0%, #003d7a 100%); padding: 48px 5vw; }
@@ -290,7 +291,7 @@
   }
   @media (max-width: 600px) {
     .services-grid { grid-template-columns: 1fr; }
-    .form-row, .form-row-2 { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
     .pcard { grid-template-columns: 1fr; text-align: center; }
     nav .nav-links { display: none; }
     footer { grid-template-columns: 1fr; }
@@ -342,33 +343,35 @@
     </div>
     <!-- RIGHT FORM -->
     <div class="hero-form-wrap">
-      <form class="hero-form-card" id="adsdash-form-frm_9899f8aefa2f5987">
-      <h4>Tell us what you need</h4>
-      <p>A scoped plan and senior WordPress engineer assigned within 24 hours.</p>
-      <div class="form-row-2">
-        <div class="form-group">
-          <label>Full Name *</label>
-          <input type="text" placeholder="Jane Smith" name="name" value="" required>
+      <form class="hero-form-wrap adsdash-lead-form" id="adsdash-form-frm_9899f8aefa2f5987">
+        <div class="form-card">
+          <h3>Get Your Free WordPress Migration Quote</h3>
+          <p>Share your migration details — we'll send a scoped plan within 24 hours.</p>
+          <div class="form-row">
+            <div class="form-field">
+              <label>Full Name</label>
+              <input type="text" placeholder="Jane Smith" name="name" required>
+            </div>
+            <div class="form-field">
+              <label>Business Email</label>
+              <input type="email" placeholder="jane@company.com" name="email" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Company / Website URL</label>
+            <input type="text" placeholder="https://yoursite.com" name="company" required>
+          </div>
+          <div class="form-field">
+            <label>Project Details</label>
+            <textarea placeholder="Tell us your current platform, site size, SEO needs, or migration deadline…" name="message" required></textarea>
+          </div>
+          <input type="hidden" name="fields[utm_source]" value="">
+          <input type="hidden" name="fields[utm_campaign]" value="">
+          <input type="hidden" name="fields[landing_page]" value="">
+          <button type="submit" class="btn-primary">Get My Free Quote →</button>
+          <p class="form-note">🔒 <span>100% confidential.</span> No spam, ever.</p>
+          <p class="adsdash-message" role="status" aria-live="polite"></p>
         </div>
-        <div class="form-group">
-          <label>Email Address *</label>
-          <input type="email" placeholder="jane@company.com" name="email" value="" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Company / Website URL</label>
-        <input type="text" placeholder="https://yoursite.com" name="company" value="" required>
-      </div>
-      <div class="form-group">
-        <label>Project Details</label>
-        <textarea placeholder="Briefly describe your project or requirements…" name="message"></textarea>
-      </div>
-      <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
-      <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
-      <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
-
-      <button class="form-submit" type="submit">Get A Free Quote</button>
-      <p class="form-note">🔒 Your information is 100% confidential.</p>
       </form>
     </div>
   </div>
@@ -762,32 +765,35 @@
         </ul>
       </div>
       <div class="bottom-form">
-        <form class="hero-form-card" id="adsdash-form-frm_9899f8aefa2f5987">
-          <h4>Tell us what you need</h4>
-          <p>We'll audit your current platform, map your content and SEO URLs, and send a fixed-price scope within 24 hours.</p>
-          <div class="form-row-2">
-            <div class="form-group">
-              <label>Full Name *</label>
-              <input type="text" placeholder="Jane Smith" name="name" required>
+        <form class="hero-form-wrap adsdash-lead-form" id="adsdash-form-frm_9899f8aefa2f5987-bottom">
+          <div class="form-card">
+            <h3>Get Your Free WordPress Migration Quote</h3>
+            <p>We'll audit your current platform and send a scoped migration plan within 24 hours.</p>
+            <div class="form-row">
+              <div class="form-field">
+                <label>Full Name</label>
+                <input type="text" placeholder="Jane Smith" name="name" required>
+              </div>
+              <div class="form-field">
+                <label>Business Email</label>
+                <input type="email" placeholder="jane@company.com" name="email" required>
+              </div>
             </div>
-            <div class="form-group">
-              <label>Email Address *</label>
-              <input type="email" placeholder="jane@company.com" name="email" required>
+            <div class="form-field">
+              <label>Company / Website URL</label>
+              <input type="text" placeholder="https://yoursite.com" name="company" required>
             </div>
+            <div class="form-field">
+              <label>Project Details</label>
+              <textarea placeholder="Tell us your current platform, site size, SEO needs, or migration deadline…" name="message" required></textarea>
+            </div>
+            <input type="hidden" name="fields[utm_source]" value="">
+            <input type="hidden" name="fields[utm_campaign]" value="">
+            <input type="hidden" name="fields[landing_page]" value="">
+            <button type="submit" class="btn-primary">Get My Free Quote →</button>
+            <p class="form-note">🔒 <span>100% confidential.</span> No spam, ever.</p>
+            <p class="adsdash-message" role="status" aria-live="polite"></p>
           </div>
-          <div class="form-group">
-            <label>Company / Website URL</label>
-            <input type="text" placeholder="https://yoursite.com" name="company" required>
-          </div>
-          <div class="form-group">
-            <label>Project Details</label>
-            <textarea placeholder="Tell us your current platform, site size, SEO needs, or migration deadline…" name="message"></textarea>
-          </div>
-          <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
-          <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
-          <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
-          <button class="form-submit" type="submit">Get A Free Quote</button>
-          <p class="form-note">🔒 Your information is 100% confidential.</p>
         </form>
       </div>
     </div>
@@ -845,6 +851,76 @@
     item.innerHTML = `<div class="faq-q">${q}<span class="faq-icon">+</span></div><div class="faq-a">${a}</div>`;
     item.querySelector('.faq-q').addEventListener('click', () => item.classList.toggle('open'));
     container.appendChild(item);
+  });
+})();
+</script>
+<script>
+(function () {
+  const formId = 'frm_9899f8aefa2f5987';
+  const forms = document.querySelectorAll('.adsdash-lead-form');
+  const params = new URLSearchParams(window.location.search);
+
+  forms.forEach(function (form) {
+    form.querySelector('[name="fields[utm_source]"]').value = params.get('utm_source') || '';
+    form.querySelector('[name="fields[utm_campaign]"]').value = params.get('utm_campaign') || '';
+    form.querySelector('[name="fields[landing_page]"]').value = window.location.href;
+
+    const renderedAt = Date.now();
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const button = form.querySelector('button[type="submit"]');
+      const message = form.querySelector('.adsdash-message');
+      const originalLabel = button.textContent;
+      const data = {};
+      new FormData(form).forEach(function (value, key) { data[key] = value; });
+      data._ts = renderedAt;
+      data.pageUrl = window.location.href;
+
+      button.disabled = true;
+      button.textContent = 'Sending…';
+      message.style.display = 'block';
+      message.style.color = '#5a5f4e';
+      message.textContent = 'Sending your request…';
+
+      fetch('https://adsdash.ebizondigital.com/api/leads/submit/' + formId, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function (response) {
+          return response.json().catch(function () { return {}; }).then(function (body) {
+            return { ok: response.ok, body: body };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok) throw new Error(result.body.error || 'Something went wrong. Please try again.');
+
+          const body = result.body;
+          if (typeof window.gtag === 'function' && body.gtagConversionId && body.gtagConversionLabel) {
+            if (body.enhancedConversions) {
+              window.gtag('set', 'user_data', { email: data.email || undefined });
+            }
+            window.gtag('event', 'conversion', {
+              send_to: body.gtagConversionId + '/' + body.gtagConversionLabel
+            });
+          }
+          if (body.redirectUrl) {
+            window.location.href = body.redirectUrl;
+            return;
+          }
+          form.querySelectorAll('.form-card > :not(.adsdash-message)').forEach(function (element) {
+            element.hidden = true;
+          });
+          message.style.color = '#16a34a';
+          message.textContent = body.message || 'Thanks! Your migration request has been submitted.';
+        })
+        .catch(function (error) {
+          message.style.color = '#dc2626';
+          message.textContent = error.message || 'Network error. Please try again.';
+          button.disabled = false;
+          button.textContent = originalLabel;
+        });
+    });
   });
 })();
 </script>
