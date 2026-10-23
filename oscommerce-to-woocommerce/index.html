@@ -162,13 +162,10 @@ h1 em { font-style: normal; color: var(--blue); }
 .stat-label { font-size: .78rem; font-weight: 700; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .05em; }
 
 /* ── LOGOS STRIP ── */
-.logos-strip { background: var(--blue); padding: 32px 5vw; overflow: hidden; }
-.logos-strip-label { text-align: center; font-size: .8rem; font-weight: 800; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 22px; }
-.logos-track-wrap { overflow: hidden; }
-.logos-track { display: flex; animation: scrollLogos 28s linear infinite; width: max-content; }
-.logos-track .logo-item { padding: 0 40px; border-right: 1px solid rgba(255,255,255,0.12); font-weight: 800; font-size: .9rem; color: rgba(255,255,255,0.5); white-space: nowrap; }
-.logos-track .logo-item:last-child { border-right: none; }
-@keyframes scrollLogos { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.logos-strip { background: var(--blue); padding: 36px 5vw; border-bottom: 1.5px solid var(--cream-border); }
+.logos-strip-label { text-align: center; font-size: 2.5rem; font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; }
+.desktop-img { display: block; margin: 0 auto; }
+.mobile-img { display: none; }
 
 /* ── SECTION COMMONS ── */
 section { padding: 88px 5vw; }
@@ -376,6 +373,8 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
 @media (max-width: 1024px) {
   .process-steps { grid-template-columns: repeat(3, 1fr); }
   .process-steps::before { display: none; }
+  .desktop-img { max-width: 100%; }
+  .logos-strip-label { font-size: 1.5rem; margin-bottom: 0; }
 }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
@@ -399,6 +398,10 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
   .mid-cta-stat { border-right: none; border-bottom: 1px solid var(--cream-border); }
   .mid-cta-stat:last-child { border-bottom: none; }
   .platform-transfer { flex-wrap: wrap; }
+}
+@media (max-width: 768px) {
+  .mobile-img { display: block; margin: 0 auto; }
+  .desktop-img { display: none; }
 }
 
 /* Existing AdsDash lead form, styled to match this migration page. */
@@ -485,7 +488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="form-group">
-        <label>osCommerce Store URL</label>
+        <label>Company / Website URL</label>
         <input type="text" placeholder="https://yourstore.com" name="company" value="">
       </div>
       <div class="form-group">
@@ -511,31 +514,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!-- LOGOS STRIP -->
-<div class="logos-strip">
-  <div class="logos-strip-label">Trusted by eCommerce brands worldwide</div>
-  <div class="logos-track-wrap">
-    <div class="logos-track">
-      <div class="logo-item">🏛️ Macmillan Publishers</div>
-      <div class="logo-item">🛒 NordicWear Store</div>
-      <div class="logo-item">⛳ Golf Asian</div>
-      <div class="logo-item">📊 CFA Institute</div>
-      <div class="logo-item">🐱 Hardcat</div>
-      <div class="logo-item">🎓 mein-lernen.at</div>
-      <div class="logo-item">⚖️ LegalDesk Pro</div>
-      <div class="logo-item">📡 Clarity Digital</div>
-      <div class="logo-item">🌍 WRI India</div>
-      <div class="logo-item">🏛️ Macmillan Publishers</div>
-      <div class="logo-item">🛒 NordicWear Store</div>
-      <div class="logo-item">⛳ Golf Asian</div>
-      <div class="logo-item">📊 CFA Institute</div>
-      <div class="logo-item">🐱 Hardcat</div>
-      <div class="logo-item">🎓 mein-lernen.at</div>
-      <div class="logo-item">⚖️ LegalDesk Pro</div>
-      <div class="logo-item">📡 Clarity Digital</div>
-      <div class="logo-item">🌍 WRI India</div>
-    </div>
+  <div class="logos-strip">
+    <div class="logos-strip-label">Trusted by businesses worldwide</div>
+      <img src="../assets/client-logo-desktop.webp" class="desktop-img" alt="Trusted by businesses worldwide">
+      <img src="../assets/client-logo-mobile.webp" class="mobile-img" alt="Trusted by businesses worldwide">
   </div>
-</div>
 
 <!-- WHY MIGRATE -->
 <section id="why-migrate" class="why-migrate">
@@ -1026,7 +1009,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="form-group">
-        <label>osCommerce Store URL</label>
+        <label>Company / Website URL</label>
         <input type="text" placeholder="https://yourstore.com" name="company" value="">
       </div>
       <div class="form-group">
