@@ -1067,7 +1067,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <script>
 (function () {
   var forms = document.querySelectorAll('#adsdash-form-frm_879a5fee104377c8');
-  var thankYouUrl = 'https://www.cmstowp.com/quick-questions/';
+  var thankYouUrl = 'https://www.cmstowp.com/thank-you/';
   var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'gbraid', 'wbraid', 'fbclid'];
   var capturedUtms = {};
   var renderedAt = Date.now();
@@ -1167,7 +1167,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(function (result) {
         if (!result.ok) throw new Error(result.data.error || 'Something went wrong. Please try again.');
         function finishSubmission() {
-          var destination = new URL(result.data.redirectUrl || thankYouUrl);
+          var destination = new URL(thankYouUrl);
           destination.searchParams.set('firstname', firstName);
           destination.searchParams.set('lastname', lastName);
           destination.searchParams.set('email', data.email || '');
