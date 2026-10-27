@@ -4,11 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zen Cart to WooCommerce Migration | Migrate Zen Cart Database | CMSToWP</title>
+<title>Zen Cart to WooCommerce Migration | Migrate Zen Cart Database | CMSTOWP</title>
 <meta name="description" content="Expert Zen Cart to WooCommerce migration. We migrate your complete Zen Cart database — products, customers, orders, SEO — to WooCommerce with zero downtime. 500+ eCommerce migrations delivered.">
 <meta name="keywords" content="zen cart to woocommerce migration, zencart to woocommerce, migrate zen cart database to woocommerce, zencart woocommerce migration">
 <link rel="canonical" href="https://www.cmstowp.com/zencart-to-woocommerce/">
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../assets/cms-favicon.png">
 <style>
 :root {
   --blue:        #0052A2;
@@ -227,7 +228,7 @@ h2 em { font-style: normal; color: var(--blue); }
 .proc-step h4 { font-weight: 800; font-size: .9rem; color: var(--dark); margin-bottom: 8px; }
 .proc-step p { font-size: .8rem; color: var(--muted); line-height: 1.6; }
 
-/* ── WHY CMSToWP ── */
+/* ── WHY CMSTOWP ── */
 .why-us { background: var(--cream); }
 .why-us-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .why-card { background: var(--white); border: 1.5px solid var(--cream-border); border-radius: 14px; padding: 28px 24px; transition: all .25s; }
@@ -274,6 +275,10 @@ h2 em { font-style: normal; color: var(--blue); }
 .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--blue); display: grid; place-items: center; font-weight: 900; font-size: .9rem; color: var(--white); flex-shrink: 0; }
 .testi-name { font-weight: 800; font-size: .88rem; color: var(--dark); }
 .testi-role { font-size: .75rem; color: var(--muted); }
+.testimonials .testi-grid { grid-template-columns: repeat(3, 1fr); }
+.testimonials blockquote.testi-text { margin: 0 0 22px; }
+@media (max-width: 900px) { .testimonials .testi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .testimonials .testi-grid { grid-template-columns: 1fr; } }
 
 /* ── PRICING ── */
 .pricing-section { background: var(--cream); }
@@ -407,7 +412,7 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
 <!-- NAV -->
 <nav>
   <a href="#" class="logo">
-    <img src="../assets/cms-logo.png" alt="CMSToWP Logo" style="height:36px;width:auto;display:block;">
+    <img src="../assets/cms-logo.png" alt="CMSTOWP Logo" style="height:36px;width:auto;display:block;">
   </a>
   <ul class="nav-links">
     <li><a href="#what-we-migrate">What We Migrate</a></li>
@@ -431,7 +436,7 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
     </div>
 
     <h1>Zen Cart to <em>WooCommerce Migration</em> — Full Database. Zero Data Loss.</h1>
-    <p>CMSToWP migrates your complete Zen Cart database to WooCommerce — every product, category, customer, order, review, and SEO URL — with full data integrity, zero downtime, and no ranking drops. Move from a legacy platform to the world’s most flexible eCommerce solution, without losing a byte.</p>
+    <p>CMSTOWP migrates your complete Zen Cart database to WooCommerce — every product, category, customer, order, review, and SEO URL — with full data integrity, zero downtime, and no ranking drops. Move from a legacy platform to the world’s most flexible eCommerce solution, without losing a byte.</p>
 
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">🚀 Get a Free Migration Quote</a>
@@ -448,53 +453,31 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
 
   <!-- HERO FORM -->
   <div class="hero-form-card">
-    <h4>Get a Free Migration Assessment</h4>
-    <p>Tell us about your Zen Cart store — we'll review your database, scope the migration, and respond within 24 hours.</p>
+    <h4>Get a Free Migration Quote</h4>
+    <p>Tell us about your store — we'll review your database, scope the migration, and respond within 24 hours.</p>
     <form id="adsdash-form-frm_db0d7c76495a21c4" class="hero-migration-form">
       <div class="form-row-2">
         <div class="form-group">
           <label>Full Name *</label>
-          <input type="text" name="name" placeholder="Jane Smith" required>
+          <input type="text" placeholder="Jane Smith" name="name" value="" required>
         </div>
         <div class="form-group">
           <label>Email Address *</label>
-          <input type="email" name="email" placeholder="jane@store.com" required>
+          <input type="email" placeholder="jane@company.com" name="email" value="" required>
         </div>
       </div>
       <div class="form-group">
-        <label>Your Zen Cart Store URL</label>
-        <input type="text" name="company" placeholder="https://yourstore.com">
+        <label>Company / Website URL</label>
+        <input type="text" placeholder="https://yourstore.com" name="company" value="">
       </div>
       <div class="form-group">
-        <label>Zen Cart Version</label>
-        <select name="cf_ec05a4ba">
-          <option value="">Select version…</option>
-          <option value="Zen Cart 1.3.x">Zen Cart 1.3.x</option>
-          <option value="Zen Cart 1.5.x">Zen Cart 1.5.x</option>
-          <option value="Zen Cart 1.6.x (Current)">Zen Cart 1.6.x (Current)</option>
-          <option value="Zen Cart 2.x">Zen Cart 2.x</option>
-          <option value="Modified / Custom Build">Modified / Custom Build</option>
-          <option value="Not sure">Not sure</option>
-        </select>
+        <label>Project Details</label>
+        <textarea placeholder="Share your store size, custom modules, and migration requirements…" name="message" required></textarea>
       </div>
-      <div class="form-group">
-        <label>Approx. Number of Products</label>
-        <select name="cf_5bc76923">
-          <option value="Under 100">Under 100</option>
-          <option value="100 – 500">100 – 500</option>
-          <option value="500 – 2,000">500 – 2,000</option>
-          <option value="2,000 – 10,000">2,000 – 10,000</option>
-          <option value="10,000+">10,000+</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Tell Us About Your Store</label>
-        <textarea name="message" placeholder="E.g. custom plugins, payment modules, product options, number of orders, go-live deadline…"></textarea>
-      </div>
-      <div class="form-group" style="position:absolute;left:-9999px;" aria-hidden="true">
-        <input type="text" name="_hp" tabindex="-1" autocomplete="off">
-      </div>
-      <button type="submit" class="form-submit">Get My Free Migration Quote →</button>
+      <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
+      <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
+      <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
+      <button class="form-submit" type="submit">Get My Free Migration Quote</button>
       <div class="adsdash-form-msg" role="status" aria-live="polite" style="display:none;font-size:13px;margin-top:10px;"></div>
       <p class="form-note">🔒 Your information is 100% confidential.</p>
     </form>
@@ -725,11 +708,11 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
   </div>
 </section>
 
-<!-- WHY CMSToWP -->
+<!-- WHY CMSTOWP -->
 <section class="why-us">
   <div class="section-inner">
-    <div class="section-tag center" style="justify-content:center;">Why CMSToWP</div>
-    <h2 class="center">Why Choose CMSToWP for Your <em>Zen Cart to WooCommerce Migration?</em></h2>
+    <div class="section-tag center" style="justify-content:center;">Why CMSTOWP</div>
+    <h2 class="center">Why Choose CMSTOWP for Your <em>Zen Cart to WooCommerce Migration?</em></h2>
     <p class="section-sub center" style="margin-left:auto;margin-right:auto;">500+ eCommerce migrations completed. We know Zen Cart's database schema, its URL structure quirks, and exactly how to map every record to WooCommerce without losing a ranking.</p>
     <div class="why-us-grid">
       <div class="why-card">
@@ -776,7 +759,7 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
     <div>
       <div class="mid-cta-badge">✦ Zen Cart to WooCommerce Migration</div>
       <h2 class="mid-cta-heading">Ready to migrate your Zen Cart store to WooCommerce — for good?</h2>
-      <p class="mid-cta-sub">Join 500+ eCommerce businesses that made the switch with CMSToWP. Get a free Zen Cart database audit and migration scope — no obligation, no pressure.</p>
+      <p class="mid-cta-sub">Join 500+ eCommerce businesses that made the switch with CMSTOWP. Get a free Zen Cart database audit and migration scope — no obligation, no pressure.</p>
       <ul class="mid-cta-list">
         <li><span class="mid-cta-tick">✓</span> Zen Cart migration scope delivered within 24 hours</li>
         <li><span class="mid-cta-tick">✓</span> Dedicated project manager from day one</li>
@@ -810,39 +793,31 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
 <section class="testimonials">
   <div class="section-inner">
     <div class="section-tag center" style="justify-content:center;">Client Stories</div>
-    <h2 class="center">What Our Clients <em>Say About CMSToWP</em></h2>
-    <p class="section-sub center" style="margin-left:auto;margin-right:auto;margin-bottom:48px;">Real reviews from eCommerce businesses who trusted CMSToWP with their migration.</p>
+    <h2 class="center">What Clients Say After Hiring Our WordPress Developers</h2>
+    <p class="section-sub center" style="margin-left:auto;margin-right:auto;margin-bottom:48px;">Businesses that hired WordPress developers through CMSTOWP consistently report faster delivery, higher quality, and better communication than any alternative they'd tried before.</p>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"Our Zen Cart store had been running since 2007 — 3,800 products, 12 years of order history, and a heavily customised template. CMSToWP audited the whole database in 24 hours, quoted clearly, and delivered in 5 weeks. Every record migrated perfectly. Site now loads in 1.4 seconds instead of 6."</p>
+        <blockquote class="testi-text">"Their services are remarkable, extraordinary team of professionals who leave no stone unturned to make customers happy! They have redesigned CFA Society India website and helped us connect investment professionals globally."</blockquote>
         <div class="testi-author">
-          <div class="testi-avatar">GW</div>
-          <div><div class="testi-name">Gary W.</div><div class="testi-role">Owner, Specialty Parts Store — Zen Cart 1.5.x</div></div>
+          <div class="testi-avatar" style="overflow:hidden"><img src="../assets/parijit-garg.png" alt="PG" style="width:100%;height:100%;object-fit:cover"></div>
+          <div><div class="testi-name">Parijat Garg</div><div class="testi-role">Program Director, CFA Institute</div></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"4,900 Zen Cart products, complex attribute combinations, 6 years of order history, and several custom payment modules. CMSToWP mapped every URL, rebuilt our modules as WooCommerce equivalents, and cut over on a Sunday night with zero downtime. Every ranking held."</p>
+        <blockquote class="testi-text">"I am 56, working on a E-Learning Plattform. You helped me to transfer the data from Joomla to Wordpress. The best thing is the quick response, when there is a problem."</blockquote>
         <div class="testi-author">
-          <div class="testi-avatar">AC</div>
-          <div><div class="testi-name">Amanda C.</div><div class="testi-role">Director, Electronics Accessories Retailer — Zen Cart</div></div>
+          <div class="testi-avatar" style="overflow:hidden"><img src="../assets/avatar-1.jpg" alt="OJ" style="width:100%;height:100%;object-fit:cover"></div>
+          <div><div class="testi-name">Mag. Oswald Jäger</div><div class="testi-role">mein-lernen.at</div></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"CMSToWP handled our Drupal migration so professionally that when we needed our Zen Cart store moved to WooCommerce, we went straight back. Same high standard — on time, on budget, and post-launch support was exceptional."</p>
+        <blockquote class="testi-text">"The team has been fantastic to work with from design, development to migration. Thank you for making the migration process easy. I'll use them for every project going forward."</blockquote>
         <div class="testi-author">
-          <div class="testi-avatar">BH</div>
-          <div><div class="testi-name">Beverly Hilton</div><div class="testi-role">Product Manager, Macmillan Publishers</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"I tried migrating from Zen Cart myself and broke the redirect setup — lost 40% of traffic overnight. CMSToWP fixed every redirect, rebuilt my WooCommerce store properly, and within 8 weeks my rankings had not just recovered but exceeded where they were before."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">RN</div>
-          <div><div class="testi-name">Richard N.</div><div class="testi-role">Founder, Hobby & Craft Store</div></div>
+          <div class="testi-avatar" style="overflow:hidden"><img src="../assets/Eileen Lawrence's profile picture.png" alt="EL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div><div class="testi-name">Eileen Lawrence</div><div class="testi-role">Macmillan Publishers</div></div>
         </div>
       </div>
     </div>
@@ -995,58 +970,31 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
     <div class="contact-form-card">
       <h4>Get Your Free Migration Quote — Response within 24 hours</h4>
       <form id="adsdash-form-frm_db0d7c76495a21c4" class="bottom-migration-form">
-        <div class="cf-row">
-          <div class="cf-group">
-            <label>First Name *</label>
-            <input type="text" name="first_name" placeholder="Jane" required>
-          </div>
-          <div class="cf-group">
-            <label>Last Name *</label>
-            <input type="text" name="last_name" placeholder="Smith" required>
-          </div>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" placeholder="Jane Smith" name="name" value="" required>
         </div>
-        <div class="cf-group">
-          <label>Business Email *</label>
-          <input type="email" name="email" placeholder="jane@yourstore.com" required>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" placeholder="jane@company.com" name="email" value="" required>
         </div>
-        <div class="cf-group">
-          <label>Zen Cart Store URL</label>
-          <input type="text" name="company" placeholder="https://yourstore.com">
-        </div>
-        <div class="cf-row">
-          <div class="cf-group">
-            <label>Zen Cart Version</label>
-            <select name="cf_ec05a4ba">
-              <option value="Zen Cart 1.3.x">Zen Cart 1.3.x</option>
-              <option value="Zen Cart 1.5.x">Zen Cart 1.5.x</option>
-              <option value="Zen Cart 1.6.x (Current)">Zen Cart 1.6.x (Current)</option>
-              <option value="Zen Cart 2.x">Zen Cart 2.x</option>
-              <option value="Modified / Custom Build">Modified / Custom Build</option>
-              <option value="Not sure">Not sure</option>
-            </select>
-          </div>
-          <div class="cf-group">
-            <label>Number of Products</label>
-            <select name="cf_5bc76923">
-              <option value="Under 100">Under 100</option>
-              <option value="100 – 500">100 – 500</option>
-              <option value="500 – 2,000">500 – 2,000</option>
-              <option value="2,000 – 10,000">2,000 – 10,000</option>
-              <option value="10,000+">10,000+</option>
-            </select>
-          </div>
-        </div>
-        <div class="cf-group">
-          <label>Project Details &amp; Timeline</label>
-          <textarea name="message" rows="4" placeholder="Any custom extensions, special requirements, or target go-live date…"></textarea>
-        </div>
-        <div class="cf-group" style="position:absolute;left:-9999px;" aria-hidden="true">
-          <input type="text" name="_hp" tabindex="-1" autocomplete="off">
-        </div>
-        <button type="submit" class="cf-submit">Get My Free Migration Quote →</button>
-        <div class="adsdash-form-msg" role="status" aria-live="polite" style="display:none;font-size:13px;margin-top:10px;"></div>
-        <p class="cf-note">🔒 100% confidential. We respond within 24 business hours.</p>
-      </form>
+      </div>
+      <div class="form-group">
+        <label>Company / Website URL</label>
+        <input type="text" placeholder="https://yourstore.com" name="company" value="">
+      </div>
+      <div class="form-group">
+        <label>Project Details</label>
+        <textarea placeholder="Share your store size, custom modules, and migration requirements…" name="message" required></textarea>
+      </div>
+      <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
+      <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
+      <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
+      <button class="form-submit" type="submit">Get My Free Migration Quote</button>
+      <div class="adsdash-form-msg" role="status" aria-live="polite" style="display:none;font-size:13px;margin-top:10px;"></div>
+      <p class="form-note">🔒 Your information is 100% confidential.</p>
+    </form>
     </div>
   </div>
 </div>
@@ -1054,7 +1002,7 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
 <!-- FOOTER -->
   <footer>
     <div class="footer-brand">
-      <div class="footer-logo"><img src="../assets/cms-logo.png" alt="CMSToWP"></div>
+      <div class="footer-logo"><img src="../assets/cms-logo.png" alt="CMSTOWP"></div>
       <p>A full-service WordPress development agency trusted by 3,000+ businesses worldwide. We build, migrate, and
         scale WordPress sites that grow revenue.</p>
     </div>
@@ -1069,7 +1017,7 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
     </div>
     <div class="footer-col">
       <h4>Company</h4>
-      <a href="https://www.cmstowp.com/about/">About CMSToWP</a>
+      <a href="https://www.cmstowp.com/about/">About CMSTOWP</a>
       <a href="https://www.cmstowp.com/our-clients/">Our Clients</a>
       <a href="https://www.cmstowp.com/case-studies/">Case Studies</a>
       <a href="https://www.cmstowp.com/blog/">Blog</a>
@@ -1085,8 +1033,8 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
     </div>
   </footer>
   <div class="footer-bottom">
-    <p>© 2026 CMSToWP (A Brand of EbizON & Appifycart Inc). All rights reserved. WordPress Development Agency.</p>
-    <p class="disclaimer">CMSToWP is an independent WordPress development agency and is not affiliated with or endorsed
+    <p>© 2026 CMSTOWP (A Brand of EbizON & Appifycart Inc). All rights reserved. WordPress Development Agency.</p>
+    <p class="disclaimer">CMSTOWP is an independent WordPress development agency and is not affiliated with or endorsed
       by Automattic or WordPress.org.</p>
   </div>
 <script>
@@ -1096,6 +1044,23 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var params = new URLSearchParams(window.location.search);
+  var values = {
+    'hidden-source': params.get('utm_source') || '',
+    'hidden-campaign': params.get('utm_campaign') || '',
+    'hidden-landing-page': window.location.href,
+    'hidden-source-2': params.get('utm_source') || '',
+    'hidden-campaign-2': params.get('utm_campaign') || '',
+    'hidden-landing-page-2': window.location.href
+  };
+  Object.keys(values).forEach(function (id) {
+    var field = document.getElementById(id);
+    if (field) field.value = values[id];
   });
 });
 </script>

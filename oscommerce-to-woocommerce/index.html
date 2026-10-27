@@ -22,6 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="keywords" content="oscommerce to woocommerce migration, oscommerce woocommerce migration service, migrate oscommerce to woocommerce, oscommerce to wordpress migration">
 <link rel="canonical" href="https://www.cmstowp.com/oscommerce-to-woocommerce/">
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../assets/cms-favicon.png">
 <style>
 :root {
   --blue:        #0052A2;
@@ -272,6 +273,10 @@ h2 em { font-style: normal; color: var(--blue); }
 .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--blue); display: grid; place-items: center; font-weight: 900; font-size: .9rem; color: var(--white); flex-shrink: 0; }
 .testi-name { font-weight: 800; font-size: .88rem; color: var(--dark); }
 .testi-role { font-size: .75rem; color: var(--muted); }
+.testimonials .testi-grid { grid-template-columns: repeat(3, 1fr); }
+.testimonials blockquote.testi-text { margin: 0 0 22px; }
+@media (max-width: 900px) { .testimonials .testi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .testimonials .testi-grid { grid-template-columns: 1fr; } }
 
 /* ── PRICING ── */
 .pricing-section { background: var(--cream); }
@@ -433,7 +438,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAV -->
 <nav>
   <a href="https://www.cmstowp.com" class="logo">
-    <img src="../assets/cms-logo.png" alt="CMStoWP Logo">
+    <img src="../assets/cms-logo.png" alt="CMSTOWP Logo">
   </a>
   <ul class="nav-links">
     <li><a href="#why-migrate">Why Switch</a></li>
@@ -459,7 +464,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <h1>osCommerce to <em>WooCommerce Migration</em> — Modernise Your Store for Good</h1>
-    <p>CmsToWP handles your complete osCommerce to WooCommerce migration — products, categories, customers, orders, SEO URLs, and reviews — with zero downtime and no ranking drops. osCommerce is aging fast; WooCommerce gives you a modern, supported platform you own outright.</p>
+    <p>CMSTOWP handles your complete osCommerce to WooCommerce migration — products, categories, customers, orders, SEO URLs, and reviews — with zero downtime and no ranking drops. osCommerce is aging fast; WooCommerce gives you a modern, supported platform you own outright.</p>
 
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">🚀 Get a Free Migration Quote</a>
@@ -475,8 +480,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
       <form class="hero-form-card" id="adsdash-form-frm_beae60b36074ac09">
-      <h4>Get a Free osCommerce Migration Quote</h4>
-      <p>Tell us about your osCommerce store. We’ll review your migration needs and respond within 24 hours.</p>
+      <h4>Get a Free Migration Quote</h4>
+      <p>Tell us about your store. We’ll review your migration needs and respond within 24 hours.</p>
       <div class="form-row-2">
         <div class="form-group">
           <label>Full Name *</label>
@@ -500,6 +505,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
 
       <button class="form-submit" type="submit">Get My Free Migration Quote</button>
+      <div class="adsdash-form-msg" role="status" aria-live="polite" style="display:none;font-size:13px;margin-top:10px;"></div>
       <p class="form-note">🔒 Your information is 100% confidential.</p>
     </form>
 </section>
@@ -731,8 +737,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- WHY CMSTOWP -->
 <section class="why-us">
   <div class="section-inner">
-    <div class="section-tag center" style="justify-content:center;">Why CmsToWP</div>
-    <h2 class="center">Why Choose CmsToWP for Your <em>osCommerce Migration?</em></h2>
+    <div class="section-tag center" style="justify-content:center;">Why CMSTOWP</div>
+    <h2 class="center">Why Choose CMSTOWP for Your <em>osCommerce Migration?</em></h2>
     <p class="section-sub center" style="margin-left:auto;margin-right:auto;">500+ eCommerce migrations completed. We know every osCommerce data quirk, every contribution conflict, and exactly how to preserve your SEO when moving from PHP-based legacy URLs.</p>
     <div class="why-us-grid">
       <div class="why-card">
@@ -779,7 +785,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <div class="mid-cta-badge">✦ osCommerce to WooCommerce Migration</div>
       <h2 class="mid-cta-heading">Ready to leave osCommerce behind — for good?</h2>
-      <p class="mid-cta-sub">Join 500+ eCommerce businesses that migrated to WooCommerce with CmsToWP. Get a free store audit and migration scope — no obligation, no pressure.</p>
+      <p class="mid-cta-sub">Join 500+ eCommerce businesses that migrated to WooCommerce with CMSTOWP. Get a free store audit and migration scope — no obligation, no pressure.</p>
       <ul class="mid-cta-list">
         <li><span class="mid-cta-tick">✓</span> osCommerce migration scope delivered within 24 hours</li>
         <li><span class="mid-cta-tick">✓</span> Dedicated project manager from day one</li>
@@ -813,39 +819,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="testimonials">
   <div class="section-inner">
     <div class="section-tag center" style="justify-content:center;">Client Stories</div>
-    <h2 class="center">What Our Clients <em>Say About CmsToWP</em></h2>
-    <p class="section-sub center" style="margin-left:auto;margin-right:auto;margin-bottom:48px;">Real reviews from eCommerce businesses who trusted CmsToWP with their migration.</p>
+    <h2 class="center">What Clients Say After Hiring Our WordPress Developers</h2>
+    <p class="section-sub center" style="margin-left:auto;margin-right:auto;margin-bottom:48px;">Businesses that hired WordPress developers through CMSTOWP consistently report faster delivery, higher quality, and better communication than any alternative they'd tried before.</p>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"We'd been on osCommerce 2.x for over 12 years and were genuinely scared about migrating. CmsToWP audited our store in 24 hours, gave us a clear fixed-price quote, and completed the whole migration in 4 weeks. Every product, every order, all our customer data — everything landed perfectly in WooCommerce. Our site now loads in under 1.5 seconds."</p>
+        <blockquote class="testi-text">"Their services are remarkable, extraordinary team of professionals who leave no stone unturned to make customers happy! They have redesigned CFA Society India website and helped us connect investment professionals globally."</blockquote>
         <div class="testi-author">
-          <div class="testi-avatar">GW</div>
-          <div><div class="testi-name">Gary W.</div><div class="testi-role">Owner, Specialty Parts Store — osCommerce 2.x Migration</div></div>
+          <div class="testi-avatar" style="overflow:hidden"><img src="../assets/parijit-garg.png" alt="PG" style="width:100%;height:100%;object-fit:cover"></div>
+          <div><div class="testi-name">Parijat Garg</div><div class="testi-role">Program Director, CFA Institute</div></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"Our osCommerce store had 5,200 products, a heavily modified checkout, and 7 years of order history. CmsToWP mapped every URL with 301 redirects, rebuilt all our custom contribution functionality in WooCommerce, and cut over on a Sunday night with zero disruption. Rankings intact. Customers never noticed."</p>
+        <blockquote class="testi-text">"I am 56, working on a E-Learning Plattform. You helped me to transfer the data from Joomla to Wordpress. The best thing is the quick response, when there is a problem."</blockquote>
         <div class="testi-author">
-          <div class="testi-avatar">AC</div>
-          <div><div class="testi-name">Amanda C.</div><div class="testi-role">Director, Electronics Accessories Retailer</div></div>
+          <div class="testi-avatar" style="overflow:hidden"><img src="../assets/avatar-1.jpg" alt="OJ" style="width:100%;height:100%;object-fit:cover"></div>
+          <div><div class="testi-name">Mag. Oswald Jäger</div><div class="testi-role">mein-lernen.at</div></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"Beverly Hilton from Macmillan here. CmsToWP handled our Drupal migration so professionally that when we needed our osCommerce store moved to WooCommerce, we went straight back to them. Same high standard — everything migrated on time, on budget, and the post-launch support was outstanding."</p>
+        <blockquote class="testi-text">"The team has been fantastic to work with from design, development to migration. Thank you for making the migration process easy. I'll use them for every project going forward."</blockquote>
         <div class="testi-author">
-          <div class="testi-avatar">BH</div>
-          <div><div class="testi-name">Beverly Hilton</div><div class="testi-role">Product Manager, Macmillan Publishers</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"I'd tried to migrate from osCommerce myself and made a mess of the redirect setup — lost significant traffic. CmsToWP came in, fixed every redirect correctly, rebuilt the WooCommerce store properly, and within 10 weeks my rankings had not only recovered but exceeded where they were before."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">RN</div>
-          <div><div class="testi-name">Richard N.</div><div class="testi-role">Founder, Hobby & Craft Store</div></div>
+          <div class="testi-avatar" style="overflow:hidden"><img src="../assets/Eileen Lawrence's profile picture.png" alt="EL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div><div class="testi-name">Eileen Lawrence</div><div class="testi-role">Macmillan Publishers</div></div>
         </div>
       </div>
     </div>
@@ -996,8 +994,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
           <form class="hero-form-card" id="adsdash-form-frm_beae60b36074ac09">
-      <h4>Get a Free osCommerce Migration Quote</h4>
-      <p>Tell us about your osCommerce store. We’ll review your migration needs and respond within 24 hours.</p>
+      <h4>Get a Free Migration Quote</h4>
+      <p>Tell us about your store. We’ll review your migration needs and respond within 24 hours.</p>
       <div class="form-row-2">
         <div class="form-group">
           <label>Full Name *</label>
@@ -1021,6 +1019,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
 
       <button class="form-submit" type="submit">Get My Free Migration Quote</button>
+      <div class="adsdash-form-msg" role="status" aria-live="polite" style="display:none;font-size:13px;margin-top:10px;"></div>
       <p class="form-note">🔒 Your information is 100% confidential.</p>
     </form>
   </div>
@@ -1038,7 +1037,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>A professional osCommerce migration is significantly more complex than a simple data export. osCommerce stores often have years of accumulated custom contributions, bespoke payment and shipping modules, and a product database structured in ways that require careful mapping to WooCommerce's data model. Beyond the data, the URL migration is critical — osCommerce uses query-string URL patterns like <code>product_info.php?products_id=123</code>, while WooCommerce uses clean permalink structures like <code>/product/product-name/</code>. Without a complete 301 redirect configuration, every osCommerce URL becomes a broken link in Google's index, and your rankings drop overnight.</p>
 
       <h3>Why osCommerce Stores Should Migrate Now — Not Later</h3>
-      <p>The longer an osCommerce store waits to migrate, the worse the technical debt accumulates. Each year without migration typically means more custom contributions layered on top of the aging codebase, more payment and shipping modules to rebuild, and a wider gap between the osCommerce PHP version and modern hosting standards. Migrating now — while your osCommerce store is still functional — is dramatically easier than waiting for a security incident, a hosting PHP incompatibility, or a complete platform failure to force the decision. CmsToWP has helped hundreds of osCommerce store owners make this move cleanly, safely, and without losing a single customer record or Google ranking.</p>
+      <p>The longer an osCommerce store waits to migrate, the worse the technical debt accumulates. Each year without migration typically means more custom contributions layered on top of the aging codebase, more payment and shipping modules to rebuild, and a wider gap between the osCommerce PHP version and modern hosting standards. Migrating now — while your osCommerce store is still functional — is dramatically easier than waiting for a security incident, a hosting PHP incompatibility, or a complete platform failure to force the decision. CMSTOWP has helped hundreds of osCommerce store owners make this move cleanly, safely, and without losing a single customer record or Google ranking.</p>
 
       <h3>Is WooCommerce a Suitable Replacement for osCommerce?</h3>
       <p>Yes — for every osCommerce store we have encountered, WooCommerce is a complete and superior replacement. Every feature osCommerce offers — product catalogues, order management, customer accounts, discount codes, shipping rules, tax management, and payment gateway integration — is available in WooCommerce, typically with a better interface, more configuration options, and a free or low-cost plugin. Beyond feature parity, WooCommerce adds what osCommerce has never had: a modern content management system (WordPress), world-class SEO tools (Yoast), native integrations for every major marketing platform, and a global developer community that keeps the platform improving every week.</p>
@@ -1049,7 +1048,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <div class="footer-logo"><img src="../assets/cms-logo.png" alt="CMStoWP"></div>
+    <div class="footer-logo"><img src="../assets/cms-logo.png" alt="CMSTOWP"></div>
     <p>A full-service WordPress and WooCommerce development agency trusted by 3,000+ businesses worldwide. We build, migrate, and scale stores that grow revenue.</p>
   </div>
   <div class="footer-col">
@@ -1062,7 +1061,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="footer-col">
     <h4>Company</h4>
-    <a href="https://www.cmstowp.com/about/">About CmsToWP</a>
+    <a href="https://www.cmstowp.com/about/">About CMSTOWP</a>
     <a href="https://www.cmstowp.com/our-clients/">Our Clients</a>
     <a href="https://www.cmstowp.com/case-studies/">Case Studies</a>
     <a href="https://www.cmstowp.com/blog/">Blog</a>
@@ -1077,8 +1076,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 <div class="footer-bottom">
-  <p>© 2026 CmsToWP (A Brand of EbizON). All rights reserved.</p>
-  <p class="disclaimer">CmsToWP is an independent WordPress development agency. Not affiliated with or endorsed by osCommerce Ltd., Automattic, or WooCommerce.</p>
+  <p>© 2026 CMSTOWP (A Brand of EbizON). All rights reserved.</p>
+  <p class="disclaimer">CMSTOWP is an independent WordPress development agency. Not affiliated with or endorsed by osCommerce Ltd., Automattic, or WooCommerce.</p>
 </div>
 
 <script>
@@ -1119,116 +1118,132 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 
    <script>
 (function () {
-
   var forms = document.querySelectorAll('#adsdash-form-frm_beae60b36074ac09');
+  var thankYouUrl = 'https://www.cmstowp.com/quick-questions/';
+  var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'gbraid', 'wbraid', 'fbclid'];
+  var capturedUtms = {};
+  var renderedAt = Date.now();
+
+  try {
+    var query = new URLSearchParams(window.location.search);
+    utmKeys.forEach(function (key) {
+      var value = query.get(key);
+      if (value) capturedUtms[key] = value;
+    });
+    if (Object.keys(capturedUtms).length) {
+      sessionStorage.setItem('adsdash_utms', JSON.stringify(capturedUtms));
+    } else {
+      capturedUtms = JSON.parse(sessionStorage.getItem('adsdash_utms') || '{}');
+    }
+  } catch (error) {}
+
+  var landingPage = window.location.href;
+  try {
+    landingPage = sessionStorage.getItem('adsdash_landing') || landingPage;
+    sessionStorage.setItem('adsdash_landing', landingPage);
+  } catch (error) {}
+
+  function trackConversion(config, data, done) {
+    var finished = false;
+    function finish() {
+      if (!finished) {
+        finished = true;
+        done();
+      }
+    }
+    try {
+      var awId = config.gtagConversionId;
+      if (typeof window.gtag !== 'function') {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(awId);
+        document.head.appendChild(script);
+        window.gtag('js', new Date());
+        window.gtag('config', awId, { send_page_view: false });
+      }
+      if (config.enhancedConversions) {
+        window.gtag('set', 'user_data', { email: data.email || undefined });
+      }
+      window.gtag('event', 'conversion', {
+        send_to: awId + '/' + config.gtagConversionLabel,
+        event_callback: finish
+      });
+    } catch (error) {
+      console.warn('[AdsDash] Conversion error', error);
+    }
+    setTimeout(finish, 1200);
+  }
 
   forms.forEach(function (form) {
-
-    var renderedAt = Date.now();
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var btn = form.querySelector('button[type="submit"]');
-      var msg = form.querySelector('.adsdash-message'); // adjust selector if needed
-
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var button = form.querySelector('button[type="submit"]');
+      var message = form.querySelector('.adsdash-form-msg');
       var data = {};
-      new FormData(form).forEach(function (v, k) {
-        data[k] = v;
-      });
-
+      new FormData(form).forEach(function (value, key) { data[key] = value; });
+      var firstName = data.first_name || '';
+      var lastName = data.last_name || data.cf_8cee7a5e || '';
+      if (!firstName && data.name) {
+        var nameParts = String(data.name).trim().split(/\s+/);
+        firstName = nameParts.shift() || '';
+        if (!lastName) lastName = nameParts.join(' ');
+      }
+      if (data.first_name || data.last_name) {
+        data.name = [data.first_name, data.last_name].filter(Boolean).join(' ');
+        delete data.first_name;
+        delete data.last_name;
+      }
       data._ts = renderedAt;
       data.pageUrl = window.location.href;
+      data.landingPage = landingPage;
+      utmKeys.forEach(function (key) {
+        if (capturedUtms[key]) data[key] = capturedUtms[key];
+      });
 
-      var origLabel = btn.textContent;
-
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
+      var originalLabel = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Sending…';
 
       fetch('https://adsdash.ebizondigital.com/api/leads/submit/frm_beae60b36074ac09', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
-      .then(function (r) {
-        return r.json().then(function (d) {
-          return { ok: r.ok, d: d };
+      .then(function (response) {
+        return response.json().then(function (result) {
+          return { ok: response.ok, data: result };
         });
       })
-      .then(function (res) {
-
-        if (res.ok) {
-
-          if (
-            typeof window.gtag === 'function' &&
-            res.d.gtagConversionId &&
-            res.d.gtagConversionLabel
-          ) {
-            if (res.d.enhancedConversions) {
-              gtag('set', 'user_data', {
-                email: data.email || undefined,
-                phone_number: data.phone || undefined
-              });
-            }
-
-            gtag('event', 'conversion', {
-              send_to: res.d.gtagConversionId + '/' + res.d.gtagConversionLabel
-            });
-          }
-
-          if (res.d.redirectUrl) {
-            window.location.href = res.d.redirectUrl;
-            return;
-          }
-
-          form.querySelectorAll('input, textarea').forEach(function (el) {
-            if (el.name !== '_hp') {
-              el.style.display = 'none';
-            }
-          });
-
-          form.querySelectorAll('label').forEach(function (el) {
-            el.style.display = 'none';
-          });
-
-          btn.style.display = 'none';
-
-          if (msg) {
-            msg.style.display = 'block';
-            msg.style.color = '#16a34a';
-            msg.textContent = res.d.message || 'Thanks!';
-          }
-
+      .then(function (result) {
+        if (!result.ok) throw new Error(result.data.error || 'Something went wrong. Please try again.');
+        function finishSubmission() {
+          var destination = new URL(result.data.redirectUrl || thankYouUrl);
+          destination.searchParams.set('firstname', firstName);
+          destination.searchParams.set('lastname', lastName);
+          destination.searchParams.set('email', data.email || '');
+          var companyValue = data.company || data.url || data.website || '';
+          if (companyValue) destination.searchParams.set('company', companyValue);
+          window.location.href = destination.href;
+        }
+        if (result.data.gtagConversionId && result.data.gtagConversionLabel) {
+          trackConversion(result.data, data, finishSubmission);
         } else {
-
-          if (msg) {
-            msg.style.display = 'block';
-            msg.style.color = '#dc2626';
-            msg.textContent =
-              res.d.error || 'Something went wrong. Please try again.';
-          }
-
-          btn.disabled = false;
-          btn.textContent = origLabel;
+          finishSubmission();
         }
       })
-      .catch(function () {
-
-        if (msg) {
-          msg.style.display = 'block';
-          msg.style.color = '#dc2626';
-          msg.textContent = 'Network error. Please try again.';
+      .catch(function (error) {
+        if (message) {
+          message.style.display = 'block';
+          message.style.color = '#dc2626';
+          message.textContent = error.message || 'Network error. Please try again.';
         }
-
-        btn.disabled = false;
-        btn.textContent = origLabel;
+        button.disabled = false;
+        button.textContent = originalLabel;
       });
     });
-
   });
-
 })();
 </script>
 
