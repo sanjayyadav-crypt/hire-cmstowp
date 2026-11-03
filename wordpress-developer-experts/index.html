@@ -2435,7 +2435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           destination.searchParams.set('firstname', data.name == null ? '' : data.name);
           destination.searchParams.set('lastname', data.cf_8cee7a5e == null ? '' : data.cf_8cee7a5e);
           destination.searchParams.set('email', data.email == null ? '' : data.email);
-          var companyValue = data.company || data.url || data.website || data.phone || '';
+          var companyValue = data.company || data.url || data.website || '';
           if (companyValue) destination.searchParams.set('company', companyValue);
           window.location.href = destination.href;
         }

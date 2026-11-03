@@ -1715,8 +1715,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="email" placeholder="john@company.com" name="email" value="" required>
           </div>
           <div class="form-field">
-            <label>Website URL</label>
-            <input type="text" placeholder="https://yourwebsite.com" name="phone" value="" required>
+            <label>Company Name</label>
+            <input type="text" placeholder="Your Company Name" name="company" value="" required>
           </div>
           <div class="form-field">
             <label>Service Needed</label>
@@ -2191,8 +2191,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="email" placeholder="john@company.com" name="email" value="" required>
           </div>
           <div class="form-field">
-            <label>Website URL</label>
-            <input type="text" placeholder="https://yourwebsite.com" name="phone" value="" required>
+            <label>Company Name</label>
+            <input type="text" placeholder="Your Company Name" name="company" value="" required>
           </div>
           <div class="form-field">
             <label>Service Needed</label>
@@ -2416,7 +2416,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (config.enhancedConversions) {
         window.gtag('set', 'user_data', {
           email: data.email || undefined,
-          phone_number: data.phone || undefined
+          company: data.company || undefined
         });
       }
       window.gtag('event', 'conversion', {
@@ -2464,7 +2464,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           destination.searchParams.set('firstname', data.name == null ? '' : data.name);
           destination.searchParams.set('lastname', data.cf_8cee7a5e == null ? '' : data.cf_8cee7a5e);
           destination.searchParams.set('email', data.email == null ? '' : data.email);
-          var companyValue = data.company || data.url || data.website || data.phone || '';
+          var companyValue = data.company || data.url || data.website || '';
           if (companyValue) destination.searchParams.set('company', companyValue);
           window.location.href = destination.href;
         }
