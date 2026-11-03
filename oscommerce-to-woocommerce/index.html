@@ -405,8 +405,9 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
   .platform-transfer { flex-wrap: wrap; }
 }
 @media (max-width: 768px) {
-  .mobile-img { display: block; margin: 0 auto; }
+  .mobile-img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
   .desktop-img { display: none; }
+  .logos-strip-label { font-size: 1rem; margin-bottom: 0; }
 }
 
 /* Existing AdsDash lead form, styled to match this migration page. */

@@ -54,17 +54,17 @@ body {
 
 /* ── NAV ── */
 nav {
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   z-index: 100;
-  background: #FAFBED;
-  border-bottom: 2px solid #0052A2;
+  background: var(--cream);
+  border-bottom: 1.5px solid var(--cream-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5%;
-  height: 68px;
+  padding: 14px 5vw;
 }
 .logo {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -404,8 +404,9 @@ footer { background: var(--blue); color: rgba(255,255,255,0.8); padding: 60px 5v
   .cf-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  .mobile-img { display: block; margin: 0 auto; }
+  .mobile-img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
   .desktop-img { display: none; }
+  .logos-strip-label { font-size: 1rem; margin-bottom: 0; }
 }
 @media (max-width: 600px) {
   .nav-links { display: none; }

@@ -2188,33 +2188,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <!-- HERO FORM -->
-    <form class="hero-form-card" id="adsdash-form-frm_9899f8aefa2f5987">
+    <form class="hero-form-card" id="adsdash-form-frm_c591aabd0473422a">
       <h4>Tell us what you need</h4>
       <p>A scoped plan and senior WordPress engineer assigned within 24 hours.</p>
       <div class="form-row-2">
         <div class="form-group">
-          <label>Full Name *</label>
-          <input type="text" placeholder="Jane Smith" name="name" value="" required>
+          <label>First Name *</label>
+          <input type="text" placeholder="John" name="name" required>
         </div>
         <div class="form-group">
-          <label>Email Address *</label>
-          <input type="email" placeholder="jane@company.com" name="email" value="" required>
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe" name="cf_8cee7a5e" value="">
         </div>
       </div>
       <div class="form-group">
-        <label>Company / Website URL</label>
-        <input type="text" placeholder="https://yoursite.com" name="company" value="" required>
+        <label>Business Email *</label>
+        <input type="email" placeholder="john@company.com" name="email" required>
       </div>
       <div class="form-group">
-        <label>Project Details</label>
-        <textarea placeholder="Briefly describe your project or requirements…" name="message"></textarea>
+        <label>Website URL *</label>
+        <input type="text" placeholder="https://yourwebsite.com" name="company" required>
+      </div>
+      <div class="form-group">
+        <label>Project Details *</label>
+        <textarea placeholder="Briefly describe your project…" name="message" required></textarea>
       </div>
       <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
       <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
       <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
 
-      <button class="form-submit" type="submit">Get A Free Quote</button>
-      <p class="form-note">🔒 Your information is 100% confidential.</p>
+      <button class="form-submit" type="submit">Get My Free Quote →</button>
+      <div class="adsdash-form-msg" role="status" aria-live="polite" style="display:none;font-size:13px;margin-top:10px;"></div>
     </form>
   </section>
 
@@ -2897,35 +2901,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <form class="hero-form-card" action="https://www.getdrip.com/forms/982483474/submissions" method="post"
-      data-drip-embedded-form="982483474" id="drip-ef-982483474">
+      <form class="hero-form-card" id="adsdash-form-frm_c591aabd0473422a">
       <h4>Tell us what you need</h4>
       <p>A scoped plan and senior WordPress engineer assigned within 24 hours.</p>
       <div class="form-row-2">
         <div class="form-group">
-          <label>Full Name *</label>
-          <input type="text" placeholder="Jane Smith" id="drip-full-name" name="fields[full_name]" value="" required>
+          <label>First Name *</label>
+          <input type="text" placeholder="John" name="name" required>
         </div>
         <div class="form-group">
-          <label>Email Address *</label>
-          <input type="email" placeholder="jane@company.com" id="drip-email" name="fields[email]" value="" required>
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe" name="cf_8cee7a5e" value="">
         </div>
       </div>
       <div class="form-group">
-        <label>Company / Website URL</label>
-        <input type="text" placeholder="https://yoursite.com" id="drip-company" name="fields[company]" value="">
+        <label>Business Email *</label>
+        <input type="email" placeholder="john@company.com" name="email" required>
       </div>
       <div class="form-group">
-        <label>Project Details</label>
-        <textarea placeholder="Briefly describe your project or requirements…" id="drip-message"
-          name="fields[message]"></textarea>
+        <label>Company Name *</label>
+        <input type="text" placeholder="Your Company Name" name="company" required>
+      </div>
+      <div class="form-group">
+        <label>Project Details *</label>
+        <textarea placeholder="Briefly describe your project…" name="message" required></textarea>
       </div>
       <input type="hidden" id="hidden-source-2" name="fields[utm_source]" value="">
       <input type="hidden" id="hidden-campaign-2" name="fields[utm_campaign]" value="">
       <input type="hidden" id="hidden-landing-page-2" name="fields[landing_page]" value="">
 
-      <input class="form-submit" type="submit" value="Get A Free Quote" data-drip-attribute="sign-up-button">
-      <p class="form-note">🔒 Your information is 100% confidential.</p>
+      <button class="form-submit" type="submit">Get My Free Quote →</button>
+      <div class="adsdash-form-msg" role="status" aria-live="polite" style="display:none;font-size:13px;margin-top:10px;"></div>
     </form>
     </div>
   </div>
@@ -3009,113 +3015,121 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>
 (function () {
 
-  var forms = document.querySelectorAll('#adsdash-form-frm_9899f8aefa2f5987');
+  var forms = document.querySelectorAll('#adsdash-form-frm_c591aabd0473422a');
+  var thankYouUrl = 'https://www.cmstowp.com/thank-you-survey/';
+  var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'gbraid', 'wbraid', 'fbclid'];
+  var capturedUtms = {};
+  var renderedAt = Date.now();
 
-  forms.forEach(function (form) {
+  try {
+    var query = new URLSearchParams(window.location.search);
+    utmKeys.forEach(function (key) {
+      var value = query.get(key);
+      if (value) capturedUtms[key] = value;
+    });
+    if (Object.keys(capturedUtms).length) {
+      sessionStorage.setItem('adsdash_utms', JSON.stringify(capturedUtms));
+    } else {
+      capturedUtms = JSON.parse(sessionStorage.getItem('adsdash_utms') || '{}');
+    }
+  } catch (error) {}
 
-    var renderedAt = Date.now();
+  var landingPage = window.location.href;
+  try {
+    landingPage = sessionStorage.getItem('adsdash_landing') || landingPage;
+    sessionStorage.setItem('adsdash_landing', landingPage);
+  } catch (error) {}
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var btn = form.querySelector('button[type="submit"]');
-      var msg = form.querySelector('.adsdash-message'); // adjust selector if needed
-
-      var data = {};
-      new FormData(form).forEach(function (v, k) {
-        data[k] = v;
+  function trackConversion(config, data, done) {
+    var finished = false;
+    function finish() {
+      if (!finished) {
+        finished = true;
+        done();
+      }
+    }
+    try {
+      var awId = config.gtagConversionId;
+      if (typeof window.gtag !== 'function') {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(awId);
+        document.head.appendChild(script);
+        window.gtag('js', new Date());
+        window.gtag('config', awId, { send_page_view: false });
+      }
+      if (config.enhancedConversions) {
+        window.gtag('set', 'user_data', {
+          email: data.email || undefined,
+          company: data.company || undefined
+        });
+      }
+      window.gtag('event', 'conversion', {
+        send_to: awId + '/' + config.gtagConversionLabel,
+        event_callback: finish
       });
-
+    } catch (error) {
+      console.warn('[AdsDash] Conversion error', error);
+    }
+    setTimeout(finish, 1200);
+  }
+  forms.forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var button = form.querySelector('button[type="submit"]');
+      var message = form.querySelector('.adsdash-form-msg');
+      var data = {};
+      new FormData(form).forEach(function (value, key) { data[key] = value; });
       data._ts = renderedAt;
       data.pageUrl = window.location.href;
+      data.landingPage = landingPage;
+      utmKeys.forEach(function (key) {
+        if (capturedUtms[key]) data[key] = capturedUtms[key];
+      });
 
-      var origLabel = btn.textContent;
+      var originalLabel = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Sending…';
+      if (message) message.style.display = 'none';
 
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
-
-      fetch('https://adsdash.ebizondigital.com/api/leads/submit/frm_9899f8aefa2f5987', {
+      fetch('https://adsdash.ebizondigital.com/api/leads/submit/frm_c591aabd0473422a', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
-      .then(function (r) {
-        return r.json().then(function (d) {
-          return { ok: r.ok, d: d };
+      .then(function (response) {
+        return response.json().then(function (result) {
+          return { ok: response.ok, data: result };
         });
       })
-      .then(function (res) {
-
-        if (res.ok) {
-
-          if (
-            typeof window.gtag === 'function' &&
-            res.d.gtagConversionId &&
-            res.d.gtagConversionLabel
-          ) {
-            if (res.d.enhancedConversions) {
-              gtag('set', 'user_data', {
-                email: data.email || undefined,
-                phone_number: data.phone || undefined
-              });
-            }
-
-            gtag('event', 'conversion', {
-              send_to: res.d.gtagConversionId + '/' + res.d.gtagConversionLabel
-            });
-          }
-
-          if (res.d.redirectUrl) {
-            window.location.href = res.d.redirectUrl;
-            return;
-          }
-
-          form.querySelectorAll('input, textarea').forEach(function (el) {
-            if (el.name !== '_hp') {
-              el.style.display = 'none';
-            }
-          });
-
-          form.querySelectorAll('label').forEach(function (el) {
-            el.style.display = 'none';
-          });
-
-          btn.style.display = 'none';
-
-          if (msg) {
-            msg.style.display = 'block';
-            msg.style.color = '#16a34a';
-            msg.textContent = res.d.message || 'Thanks!';
-          }
-
+      .then(function (result) {
+        if (!result.ok) throw new Error(result.data.error || 'Something went wrong. Please try again.');
+        function continueToThankYou() {
+          var destination = new URL(thankYouUrl);
+          destination.searchParams.set('firstname', data.name == null ? '' : data.name);
+          destination.searchParams.set('lastname', data.cf_8cee7a5e == null ? '' : data.cf_8cee7a5e);
+          destination.searchParams.set('email', data.email == null ? '' : data.email);
+          if (data.company) destination.searchParams.set('company', data.company);
+          window.location.href = destination.href;
+        }
+        if (result.data.gtagConversionId && result.data.gtagConversionLabel) {
+          trackConversion(result.data, data, continueToThankYou);
         } else {
-
-          if (msg) {
-            msg.style.display = 'block';
-            msg.style.color = '#dc2626';
-            msg.textContent =
-              res.d.error || 'Something went wrong. Please try again.';
-          }
-
-          btn.disabled = false;
-          btn.textContent = origLabel;
+          continueToThankYou();
         }
       })
-      .catch(function () {
-
-        if (msg) {
-          msg.style.display = 'block';
-          msg.style.color = '#dc2626';
-          msg.textContent = 'Network error. Please try again.';
+      .catch(function (error) {
+        if (message) {
+          message.style.display = 'block';
+          message.style.color = '#dc2626';
+          message.textContent = error.message || 'Network error. Please try again.';
         }
-
-        btn.disabled = false;
-        btn.textContent = origLabel;
+        button.disabled = false;
+        button.textContent = originalLabel;
       });
     });
-
   });
 
 })();
